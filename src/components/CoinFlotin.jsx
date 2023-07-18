@@ -9,7 +9,7 @@ import CajaMount from "./CajaDisponible"
 const ContentFlotin = styled(Stack)({
     position: "relative",
     margin: "0 auto",
-    bottom: "-250px",
+    bottom: "-350px",
     backgroundColor: "rgba(255, 255, 255, 1)",
     boxShadow: "0px 0px 8px rgba(61, 64, 75, 0.15)",
     borderRadius: "8px",
