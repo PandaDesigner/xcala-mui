@@ -41,14 +41,14 @@ export const NewDashboard = () => {
     return (
         <>
             <SectionHeader
-                gap={"32px"}
+                gap={"24px"}
                 flexWrap={{ md: "no-wrap", xs: "wrap" }}
                 maxHeight={{ md: "315px", xs: "100%" }}
                 margin={{ md: "0 auto", xs: "0" }}
                 justifyContent={"center"}>
                 <CarrselContent m={0} justifyContent={"center"} alignItems={"center"}>
                     <Box
-                        width={"100%"} height={"100%"} minHeight={{ md: "315px", sm: "250px", xs: "100px" }}>test</Box>
+                        width={"100%"} height={"100%"} minHeight={{ md: "315px", sm: "250px", xs: "450px" }}>test</Box>
                 </CarrselContent>
                 <SectionCaja
                     minWidth={{ xs: "80%", md: "241px" }}
