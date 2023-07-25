@@ -55,7 +55,7 @@ export const BtnGroupCaja = () => {
                     > Retirar</Button>
                 </BtnGroup>
 
-                <Box sx={{ "& > button": { m: 0 }, marginTop: "-85px", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)", borderRadius: "100%", "& > button:hover": { backgroundColor: "white" } }}>
+                <Box sx={{ "& > button": { m: 0 }, marginTop: "-85px", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)", borderRadius: "100%", "& > button:hover": { backgroundColor: "#fff" } }}>
                     <IconButton
                         color="primary"
                         size="large"

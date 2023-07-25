@@ -59,7 +59,7 @@ export const BtnGroupFix = () => {
                     <IconButton
                         color="primary"
                         size="large"
-                        sx={{ width: "100%", padding: "32px 32px", width: "32px", height: "32px", backgroundColor: "#fff", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", zIndex: "101" }}
+                        sx={{ width: "100%", padding: "32px 32px", width: "32px", height: "32px", backgroundColor: "#fff", position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}
 
                     >
 
