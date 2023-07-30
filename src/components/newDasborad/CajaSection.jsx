@@ -7,7 +7,6 @@ import AvatarSection from '../AvatarSection';
 
 const SectionCajaContainer = styled(Stack)({
     backgroundColor: "rgba(255, 255, 255, 1)",
-    //boxShadow: "0px 0px 8px rgba(61, 64, 75, 0.15)",
     borderRadius: "8px",
     position: "relative",
     isolation: "isolate",
@@ -33,7 +32,6 @@ const HeaderMenu = styled(Stack)({
     boxSizing: "border-box",
     alignSelf: "stretch",
     margin: "0px",
-    height: "24px",
     width: "100%",
 });
 
@@ -46,8 +44,6 @@ const Menu = styled(IconButton)({
     alignItems: "flex-start",
     padding: "4px",
     boxSizing: "border-box",
-    height: "24px",
-    width: "24px",
     borderRadius: "4px"
 })
 
@@ -73,7 +69,6 @@ const Titel = styled(Stack)({
     padding: "0px",
     boxSizing: "border-box",
     alignSelf: "stretch",
-    //marginTop: "16px",
     height: "100%",
     width: "100%",
     maxHeight: "20px",

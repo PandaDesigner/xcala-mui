@@ -1,9 +1,11 @@
 import { Box, Button, Stack, Typography, styled } from '@mui/material'
 import { CajaSection } from './CajaSection'
+import { SectionInteraction } from './SectionInteraction'
+
 
 const SectionHeader = styled(Stack)({
 
-    flexDirection: "row", //{ md: "row", xs: "column" },
+    flexDirection: { lg: "row", md: "column" },
     width: "100%",
     height: "100%",
     position: "relative",
@@ -11,26 +13,27 @@ const SectionHeader = styled(Stack)({
     alignItems: "flex-start",
     padding: "0px",
     boxSizing: "border-box",
-    maxHeight: "315px",
     maxWidth: "1398px",
     isolation: "isolate",
 
 })
 
 const CarrselContent = styled(Box)({
-    maxWidth: "1124px",
-    maxHeight: "315px",
+    //maxWidth: "80%",
+    maxHeight: { xs: "100%", md: '315px' },
+    maxWidth: { xs: '100%', md: '100%', lg: '1080px' },
     height: "100%",
-    width: "80%",
+    width: '78%',//{ lg: "78%", xs: '100%' },
     margin: "0px",
     backgroundColor: "red",
     borderRadius: "8px"
 })
 
 const SectionCaja = styled(Stack)({
-    width: { md: "241px", sm: "100%" },
+
+    width: { md: "100%", sm: "100%", lg: "100%" },
     height: "315px",
-    margin: "0px 0px 0px 32px",
+    margin: "0px 0px 0px 0px",
     borderRadius: "8px",
     backgroundColor: "rgba(255, 255, 255, 1)",
     boxShadow: "0px 0px 8px rgba(61, 64, 75, 0.15)",
@@ -39,23 +42,38 @@ const SectionCaja = styled(Stack)({
 
 export const NewDashboard = () => {
     return (
-        <>
+        <Stack alignItems={'center'} gap={2}>
             <SectionHeader
-                gap={"24px"}
+                gap={"16px"}
                 flexWrap={{ md: "no-wrap", xs: "wrap" }}
                 maxHeight={{ md: "315px", xs: "100%" }}
-                margin={{ md: "0 auto", xs: "0" }}
-                justifyContent={"center"}>
-                <CarrselContent m={0} justifyContent={"center"} alignItems={"center"}>
+                width={'100%'}
+                justifyContent={"center"}
+                flexDirection={'row'}
+            >
+                <CarrselContent
+                    m={0}
+                    justifyContent={"center"}
+                    //flexBasis={"auto"}
+                    alignItems={"center"}
+                    minWidth={{ lg: '78%', xs: '100%' }}
+                    height={'100%'}
+
+                >
                     <Box
-                        width={"100%"} height={"100%"} minHeight={{ md: "315px", sm: "250px", xs: "450px" }}>test</Box>
+                        width={"100%"}
+                        height={{ xs: '450px', md: '315px' }}
+                        minHeight={{ md: "315px", sm: "315px", xs: "450px" }} >
+                    </Box>
                 </CarrselContent>
                 <SectionCaja
-                    minWidth={{ xs: "80%", md: "241px" }}
+                    flexBasis={'1'}
+                    minWidth={{ lg: '20%', md: '100%', sm: '100%', xs: '100%' }}
                     maxHeight={{ lg: "315px", sm: "315px" }}>
                     <CajaSection />
                 </SectionCaja>
-            </SectionHeader >
-        </>
+            </SectionHeader>
+            <SectionInteraction />
+        </Stack >
     )
 }
