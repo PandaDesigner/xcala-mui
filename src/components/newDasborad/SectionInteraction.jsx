@@ -43,7 +43,8 @@ const Cards = styled(Stack)({
     flexDirection: 'column',
     height: '135.63px',
     width: '100%',
-    minWidth: '230.5px',
+    minWidth: '140px',
+    //maxWidth: '230.5px',
     justifyContent: 'center',
     alignItems: 'center',
     padding: '8px 20px',
@@ -88,6 +89,7 @@ const BodyText = styled(Stack)({
     margin: '8px 0px 0px 0px',
     height: '100%',
     width: '100%',
+    backgroundColor: '#fff'
 });
 
 const Titulo = styled(Typography)({
@@ -112,7 +114,6 @@ const Coin = styled(Typography)({
     color: 'rgba(0, 0, 0, 1)',
     fontFamily: 'Poppins',
     fontWeight: '700',
-    fontSize: '28.45217514038086px',
     letterSpacing: '-0.4742029309272766px',
     textDecoration: 'none',
     lineHeight: '26.081161499023438px',
@@ -121,40 +122,41 @@ const Coin = styled(Typography)({
 });
 
 
-
-
 export const SectionInteraction = () => {
     return (
         <Stack
             width={'100%'}
             borderRadius={'8px'}
             height={'100%'}
-            minHeight={'414px'}
+            minHeight={'284px'}
             maxHeight={'414px'}
-            //backgroundColor={'red'}
+
             maxWidth={"1398px"}
             gap={2}
-            flexDirection={'row'}
-
+            marginTop={{ lg: '0', md: '340px', sm: '250px', xs: '245px' }}
+            flexDirection={{ xs: 'column-reverse', sm: 'column-reverse', lg: 'row', md: 'row' }}
         >
-            <Box sx={{
-                width: '60%',
+            <Stack sx={{
+                width: { ls: '60%', md: '80%' },
                 height: '100%',
                 backgroundColor: 'rgba(255, 255, 255, 0.42)',
                 minHeight: '414px',
                 backgroundColor: 'red',
-                borderRadius: '8px'
+                borderRadius: '8px',
+                alignItems: 'center',
+                justifyContent: 'center'
             }}>
+                <Typography variant="h4" color="#fff">imagen Charts</Typography>
 
-
-            </Box>
+            </Stack>
             <Stack
                 sx={{
-                    width: '40%',
+                    width: { lg: '40%', md: '80%' },
                     backgroundColor: 'rgba(255, 255, 255, 0.52)',
                 }}
                 padding={'8px'}
                 gap={1}
+            //minWidth={'405px'}
             >
                 <TitelSection>
 
@@ -163,13 +165,16 @@ export const SectionInteraction = () => {
                 <Stack
                     gap={2}
                     flexDirection={'row'}
+
                 >
                     <Cards>
                         <BodyCards gap={0.1}>
                             <Icons alt='Icons Monety' src={icons_Money} />
                             <BodyText>
                                 <Titulo>Valor Actual</Titulo>
-                                <Coin>{`$ ${'8.480'}`}</Coin>
+                                <Coin
+                                    fontSize={{ lg: '28px', md: '28px', sm: '28px', xs: '22px' }}
+                                >{`$ ${'8.480'}`}</Coin>
                             </BodyText>
                         </BodyCards>
                     </Cards>
@@ -178,7 +183,9 @@ export const SectionInteraction = () => {
                             <Icons alt='Icons Rentability' src={icons_Rentavility} />
                             <BodyText>
                                 <Titulo>Rentabilidad</Titulo>
-                                <Coin>{`$ ${'18.480'}`}</Coin>
+                                <Coin
+                                    fontSize={{ lg: '28px', md: '28px', sm: '28px', xs: '22px' }}
+                                >{`$ ${'18.480'}`}</Coin>
                             </BodyText>
                         </BodyCards>
                     </Cards>
