@@ -60,11 +60,15 @@ export const NewDashboard = () => {
                     height={'100%'}
 
                 >
-                    <Box
+                    <Stack
                         width={"100%"}
                         height={{ xs: '450px', md: '315px' }}
-                        minHeight={{ md: "315px", sm: "315px", xs: "450px" }} >
-                    </Box>
+                        minHeight={{ md: "315px", sm: "315px", xs: "450px" }}
+                        justifyContent={'center'}
+                        alignItems={'center'}
+                    >
+                        <Typography variant="h4" color="#fff">Carrusel</Typography>
+                    </Stack>
                 </CarrselContent>
                 <SectionCaja
                     flexBasis={'1'}

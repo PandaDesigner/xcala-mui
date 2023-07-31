@@ -133,8 +133,8 @@ export const SectionInteraction = () => {
 
             maxWidth={"1398px"}
             gap={2}
-            marginTop={{ lg: '0', md: '340px', sm: '250px', xs: '245px' }}
-            flexDirection={{ xs: 'column-reverse', sm: 'column-reverse', lg: 'row', md: 'row' }}
+            marginTop={{ lg: '0', md: '340px', sm: '12px', xs: '12px' }}
+            flexDirection={{ xs: 'column', sm: 'column', lg: 'row', md: 'row' }}
         >
             <Stack sx={{
                 width: { ls: '60%', md: '80%' },
