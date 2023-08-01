@@ -1,7 +1,8 @@
-import { Box, Button, Stack, Typography, styled } from '@mui/material'
+import { Box, Button, Portal, Stack, Typography, styled } from '@mui/material'
 
 import icons_Money from '../../assets/images/iconsMoney.svg'
 import icons_Rentavility from '../../assets/images/iconsRentability.svg'
+import { PeymenCards } from './PeymenCards';
 
 const TitelSection = styled(Stack)({
     background: 'linear-gradient(106.49deg, rgba(112, 151, 217, 1) -29.020488665609555%, rgba(30, 34, 170, 1) 50.092131130721704%)',
@@ -102,7 +103,7 @@ const Titulo = styled(Typography)({
     fontSize: '12px',
     letterSpacing: '-0.4742029309272766px',
     textDecoration: 'none',
-    //lineHeight: '26.081161499023438px',
+    lineHeight: '105%',
     textTransform: 'none',
     margin: '0px',
 });
@@ -121,6 +122,54 @@ const Coin = styled(Typography)({
     margin: '4px 0px 0px 0px',
 });
 
+//*section product items
+
+const ListProduct = styled(Stack)({
+    position: 'relative',
+    isolation: 'isolate',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: '4px',
+    boxSizing: 'border-box',
+    height: '100%',
+    margin: '8px 0px 0px 0px',
+    overflow: 'hidden',
+    width: '100%',
+    //backgroundColor: 'red',
+    borderRadius: '8px',
+    minHeight: '164px',
+    overflowY: 'scroll'
+});
+
+const portfolio = [
+    {
+        perfil: 'conservador',
+        titelPeymen: 'text one loremp 1',
+        montoTotal: '13.200'
+    },
+    {
+        perfil: 'agresivo',
+        titelPeymen: 'text one loremp 2',
+        montoTotal: '15.200'
+    },
+    {
+        perfil: 'moderado',
+        titelPeymen: 'text one loremp 3',
+        montoTotal: '11.200'
+    },
+    {
+        perfil: 'portafolio',
+        titelPeymen: 'text one loremp 4',
+        montoTotal: '13.200'
+    },
+    {
+        perfil: 'portafolio',
+        titelPeymen: 'text one loremp 5',
+        montoTotal: '20.200'
+    },
+]
+
 
 export const SectionInteraction = () => {
     return (
@@ -133,7 +182,7 @@ export const SectionInteraction = () => {
 
             maxWidth={"1398px"}
             gap={2}
-            marginTop={{ lg: '0', md: '340px', sm: '12px', xs: '12px' }}
+            marginTop={{ lg: '0', md: '340px', sm: '8px', xs: '8px' }}
             flexDirection={{ xs: 'column', sm: 'column', lg: 'row', md: 'row' }}
         >
             <Stack sx={{
@@ -144,7 +193,7 @@ export const SectionInteraction = () => {
                 backgroundColor: 'red',
                 borderRadius: '8px',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
             }}>
                 <Typography variant="h4" color="#fff">imagen Charts</Typography>
 
@@ -154,7 +203,7 @@ export const SectionInteraction = () => {
                     width: { lg: '40%', md: '80%' },
                     backgroundColor: 'rgba(255, 255, 255, 0.52)',
                 }}
-                padding={'8px'}
+                //padding={'1px'}
                 gap={1}
             //minWidth={'405px'}
             >
@@ -191,9 +240,19 @@ export const SectionInteraction = () => {
                     </Cards>
                 </Stack>
                 <TitelSection>
-
                     <TitelSectionBox variant='h6'>Productos Activos </TitelSectionBox>
                 </TitelSection>
+                <ListProduct gap={0.5} overflow={'hidden'} maxHeight={'160px'} >
+                    {portfolio.map(({ perfil, titelPeymen, montoTotal }) => {
+
+                        return (<PeymenCards
+                            key={titelPeymen}
+                            perfil={perfil}
+                            titelPeymen={titelPeymen}
+                            montoTotal={montoTotal} />)
+                    })}
+                </ListProduct>
+
             </Stack>
 
         </Stack>
