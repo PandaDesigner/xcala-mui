@@ -1,7 +1,8 @@
 import { Box, Button, Portal, Stack, Typography, styled } from '@mui/material'
 
-import icons_Money from '../../assets/images/iconsMoney.svg'
-import icons_Rentavility from '../../assets/images/iconsRentability.svg'
+import icons_Money from '../../assets/images/iconsMoney.svg';
+import icons_Rentavility from '../../assets/images/iconsRentability.svg';
+import icons_NoProduct from '../../assets/images/Team members discussing solution.gif';
 import { PeymenCards } from './PeymenCards';
 
 const TitelSection = styled(Stack)({
@@ -142,7 +143,108 @@ const ListProduct = styled(Stack)({
     overflowY: 'scroll'
 });
 
-const portfolio = [
+/**Action no Product */
+
+const SectionNoProduct = styled(Stack)({
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    boxShadow: '0px 0px 6.828890800476074px rgba(0, 0, 0, 0.12)',
+    borderRadius: '4px',
+    position: 'relative',
+    isolation: 'isolate',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '2px 11.706669807434082px',
+    boxSizing: 'border-box',
+    alignSelf: 'stretch',
+    flex: '1',
+    margin: '0px',
+    height: '100%',
+    width: '100%',
+});
+
+const ContetNoProduct = styled(Stack)({
+    position: 'relative',
+    isolation: 'isolate',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: '0px',
+    boxSizing: 'border-box',
+    margin: '0px',
+    height: '120px',
+    width: '100%',
+});
+const IconsNoProduct = styled("img")({
+    height: '120px',
+    width: '140px',
+    objectFit: 'cover',
+    margin: '0px',
+});
+const BodyTextNoProduct = styled(Stack)({
+    position: 'relative',
+    isolation: 'isolate',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    padding: '0px',
+    boxSizing: 'border-box',
+    margin: '0px 0px 0px 6px',
+    //height: '78.61px',
+    //width: '180px',
+});
+
+const TitelNopProduct = styled(Typography)({
+    textAlign: 'left',
+    whiteSpace: 'pre-wrap',
+    fontSynthesis: 'none',
+    color: 'rgba(0, 0, 0, 1)',
+    //fontStyle: 'normal',
+    fontFamily: 'Poppins',
+    fontWeight: '700',
+    letterSpacing: '-0.39022237062454224px',
+    textDecoration: 'none',
+    lineHeight: '21.462230682373047px',
+    textTransform: 'none',
+    margin: '0px',
+});
+
+const ParrafoNoProduct = styled(Typography)({
+    textAlign: 'left',
+    whiteSpace: 'pre-wrap',
+    fontSynthesis: 'none',
+    color: 'rgba(143, 141, 141, 1)',
+    fontFamily: 'Poppins',
+    fontWeight: '500',
+    //fontSize: '11.706669807434082px',
+    letterSpacing: '-0.39022237062454224px',
+    textDecoration: 'none',
+    lineHeight: '12.962230682373047px',
+    textTransform: 'none',
+    margin: '7.804447174072266px 0px 0px 0px',
+});
+
+const BtnCarga = styled(Button)({
+    backgroundColor: 'rgba(30, 34, 170, 1)',
+    borderRadius: '4px',
+    position: 'relative',
+    isolation: 'isolate',
+    //padding: '12px 24px',
+    boxSizing: 'border-box',
+    margin: '7.804447174072266px 0px 0px 0px',
+    height: '100%',
+    width: '100%',
+    color: '#fff',
+    textTransform: "none",
+    "&:hover": {
+        backgroundColor: "#4449D8"
+    },
+});
+
+
+/** FIN */
+
+const portfolio = null/*[
     {
         perfil: 'conservador',
         titelPeymen: 'text one loremp 1',
@@ -169,6 +271,9 @@ const portfolio = [
         montoTotal: '20.200'
     },
 ]
+*/
+
+
 
 
 export const SectionInteraction = () => {
@@ -209,7 +314,7 @@ export const SectionInteraction = () => {
             >
                 <TitelSection>
 
-                    <TitelSectionBox variant='h6'>Valores Invertidos </TitelSectionBox>
+                    <TitelSectionBox variant='h6' >Valores Invertidos </TitelSectionBox>
                 </TitelSection>
                 <Stack
                     gap={2}
@@ -222,7 +327,7 @@ export const SectionInteraction = () => {
                             <BodyText>
                                 <Titulo>Valor Actual</Titulo>
                                 <Coin
-                                    fontSize={{ lg: '28px', md: '28px', sm: '28px', xs: '22px' }}
+                                    fontSize={'clamp(1.4em, 6vw, 1.8em)'}
                                 >{`$ ${'8.480'}`}</Coin>
                             </BodyText>
                         </BodyCards>
@@ -233,7 +338,7 @@ export const SectionInteraction = () => {
                             <BodyText>
                                 <Titulo>Rentabilidad</Titulo>
                                 <Coin
-                                    fontSize={{ lg: '28px', md: '28px', sm: '28px', xs: '22px' }}
+                                    fontSize={'clamp(1.4em, 6vw, 1.8em)'}
                                 >{`$ ${'18.480'}`}</Coin>
                             </BodyText>
                         </BodyCards>
@@ -242,19 +347,39 @@ export const SectionInteraction = () => {
                 <TitelSection>
                     <TitelSectionBox variant='h6'>Productos Activos </TitelSectionBox>
                 </TitelSection>
-                <ListProduct gap={0.5} overflow={'hidden'} maxHeight={'160px'} >
-                    {portfolio.map(({ perfil, titelPeymen, montoTotal }) => {
+                {(portfolio != null)
+                    ? (<ListProduct
+                        gap={0.5}
+                        overflow={'hidden'}
+                        maxHeight={'160px'}
 
-                        return (<PeymenCards
-                            key={titelPeymen}
-                            perfil={perfil}
-                            titelPeymen={titelPeymen}
-                            montoTotal={montoTotal} />)
-                    })}
-                </ListProduct>
+                    >
+
+                        {portfolio.map(({ perfil, titelPeymen, montoTotal }) => {
+
+                            return (<PeymenCards
+                                key={titelPeymen}
+                                perfil={perfil}
+                                titelPeymen={titelPeymen}
+                                montoTotal={montoTotal} />)
+                        })
+                        }
+                    </ListProduct>)
+                    : (<SectionNoProduct>
+                        <ContetNoProduct>
+                            <IconsNoProduct src={icons_NoProduct} alt={'Cargando Product'} />
+                            <BodyTextNoProduct>
+                                <TitelNopProduct fontSize={'clamp(12px, 5vw, 32px)'}>Creemos en ti</TitelNopProduct>
+                                <ParrafoNoProduct fontSize={'clamp(12px, 2vw, 16px)'}>La base de una buena inversión
+                                    es el conocimiento
+                                </ParrafoNoProduct>
+                                <BtnCarga variant='text' sx={{ fontSize: 'clamp(12px, 3vw, 16px)' }} >Aprende de los que saben</BtnCarga>
+                            </BodyTextNoProduct>
+                        </ContetNoProduct>
+                    </SectionNoProduct>)}
+
 
             </Stack>
-
-        </Stack>
+        </Stack >
     )
 }

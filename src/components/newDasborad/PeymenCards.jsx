@@ -6,13 +6,6 @@ import perfil_agresivo from '../../assets/images/perfiles/agresivo.svg'
 import perfil_portafolio from '../../assets/images/perfiles/portafolio.svg'
 /**ItemsPeymenBox */
 
-const props = {
-    perfil: 'conservador',
-    titelPeymen: 'Propuesta One Titel Name',
-    montoTotal: '12.800'
-}
-
-const { perfil, titelPeymen, montoTotal } = props
 
 const ItemsPeymenBox = styled(Stack)({
     backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -81,7 +74,7 @@ const CoinValueBox = styled(Typography)({
     fontStyle: 'normal',
     fontFamily: 'Poppins',
     fontWeight: '700',
-    fontSize: '15.608894348144531px',
+    fontSize: 'clamp(1rem, 2vw, 1.2rem)',//'15px',
     letterSpacing: '-0.39022237062454224px',
     textDecoration: 'none',
     lineHeight: '21.462230682373047px',
