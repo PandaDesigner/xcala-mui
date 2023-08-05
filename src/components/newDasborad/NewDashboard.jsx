@@ -1,7 +1,29 @@
 import { Box, Button, Stack, Typography, styled } from '@mui/material'
 import { CajaSection } from './CajaSection'
 import { SectionInteraction } from './SectionInteraction'
+import { GreetingDashboard } from './GreetingDashboard'
 
+const perfil = 'agresivo';
+const cashAmount = '15.345'
+const name = 'jose'
+
+
+/**HandelFuntion */
+
+const HandlerCapital = (str) => {
+    const resultStr = [...str].map((leter, index) => {
+        return index === 0 ? leter.toUpperCase() : leter.toLowerCase()
+    }).join('')
+    console.log(resultStr)
+    return resultStr
+
+}
+
+
+
+
+
+/**FIN */
 
 const SectionHeader = styled(Stack)({
 
@@ -43,6 +65,7 @@ const SectionCaja = styled(Stack)({
 export const NewDashboard = () => {
     return (
         <Stack alignItems={'center'} gap={2}>
+            <GreetingDashboard name={HandlerCapital(name)} width={'100%'} padding={'32px 0px 0px 0px'} />
             <SectionHeader
                 gap={"16px"}
                 flexWrap={{ md: "no-wrap", xs: "wrap" }}
@@ -74,7 +97,7 @@ export const NewDashboard = () => {
                     flexBasis={'1'}
                     minWidth={{ lg: '20%', md: '100%', sm: '100%', xs: '100%' }}
                     maxHeight={{ lg: "315px", sm: "315px" }}>
-                    <CajaSection />
+                    <CajaSection perfil={perfil} cashAmount={cashAmount} />
                 </SectionCaja>
             </SectionHeader>
             <SectionInteraction />

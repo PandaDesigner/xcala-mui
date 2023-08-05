@@ -7,7 +7,9 @@ import {
 
 import { Stack, Typography } from '@mui/material';
 import AvatarIcon from '../assets/images/Avatar.svg';
-import IconosPerfile from '../assets/images/Iconos-Perfiles.svg';
+import IconosPerfileConservador from '../assets/images/Iconos-Perfiles.svg';
+import IconsPerfilModerado from '../assets/images/perfiles/Iconos-Perfiles-moderado.svg'
+import IconsPerfilAgresivo from '../assets/images/perfiles/Iconos-Perfiles-agresivo.svg'
 
 const AvatarSection1 = styled(Stack)({
     position: "relative",
@@ -54,14 +56,20 @@ const IconosPerfiles = styled("img")({
     top: "45px",
 });
 
+const handelPerfil = (perfil) => {
+    return perfil === 'conservador'
+        ? IconosPerfileConservador
+        : perfil === 'moderado'
+            ? IconsPerfilModerado
+            : IconsPerfilAgresivo
+}
 
-
-function AvatarSection() {
+function AvatarSection({ perfil }) {
     return (
         <AvatarSection1>
             <Avatar>
                 <Avatar1 src={AvatarIcon} loading='lazy' alt={"Avatar Icons"} />
-                <IconosPerfiles src={IconosPerfile} loading='lazy' alt={"Iconos Perfile"} />
+                <IconosPerfiles src={handelPerfil(perfil)} loading='lazy' alt={"Iconos Perfile"} />
             </Avatar>
 
         </AvatarSection1>);

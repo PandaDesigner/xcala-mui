@@ -198,7 +198,7 @@ const TitelNopProduct = styled(Typography)({
     textAlign: 'left',
     whiteSpace: 'pre-wrap',
     fontSynthesis: 'none',
-    color: 'rgba(0, 0, 0, 1)',
+    color: '#182849',
     //fontStyle: 'normal',
     fontFamily: 'Poppins',
     fontWeight: '700',

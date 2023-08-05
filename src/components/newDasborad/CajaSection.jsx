@@ -1,4 +1,4 @@
-import { Button, Box, Stack, IconButton, styled, Typography } from '@mui/material'
+import { Button, Stack, IconButton, styled, Typography } from '@mui/material'
 
 import IconsMenus from '../../assets/images/iconsMenu.svg'
 import AvatarSection from '../AvatarSection';
@@ -157,7 +157,7 @@ const BtnActualiza = styled(Button)({
 })
 
 
-export const CajaSection = () => {
+export const CajaSection = ({ perfil, cashAmount }) => {
     return (
         <>
             <SectionCajaContainer>
@@ -166,11 +166,11 @@ export const CajaSection = () => {
                         <Icons src={IconsMenus} alt='icons Menu' />
                     </Menu>
                 </HeaderMenu>
-                <AvatarSection />
+                <AvatarSection perfil={perfil} />
                 <Titel>
                     <CajaDisponible> Caja Disponible </CajaDisponible>
                     <MoneyCaja>
-                        {`$ ${15.345}`}
+                        {`$ ${cashAmount}`}
                     </MoneyCaja>
                 </Titel>
                 <ContainerCaja>
