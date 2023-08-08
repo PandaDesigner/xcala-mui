@@ -2,6 +2,8 @@ import { Button, Stack, IconButton, styled, Typography } from '@mui/material'
 
 import IconsMenus from '../../assets/images/iconsMenu.svg'
 import AvatarSection from '../AvatarSection';
+import { SectionNoAmount } from './SectionNoAmount';
+
 
 
 
@@ -167,17 +169,20 @@ export const CajaSection = ({ perfil, cashAmount }) => {
                     </Menu>
                 </HeaderMenu>
                 <AvatarSection perfil={perfil} />
-                <Titel>
-                    <CajaDisponible> Caja Disponible </CajaDisponible>
-                    <MoneyCaja>
-                        {`$ ${cashAmount}`}
-                    </MoneyCaja>
-                </Titel>
-                <ContainerCaja>
-                    <BtnCargar>Carga aquí tu caja</BtnCargar>
-                    <BtnActualiza disabled variant='text'>Actualizar Caja</BtnActualiza>
-
-                </ContainerCaja>
+                {(cashAmount !== '0')
+                    ? (<>
+                        <Titel>
+                            <CajaDisponible> Caja Disponible </CajaDisponible>
+                            <MoneyCaja>
+                                {`$ ${cashAmount}`}
+                            </MoneyCaja>
+                        </Titel><ContainerCaja>
+                            <BtnCargar>Carga aquí tu caja</BtnCargar>
+                            <BtnActualiza disabled variant='text'>Actualizar Caja</BtnActualiza>
+                        </ContainerCaja>
+                    </>)
+                    : <SectionNoAmount />
+                }
 
             </SectionCajaContainer>
 
