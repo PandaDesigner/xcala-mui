@@ -243,36 +243,11 @@ const BtnCarga = styled(Button)({
 
 /** FIN */
 
-const portfolio = null; /*[
-    {
-        perfil: 'conservador',
-        titelPeymen: 'text one loremp 1',
-        montoTotal: '13.200'
-    },
-    {
-        perfil: 'agresivo',
-        titelPeymen: 'text one loremp 2',
-        montoTotal: '15.200'
-    },
-    {
-        perfil: 'moderado',
-        titelPeymen: 'text one loremp 3',
-        montoTotal: '11.200'
-    },
-    {
-        perfil: 'portafolio',
-        titelPeymen: 'text one loremp 4',
-        montoTotal: '13.200'
-    },
-    {
-        perfil: 'portafolio',
-        titelPeymen: 'text one loremp 5',
-        montoTotal: '20.200'
-    },
-]
-*/
-
-export const SectionInteraction = () => {
+export const SectionInteraction = ({
+	portfolio,
+	actualMount = "0",
+	rentabilityMount = "0",
+}) => {
 	return (
 		<Stack
 			width={"100%"}
@@ -284,6 +259,13 @@ export const SectionInteraction = () => {
 			gap={2}
 			marginTop={{ lg: "0", md: "340px", sm: "8px", xs: "8px" }}
 			flexDirection={{ xs: "column", sm: "column", lg: "row", md: "row" }}
+			justifyContent={{
+				xs: "center",
+				ms: "center",
+				md: "flex-start",
+				lg: "flex-start",
+			}}
+			mt={{ xs: "190px", ms: "190px", md: "184px", lg: "16px" }}
 		>
 			<Stack
 				sx={{
@@ -318,8 +300,8 @@ export const SectionInteraction = () => {
 							<BodyText>
 								<Titulo>Valor Actual</Titulo>
 								<Coin
-									fontSize={"clamp(1.4em, 6vw, 1.8em)"}
-								>{`$ ${"8.480"}`}</Coin>
+									fontSize={"clamp(0.6em, 4vw, 1.4em)"}
+								>{`$ ${actualMount}`}</Coin>
 							</BodyText>
 						</BodyCards>
 					</Cards>
@@ -329,8 +311,8 @@ export const SectionInteraction = () => {
 							<BodyText>
 								<Titulo>Rentabilidad</Titulo>
 								<Coin
-									fontSize={"clamp(1.4em, 6vw, 1.8em)"}
-								>{`$ ${"18.480"}`}</Coin>
+									fontSize={"clamp(0.6em, 4vw, 1.4em)"}
+								>{`$ ${rentabilityMount}`}</Coin>
 							</BodyText>
 						</BodyCards>
 					</Cards>

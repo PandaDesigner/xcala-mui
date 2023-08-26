@@ -15,7 +15,7 @@ export const theme = createTheme({
 		},
 	},
 	typography: {
-		fontFamily: "Poppins, san-serif",
+		fontFamily: "Poppins, Museo, san-serif",
 		fontSize: 16, // Tamaño de fuente base para el proyecto
 		fontWeightRegular: 400, // Peso de fuente regular
 		fontWeightBold: 600,

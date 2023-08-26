@@ -3,10 +3,42 @@ import { CajaSection } from "./CajaSection";
 import { SectionInteraction } from "./SectionInteraction";
 import { GreetingDashboard } from "./GreetingDashboard";
 import backgroundFondo from "../../assets/images/Background-fondo.png";
+import { DiviaiderSectionText } from "./DiviaiderSectionText";
+import { CardsFound } from "./CardsProduct/CardsFound";
 
 const perfil = "conservador";
-const cashAmount = "0";
+const cashAmount = "10.000.000";
 const name = "jose";
+const actualMount = "8.480.000";
+const rentabilityMount = "18.480.000";
+const portfolio = null; /*[
+    {
+        perfil: 'conservador',
+        titelPeymen: 'text one loremp 1',
+        montoTotal: '13.200'
+    },
+    {
+        perfil: 'agresivo',
+        titelPeymen: 'text one loremp 2',
+        montoTotal: '15.200'
+    },
+    {
+        perfil: 'moderado',
+        titelPeymen: 'text one loremp 3',
+        montoTotal: '11.200'
+    },
+    {
+        perfil: 'portafolio',
+        titelPeymen: 'text one loremp 4',
+        montoTotal: '13.200'
+    },
+    {
+        perfil: 'portafolio',
+        titelPeymen: 'text one loremp 5',
+        montoTotal: '20.200'
+    },
+]
+*/
 
 /**HandelFuntion */
 
@@ -77,7 +109,17 @@ const BackgroundDashboard = styled(Stack)({
 export const NewDashboard = () => {
 	return (
 		<BackgroundDashboard>
-			<Stack width={"90%"} alignItems={"center"} gap={2}>
+			<Stack
+				width={"90%"}
+				alignItems={"center"}
+				gap={2}
+				justifyContent={{
+					xs: "center",
+					ms: "center",
+					md: "flex-start",
+					lg: "flex-start",
+				}}
+			>
 				<GreetingDashboard
 					name={HandlerCapital(name)}
 					width={"100%"}
@@ -121,8 +163,32 @@ export const NewDashboard = () => {
 						<CajaSection perfil={perfil} cashAmount={cashAmount} />
 					</SectionCaja>
 				</SectionHeader>
-				<SectionInteraction />
-				<Box height={"100px"} />
+				<SectionInteraction
+					portfolio={portfolio}
+					height={"100%"}
+					actualMount={actualMount}
+					rentabilityMount={rentabilityMount}
+				/>
+				<Box height={{ xs: "190px", md: "50px", lg: "20px" }} />
+
+				<DiviaiderSectionText width={"100%"} />
+				<Box height={{ xs: "190px", md: "50px", lg: "20px" }} />
+				<Stack
+					width={"100%"}
+					gap={"16px"}
+					flexWrap={"wrap"}
+					flexDirection={"row"}
+					marginTop={6}
+					justifyContent={"center"}
+				>
+					<CardsFound />
+					<CardsFound />
+					<CardsFound />
+				</Stack>
+
+				<Button variant="contained" color="primary">
+					Agregar
+				</Button>
 			</Stack>
 		</BackgroundDashboard>
 	);
