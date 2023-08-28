@@ -169,7 +169,7 @@ export const NewDashboard = () => {
 				<Stack
 					width={"100%"}
 					gap={"16px"}
-					flexWrap={"wrap"}
+					flexWrap={{lg:"nowrap",md:"wrap",ms:"wrap", xs:"wrap"}}
 					flexDirection={"row"}
 					justifyContent={"center"}
 				>
