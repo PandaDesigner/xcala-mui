@@ -47,15 +47,12 @@ component="p"
 `,
 );
 
-export const CardsDescription = () => {
+export const CardsDescription = ({ funDescription }) => {
 	return (
 		<>
 			<CardsContainer>
 				<TitelCards>Descripción</TitelCards>
-				<BodyCardsDescription>
-					Lorem ipsum dolor sit amet consectetur. Congue hendrerit et lacinia
-					donec tristique. A sit commodo fusce viverra{" "}
-				</BodyCardsDescription>
+				<BodyCardsDescription>{funDescription}</BodyCardsDescription>
 			</CardsContainer>
 		</>
 	);

@@ -163,7 +163,6 @@ export const NewDashboard = () => {
 					actualMount={actualMount}
 					rentabilityMount={rentabilityMount}
 				/>
-				{/*<Box height={{ xs: "190px", md: "50px", lg: "20px" }} />*/}
 
 				<DiviaiderSectionText width={"100%"} />
 
@@ -175,16 +174,43 @@ export const NewDashboard = () => {
 					justifyContent={"center"}
 				>
 					<CardsFound
-						intereses={"Capital Privado"}
-						motivation={"Generar un ingreso mensual extra"}
+						profileCards="Conservador"
+						fundName="Global Real Estate Income"
+						rentabilityFound={"10,00"}
+						typeCurrency={"CPL"}
+						intereses={"Renta Inmobiliaria"}
+						motivation={"Generar ingreso extra"}
+						foundTerm="Anualizado a largo plazo"
+						fundPerfile={true}
+						funDescription={
+							"Fondo que selecciona e invierte activamente en los mejores gestores globales Inmobiliarios. A su vez."
+						}
 					/>
 					<CardsFound
-						intereses={"Sostenibilidad"}
-						motivation={"Ganar con propósito e impacto"}
+						profileCards="Moderado"
+						fundName="Balanceado Global"
+						rentabilityFound={"8,90"}
+						typeCurrency={"USD"}
+						intereses={"Retorno Absoluto"}
+						motivation={"Hacer crecer mi plata"}
+						foundTerm="Anualizado a largo plazo"
+						fundPerfile={true}
+						funDescription={
+							"Fondo que selecciona e invierte activamente en los mejores gestores de deuda privada listados en este fondo..."
+						}
 					/>
 					<CardsFound
+						profileCards="Agresivo"
+						fundName="US Venture Opportunities"
+						rentabilityFound={"25,00"}
+						typeCurrency="CPL"
 						intereses={"Venture Capital/Startups"}
 						motivation={"Hacer crecer mi plata"}
+						foundTerm="Anualizado a largo plazo"
+						fundPerfile={false}
+						funDescription={
+							"Fondo que replica el índice de Venture Capital de Estados Unidos. Venture Capital son todas aquellas inversiones..."
+						}
 					/>
 				</Stack>
 

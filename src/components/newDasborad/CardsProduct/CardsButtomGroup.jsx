@@ -44,7 +44,7 @@ const BtnSecundary = styled(Button)({
 const BtnInformation = styled(Button)({
 	backgroundColor: "rgba(244, 244, 251, 1)",
 	color: "rgba(30, 34, 170, 1)",
-	border: "1px solid rgba(30, 34, 170, 1)",
+	//border: "1px solid rgba(30, 34, 170, 1)",
 	flex: "1",
 	alignSelf: "stretch",
 	height: "50px",

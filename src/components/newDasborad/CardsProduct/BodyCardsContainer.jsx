@@ -5,6 +5,12 @@ import { TypeOfCurrency } from "./TypeOfCurrency";
 import { CardsDescription } from "./CardsDescription";
 import { CardsButtomGroup } from "./CardsButtomGroup";
 
+import iconsAgresivo from "../../../assets/images/perfiles/ProfilCards/iconos-Perfiles-agresivo.svg";
+import iconsConservador from "../../../assets/images/perfiles/ProfilCards/iconos-Perfiles-conservador.svg";
+import iconsModerado from "../../../assets/images/perfiles/ProfilCards/iconos-Perfiles-moderado.svg";
+
+const $profileIcons = [iconsAgresivo, iconsConservador, iconsModerado];
+
 const BodyContainers = styled(Stack)({
 	backgroundColor: "rgba(255, 255, 255, 1)",
 	position: "relative",
@@ -91,22 +97,39 @@ const ExpectedTime = styled(Typography)({
 	margin: "0px",
 });
 
+const handelProfileIcon = (rofileCards) => {
+	switch (rofileCards) {
+		case "Agresivo":
+			return iconsAgresivo;
+		case "Conservador":
+			return iconsConservador;
+		case "Moderado":
+			return iconsModerado;
+		default:
+			return iconsConservador;
+	}
+};
+
 export const BodyCardsContainer = ({
-	$typeCurrency,
+	profileCards,
+	typeCurrency,
 	intereses,
 	motivation,
+	rentabilityFound,
+	foundTerm,
+	funDescription,
 }) => {
 	return (
 		<BodyContainers gap={2}>
-			<Stack gap={1}>
+			<Stack gap={1} width={"100%"}>
 				<TitelCards>
-					<BottonsIconosPerfile />
+					<BottonsIconosPerfile src={handelProfileIcon(profileCards)} />
 					<CardsInfo>
 						<ReantabilityTitel fontSize={"clamp(0.96rem, 2vw, 1.2rem)"}>
 							Rentabilidad Esperada
 						</ReantabilityTitel>
-						<RentabilityValue>{`$${0.0}`}</RentabilityValue>
-						<ExpectedTime>(últimos 12 meses)</ExpectedTime>
+						<RentabilityValue>{`${rentabilityFound}%`}</RentabilityValue>
+						<ExpectedTime>{`(${foundTerm})`}</ExpectedTime>
 					</CardsInfo>
 				</TitelCards>
 				<Divider variant="fullWidth" width="100%" />
@@ -115,8 +138,8 @@ export const BodyCardsContainer = ({
 					<MotivationLabel motivation={motivation} />
 				</Stack>
 			</Stack>
-			<TypeOfCurrency $typeCurrency={$typeCurrency} />
-			<CardsDescription />
+			<TypeOfCurrency typeCurrency={typeCurrency} />
+			<CardsDescription funDescription={funDescription} />
 			<CardsButtomGroup />
 		</BodyContainers>
 	);

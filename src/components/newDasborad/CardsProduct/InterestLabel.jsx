@@ -1,11 +1,11 @@
+import { useState, useEffect } from "react";
 import { styled, Chip } from "@mui/material";
-import iconRetorno from "../../../assets/images/Symbol/intereses/icono-renta.svg";
+import iconRetorno from "../../../assets/images/Symbol/intereses/icono-retorno.svg";
 import iconSostenibility from "../../../assets/images/Symbol/intereses/icono-sotenibilidad.svg";
 import iconDeuda from "../../../assets/images/Symbol/intereses/icono-deuda.svg";
 import iconVenture from "../../../assets/images/Symbol/intereses/icono-venture.svg";
 import iconCapital from "../../../assets/images/Symbol/intereses/icono-capital.svg";
 import iconRenta from "../../../assets/images/Symbol/intereses/icono-renta.svg";
-import { useState, useEffect } from "react";
 
 const interestObjects = [
 	{ label: "Retorno Absoluto", icon: iconRetorno },

@@ -95,7 +95,7 @@ const HeadTitel = styled(Typography)({
 	margin: "18px 0px 0px 0px",
 });
 
-export const HeadContainerCards = () => {
+export const HeadContainerCards = ({ fundName, fundPerfile }) => {
 	return (
 		<>
 			<HeadCards>
@@ -103,11 +103,13 @@ export const HeadContainerCards = () => {
 					<MotivacionesGenerarl>
 						<HmcText>HMC</HmcText>
 					</MotivacionesGenerarl>
-					<Start>
-						<StartIcons src={startIcons} alt="start-icons" />
-					</Start>
+					{fundPerfile && (
+						<Start>
+							<StartIcons src={startIcons} alt="start-icons" />
+						</Start>
+					)}
 				</HeadChips>
-				<HeadTitel>Xcala Balanceado Global</HeadTitel>
+				<HeadTitel>{fundName}</HeadTitel>
 			</HeadCards>
 		</>
 	);

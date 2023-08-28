@@ -7,7 +7,7 @@ import iconGanar from "../../../assets/images/Symbol/motivaciones/icons-ganar.sv
 const motivationObj = [
 	{ label: "Hacer crecer mi plata", icon: iconHacer },
 	{ label: "Ganar con propósito e impacto", icon: iconGanar },
-	{ label: "Generar un ingreso mensual extra", icon: iconGrenerar },
+	{ label: "Generar ingreso extra", icon: iconGrenerar },
 ];
 
 const ContentLabel = styled(Chip)({
