@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography, styled } from "@mui/material";
+import { Box, Button, Grid, Stack, Typography, styled } from "@mui/material";
 import { CajaSection } from "./CajaSection";
 import { SectionInteraction } from "./SectionInteraction";
 import { GreetingDashboard } from "./GreetingDashboard";
@@ -64,7 +64,7 @@ const SectionHeader = styled(Stack)({
 	alignItems: "flex-start",
 	padding: "0px",
 	boxSizing: "border-box",
-	maxWidth: "1398px",
+	//maxWidth: "1398px",
 	isolation: "isolate",
 });
 
@@ -166,12 +166,14 @@ export const NewDashboard = () => {
 
 				<DiviaiderSectionText width={"100%"} />
 
-				<Stack
+				<Grid
 					width={"100%"}
-					gap={"16px"}
-					flexWrap={{lg:"nowrap",md:"wrap",ms:"wrap", xs:"wrap"}}
-					flexDirection={"row"}
-					justifyContent={"center"}
+					rowSpacing={2}
+					columnSpacing={2}
+					Spacing={{ xs: 1, sm: 1, md: 2, lg: 2 }}
+					columns={{ xs: 4, sm: 4, md: 8, lg: 8 }}
+					container
+					
 				>
 					<CardsFound
 						profileCards="Conservador"
@@ -212,7 +214,7 @@ export const NewDashboard = () => {
 							"Fondo que replica el índice de Venture Capital de Estados Unidos. Venture Capital son todas aquellas inversiones..."
 						}
 					/>
-				</Stack>
+				</Grid>
 
 				<Button variant="contained" color="primary">
 					Ver más

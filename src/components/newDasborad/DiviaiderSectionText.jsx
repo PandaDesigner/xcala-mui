@@ -15,7 +15,7 @@ const ContainerDivaider = styled(Stack)({
 	padding: "0px",
 	boxSizing: "border-box",
 	width: "100%",
-	maxWidth: "1398px",
+	//maxWidth: "1398px",
 	marginBottom: "20px",
 });
 const TitelDivaiderContent = styled(Stack)({
@@ -107,7 +107,7 @@ const ContenTime = styled(Typography)({
 
 export const DiviaiderSectionText = () => {
 	return (
-		<ContainerDivaider maxWidth={"1398px"}>
+		<ContainerDivaider >
 			<TitelDivaiderContent
 				justifyContent={{
 					xs: "center",

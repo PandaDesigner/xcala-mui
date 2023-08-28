@@ -35,7 +35,7 @@ const TitelCards = styled(Stack)({
 	isolation: "isolate",
 	flexDirection: "row",
 	width: "100%",
-	maxWidth: "374px",
+	//maxWidth: "374px",
 	justifyContent: "flex-start",
 	alignItems: "center",
 	padding: "0px",
@@ -139,7 +139,7 @@ export const BodyCardsContainer = ({
 				</Stack>
 			</Stack>
 			<TypeOfCurrency typeCurrency={typeCurrency} />
-			<CardsDescription funDescription={funDescription} />
+			{/*<CardsDescription funDescription={funDescription} />*/}
 			<CardsButtomGroup />
 		</BodyContainers>
 	);
