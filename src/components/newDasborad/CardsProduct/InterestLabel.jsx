@@ -5,8 +5,9 @@ import iconDeuda from "../../../assets/images/Symbol/intereses/icono-deuda.svg";
 import iconVenture from "../../../assets/images/Symbol/intereses/icono-venture.svg";
 import iconCapital from "../../../assets/images/Symbol/intereses/icono-capital.svg";
 import iconRenta from "../../../assets/images/Symbol/intereses/icono-renta.svg";
+import { useState, useEffect } from "react";
 
-const interestObject = [
+const interestObjects = [
 	{ label: "Retorno Absoluto", icon: iconRetorno },
 	{ label: "Sostenibilidad", icon: iconSostenibility },
 	{ label: "Deuda Privada", icon: iconDeuda },
@@ -15,17 +16,10 @@ const interestObject = [
 	{ label: "Renta Inmobiliaria", icon: iconRenta },
 ];
 
-const HandlerInterest = (intereses) => {
-	return interestObject.filter((item) => intereses === item.label);
-};
-
 const ContentLabel = styled(Chip)({
 	backgroundColor: "rgba(237, 252, 249, 1)",
 	color: "rgba(73, 161, 151, 1)",
-	//alignItems: "center",
-	//justifyContent: "center",
 	padding: "2.421052932739258px 4.263158798217773px",
-	//boxSizing: "border-box",
 	height: "23px",
 	fontStyle: "normal",
 	fontFamily: "Poppins",
@@ -43,9 +37,20 @@ const AvatarLabel = styled("img")({
 	width: "16px",
 });
 
+const HandlerInterests = (intereses) => {
+	const result = interestObjects.find((item) => intereses === item.label);
+	return result;
+};
+
 export const InterestLabel = ({ intereses }) => {
-	console.log(HandlerInterest(intereses));
-	const { label, icon } = HandlerInterest(intereses);
+	const [{ label, icon }, setInsterState] = useState({
+		label: "Retorno Absoluto",
+		icon: iconRetorno,
+	});
+	useEffect(() => {
+		setInsterState(HandlerInterests(intereses));
+	}, []);
+
 	return (
 		<>
 			<ContentLabel

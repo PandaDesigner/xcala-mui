@@ -49,7 +49,7 @@ const HandlerCapital = (str) => {
 			return index === 0 ? leter.toUpperCase() : leter.toLowerCase();
 		})
 		.join("");
-	console.log(resultStr);
+	//console.log(resultStr);
 	return resultStr;
 };
 
@@ -69,11 +69,9 @@ const SectionHeader = styled(Stack)({
 });
 
 const CarrselContent = styled(Box)({
-	//maxWidth: "80%",
-	//maxHeight: { xs: "100%", md: "315px" },
 	maxWidth: { xs: "100%", md: "100%", lg: "1080px" },
 	height: "100%",
-	width: "78%", //{ lg: "78%", xs: '100%' },
+	width: "78%",
 	margin: "0px",
 	backgroundColor: "red",
 	borderRadius: "8px",
@@ -81,7 +79,6 @@ const CarrselContent = styled(Box)({
 
 const SectionCaja = styled(Stack)({
 	width: { md: "100%", sm: "100%", lg: "100%" },
-	//height: "315px",
 	margin: "0px 0px 0px 0px",
 	borderRadius: "8px",
 	backgroundColor: "rgba(255, 255, 255, 1)",
@@ -129,7 +126,6 @@ export const NewDashboard = () => {
 				<SectionHeader
 					gap={"16px"}
 					flexWrap={{ md: "no-wrap", xs: "wrap" }}
-					//maxHeight={{ md: "315px", xs: "100%" }}
 					width={"100%"}
 					justifyContent={"center"}
 					flexDirection={"row"}
@@ -137,10 +133,8 @@ export const NewDashboard = () => {
 					<CarrselContent
 						m={0}
 						justifyContent={"center"}
-						//flexBasis={"auto"}
 						alignItems={"center"}
 						minWidth={{ lg: "78%", xs: "100%" }}
-						//height={"100%"}
 					>
 						<Stack
 							width={"100%"}
@@ -159,7 +153,6 @@ export const NewDashboard = () => {
 					<SectionCaja
 						flex={"1 1 18%"}
 						minWidth={{ lg: "20%", md: "100%", sm: "100%", xs: "100%" }}
-						//maxHeight={{ lg: "315px", sm: "315px" }}
 					>
 						<CajaSection perfil={perfil} cashAmount={cashAmount} />
 					</SectionCaja>
@@ -181,9 +174,18 @@ export const NewDashboard = () => {
 					flexDirection={"row"}
 					justifyContent={"center"}
 				>
-					<CardsFound />
-					<CardsFound />
-					<CardsFound />
+					<CardsFound
+						intereses={"Capital Privado"}
+						motivation={"Generar un ingreso mensual extra"}
+					/>
+					<CardsFound
+						intereses={"Sostenibilidad"}
+						motivation={"Ganar con propósito e impacto"}
+					/>
+					<CardsFound
+						intereses={"Venture Capital/Startups"}
+						motivation={"Hacer crecer mi plata"}
+					/>
 				</Stack>
 
 				<Button variant="contained" color="primary">

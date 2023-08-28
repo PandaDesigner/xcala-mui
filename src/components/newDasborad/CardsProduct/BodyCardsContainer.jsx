@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Stack, Typography, styled } from "@mui/material";
+import { Divider, Stack, Typography, styled } from "@mui/material";
 import { InterestLabel } from "./InterestLabel";
 import { MotivationLabel } from "./MotivationLabel";
 import { TypeOfCurrency } from "./TypeOfCurrency";
@@ -58,7 +58,6 @@ const ReantabilityTitel = styled(Typography)({
 	fontStyle: "normal",
 	fontFamily: "Poppins",
 	fontWeight: "400",
-	//fontSize: "20px",
 	letterSpacing: "0px",
 	textDecoration: "none",
 	textTransform: "none",
@@ -92,7 +91,11 @@ const ExpectedTime = styled(Typography)({
 	margin: "0px",
 });
 
-export const BodyCardsContainer = ({ $typeCurrency, intereses }) => {
+export const BodyCardsContainer = ({
+	$typeCurrency,
+	intereses,
+	motivation,
+}) => {
 	return (
 		<BodyContainers gap={2}>
 			<Stack gap={1}>
@@ -109,7 +112,7 @@ export const BodyCardsContainer = ({ $typeCurrency, intereses }) => {
 				<Divider variant="fullWidth" width="100%" />
 				<Stack flexDirection={"row"} gap={1} flexWrap={"wrap"}>
 					<InterestLabel intereses={intereses} />
-					<MotivationLabel />
+					<MotivationLabel motivation={motivation} />
 				</Stack>
 			</Stack>
 			<TypeOfCurrency $typeCurrency={$typeCurrency} />

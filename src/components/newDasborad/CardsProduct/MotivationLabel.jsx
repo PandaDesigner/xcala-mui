@@ -1,5 +1,14 @@
-import { styled, Stack, Typography, Chip, Avatar } from "@mui/material";
-import iconGrenerar from "../../../assets/images/insert_invitation.svg";
+import { useState, useEffect } from "react";
+import { styled, Chip } from "@mui/material";
+import iconGrenerar from "../../../assets/images/Symbol//motivaciones/icono-generar.svg";
+import iconHacer from "../../../assets/images/Symbol/motivaciones/icon-hacer.svg";
+import iconGanar from "../../../assets/images/Symbol/motivaciones/icons-ganar.svg";
+
+const motivationObj = [
+	{ label: "Hacer crecer mi plata", icon: iconHacer },
+	{ label: "Ganar con propósito e impacto", icon: iconGanar },
+	{ label: "Generar un ingreso mensual extra", icon: iconGrenerar },
+];
 
 const ContentLabel = styled(Chip)({
 	backgroundColor: "rgba(231, 243, 255, 1)",
@@ -8,7 +17,6 @@ const ContentLabel = styled(Chip)({
 	alignItems: "center",
 	justifyContent: "center",
 	padding: "2.421052932739258px 4.263158798217773px",
-	//boxSizing: "border-box",
 	height: "23px",
 	fontStyle: "normal",
 	fontFamily: "Poppins",
@@ -26,15 +34,33 @@ const AvatarLabel = styled("img")({
 	width: "20px",
 });
 
-export const MotivationLabel = () => {
+const HandlerMotivation = (motivation) => {
+	const result = motivationObj.find((item) => motivation === item.label);
+	return result;
+};
+
+export const MotivationLabel = ({ motivation }) => {
+	const [motivationSate, setMotivationState] = useState({
+		label: "Hacer crecer mi plata",
+		icon: iconHacer,
+	});
+
+	console.log(motivation);
+
+	useEffect(() => {
+		setMotivationState(HandlerMotivation(motivation));
+	}, []);
+
+	const { label, icon } = motivationSate;
+
 	return (
 		<>
 			<ContentLabel
-				label={"Generar un ingreso mensual extra "}
+				label={label}
 				//clickable
 				avatar={
 					<AvatarLabel
-						src={iconGrenerar}
+						src={icon}
 						sx={{
 							width: "20px",
 							height: "20px",

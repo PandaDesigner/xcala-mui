@@ -14,7 +14,6 @@ const ContainerDivaider = styled(Stack)({
 	},
 	padding: "0px",
 	boxSizing: "border-box",
-	//height: "65px",
 	width: "100%",
 	maxWidth: "1398px",
 	marginBottom: "20px",
@@ -29,7 +28,6 @@ const TitelDivaiderContent = styled(Stack)({
 	width: "100%",
 	maxWidth: "627px",
 	margin: "0px",
-	//height: "34px",
 });
 
 const IconSectionDivaider = styled("img")({

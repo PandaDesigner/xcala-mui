@@ -27,13 +27,19 @@ const CardsProduct = styled(Stack)({
 });
 
 const $typeCurrency = "USD";
-const intereses = "Venture Capital/Startups";
 
-export const CardsFound = () => {
+export const CardsFound = ({
+	intereses = "Capital Privado",
+	motivation = "Hacer crecer mi plata",
+}) => {
 	return (
 		<CardsProduct>
 			<HeadContainerCards />
-			<BodyCardsContainer $typeCurrency={$typeCurrency} intereses={intereses} />
+			<BodyCardsContainer
+				$typeCurrency={$typeCurrency}
+				intereses={intereses}
+				motivation={motivation}
+			/>
 		</CardsProduct>
 	);
 };
