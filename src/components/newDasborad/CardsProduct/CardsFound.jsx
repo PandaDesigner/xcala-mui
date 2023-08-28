@@ -14,14 +14,26 @@ const CardsProduct = styled(Stack)({
 	overflow: "hidden",
 	width: "100%",
 	height: "100%",
-	maxWidth: "406px",
-	maxHeight: "483.9px",
+	maxWidth: "456px",
+	//maxHeight: "483.9px",
+	minWidth: "316px",
+	cursor: "pointer",
+	transitionDelay: "-2000",
+	transitionDuration: "3000",
+	boxShadow: "0px 0px 4px rgba(80, 80, 80, 0.15)",
+	"&:hover": {
+		boxShadow: "0px 0px 9.828890800476074px rgba(80, 80, 80, 0.25)",
+	},
 });
+
+const $typeCurrency = "USD";
+const intereses = "Venture Capital/Startups";
+
 export const CardsFound = () => {
 	return (
 		<CardsProduct>
 			<HeadContainerCards />
-			<BodyCardsContainer />
+			<BodyCardsContainer $typeCurrency={$typeCurrency} intereses={intereses} />
 		</CardsProduct>
 	);
 };

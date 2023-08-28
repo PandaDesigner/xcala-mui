@@ -14,7 +14,7 @@ const ContainerDivaider = styled(Stack)({
 	},
 	padding: "0px",
 	boxSizing: "border-box",
-	height: "65px",
+	//height: "65px",
 	width: "100%",
 	maxWidth: "1398px",
 	marginBottom: "20px",
@@ -29,7 +29,7 @@ const TitelDivaiderContent = styled(Stack)({
 	width: "100%",
 	maxWidth: "627px",
 	margin: "0px",
-	height: "34px",
+	//height: "34px",
 });
 
 const IconSectionDivaider = styled("img")({
@@ -85,7 +85,6 @@ const TextPromo = styled(Typography)({
 	letterSpacing: "0px",
 	textDecoration: "none",
 	textTransform: "none",
-	flex: "1",
 	width: "100%",
 	margin: "0px",
 	flex: "1 0",
@@ -118,7 +117,7 @@ export const DiviaiderSectionText = () => {
 					md: "flex-start",
 					lg: "flex-start",
 				}}
-				mb={{ sx: "50px", md: "50px" }}
+				//mb={{ sx: "50px", md: "50px" }}
 			>
 				<IconSectionDivaider src={iconSection} alt="icon-section" />
 				<TextSectionFondoSpan
@@ -156,7 +155,7 @@ export const DiviaiderSectionText = () => {
 					Invierte tranquila... Podrás invertir desde $10 mil y sacar tu plata
 					cuando la necesites.
 				</TextPromo>
-				<ContenTime>{`Actualizado${"16/12/2021 - 14:27"}`}</ContenTime>
+				<ContenTime>{`Actualizado ${"16/12/2021 - 14:27"}`}</ContenTime>
 			</DivideSectionText>
 		</ContainerDivaider>
 	);

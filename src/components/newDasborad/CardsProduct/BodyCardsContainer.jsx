@@ -2,6 +2,8 @@ import { Box, Button, Divider, Stack, Typography, styled } from "@mui/material";
 import { InterestLabel } from "./InterestLabel";
 import { MotivationLabel } from "./MotivationLabel";
 import { TypeOfCurrency } from "./TypeOfCurrency";
+import { CardsDescription } from "./CardsDescription";
+import { CardsButtomGroup } from "./CardsButtomGroup";
 
 const BodyContainers = styled(Stack)({
 	backgroundColor: "rgba(255, 255, 255, 1)",
@@ -14,7 +16,6 @@ const BodyContainers = styled(Stack)({
 	padding: "8px 16px 16px 16px",
 	boxSizing: "border-box",
 	height: "100%",
-	maxHeight: "380.07px",
 });
 
 const BottonsIconosPerfile = styled("img")({
@@ -91,36 +92,29 @@ const ExpectedTime = styled(Typography)({
 	margin: "0px",
 });
 
-const Line = styled(Divider)({
-	border: "1px solid rgba(255, 255, 255, 1)",
-	//alignSelf: "stretch",
-	//height: "0px",
-	margin: "10px 0px 0px 0px",
-	//width: "374px",
-});
-
-export const BodyCardsContainer = () => {
+export const BodyCardsContainer = ({ $typeCurrency, intereses }) => {
 	return (
 		<BodyContainers gap={2}>
-			<TitelCards>
-				<BottonsIconosPerfile />
-				<CardsInfo>
-					<ReantabilityTitel fontSize={"clamp(0.96rem, 2vw, 1.2rem)"}>
-						Rentabilidad Esperada
-					</ReantabilityTitel>
-					<RentabilityValue>$0.00</RentabilityValue>
-					<ExpectedTime>(últimos 12 meses)</ExpectedTime>
-				</CardsInfo>
-			</TitelCards>
-			<Divider variant="fullWidth" width="100%" />
-			<Stack flexDirection={"row"} gap={1} flexWrap={"wrap"}>
-				<InterestLabel />
-				<MotivationLabel />
+			<Stack gap={1}>
+				<TitelCards>
+					<BottonsIconosPerfile />
+					<CardsInfo>
+						<ReantabilityTitel fontSize={"clamp(0.96rem, 2vw, 1.2rem)"}>
+							Rentabilidad Esperada
+						</ReantabilityTitel>
+						<RentabilityValue>{`$${0.0}`}</RentabilityValue>
+						<ExpectedTime>(últimos 12 meses)</ExpectedTime>
+					</CardsInfo>
+				</TitelCards>
+				<Divider variant="fullWidth" width="100%" />
+				<Stack flexDirection={"row"} gap={1} flexWrap={"wrap"}>
+					<InterestLabel intereses={intereses} />
+					<MotivationLabel />
+				</Stack>
 			</Stack>
-			<TypeOfCurrency />
-			<Box sx={{ mt: 3, ml: 1, mb: 1 }}>
-				<Button>Add to cart</Button>
-			</Box>
+			<TypeOfCurrency $typeCurrency={$typeCurrency} />
+			<CardsDescription />
+			<CardsButtomGroup />
 		</BodyContainers>
 	);
 };

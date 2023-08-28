@@ -1,5 +1,23 @@
-import { styled, Stack, Typography, Chip, Avatar } from "@mui/material";
-import iconRetorno from "../../../assets/images/icono_retorno.svg";
+import { styled, Chip } from "@mui/material";
+import iconRetorno from "../../../assets/images/Symbol/intereses/icono-renta.svg";
+import iconSostenibility from "../../../assets/images/Symbol/intereses/icono-sotenibilidad.svg";
+import iconDeuda from "../../../assets/images/Symbol/intereses/icono-deuda.svg";
+import iconVenture from "../../../assets/images/Symbol/intereses/icono-venture.svg";
+import iconCapital from "../../../assets/images/Symbol/intereses/icono-capital.svg";
+import iconRenta from "../../../assets/images/Symbol/intereses/icono-renta.svg";
+
+const interestObject = [
+	{ label: "Retorno Absoluto", icon: iconRetorno },
+	{ label: "Sostenibilidad", icon: iconSostenibility },
+	{ label: "Deuda Privada", icon: iconDeuda },
+	{ label: "Venture Capital/Startups", icon: iconVenture },
+	{ label: "Capital Privado", icon: iconCapital },
+	{ label: "Renta Inmobiliaria", icon: iconRenta },
+];
+
+const HandlerInterest = (intereses) => {
+	return interestObject.filter((item) => intereses === item.label);
+};
 
 const ContentLabel = styled(Chip)({
 	backgroundColor: "rgba(237, 252, 249, 1)",
@@ -25,15 +43,17 @@ const AvatarLabel = styled("img")({
 	width: "16px",
 });
 
-export const InterestLabel = () => {
+export const InterestLabel = ({ intereses }) => {
+	console.log(HandlerInterest(intereses));
+	const { label, icon } = HandlerInterest(intereses);
 	return (
 		<>
 			<ContentLabel
-				label={"Retorno Absoluto"}
+				label={label}
 				//clickable
 				avatar={
 					<AvatarLabel
-						src={iconRetorno}
+						src={icon}
 						sx={{ width: "16px", height: "16px", fontSize: 8 }}
 					/>
 				}

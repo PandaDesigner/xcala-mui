@@ -5,6 +5,7 @@ import { GreetingDashboard } from "./GreetingDashboard";
 import backgroundFondo from "../../assets/images/Background-fondo.png";
 import { DiviaiderSectionText } from "./DiviaiderSectionText";
 import { CardsFound } from "./CardsProduct/CardsFound";
+import { CardsButtomGroup } from "./CardsProduct/CardsButtomGroup";
 
 const perfil = "conservador";
 const cashAmount = "10.000.000";
@@ -69,7 +70,7 @@ const SectionHeader = styled(Stack)({
 
 const CarrselContent = styled(Box)({
 	//maxWidth: "80%",
-	maxHeight: { xs: "100%", md: "315px" },
+	//maxHeight: { xs: "100%", md: "315px" },
 	maxWidth: { xs: "100%", md: "100%", lg: "1080px" },
 	height: "100%",
 	width: "78%", //{ lg: "78%", xs: '100%' },
@@ -80,7 +81,7 @@ const CarrselContent = styled(Box)({
 
 const SectionCaja = styled(Stack)({
 	width: { md: "100%", sm: "100%", lg: "100%" },
-	height: "315px",
+	//height: "315px",
 	margin: "0px 0px 0px 0px",
 	borderRadius: "8px",
 	backgroundColor: "rgba(255, 255, 255, 1)",
@@ -128,7 +129,7 @@ export const NewDashboard = () => {
 				<SectionHeader
 					gap={"16px"}
 					flexWrap={{ md: "no-wrap", xs: "wrap" }}
-					maxHeight={{ md: "315px", xs: "100%" }}
+					//maxHeight={{ md: "315px", xs: "100%" }}
 					width={"100%"}
 					justifyContent={"center"}
 					flexDirection={"row"}
@@ -139,7 +140,7 @@ export const NewDashboard = () => {
 						//flexBasis={"auto"}
 						alignItems={"center"}
 						minWidth={{ lg: "78%", xs: "100%" }}
-						height={"100%"}
+						//height={"100%"}
 					>
 						<Stack
 							width={"100%"}
@@ -158,7 +159,7 @@ export const NewDashboard = () => {
 					<SectionCaja
 						flex={"1 1 18%"}
 						minWidth={{ lg: "20%", md: "100%", sm: "100%", xs: "100%" }}
-						maxHeight={{ lg: "315px", sm: "315px" }}
+						//maxHeight={{ lg: "315px", sm: "315px" }}
 					>
 						<CajaSection perfil={perfil} cashAmount={cashAmount} />
 					</SectionCaja>
@@ -169,16 +170,15 @@ export const NewDashboard = () => {
 					actualMount={actualMount}
 					rentabilityMount={rentabilityMount}
 				/>
-				<Box height={{ xs: "190px", md: "50px", lg: "20px" }} />
+				{/*<Box height={{ xs: "190px", md: "50px", lg: "20px" }} />*/}
 
 				<DiviaiderSectionText width={"100%"} />
-				<Box height={{ xs: "190px", md: "50px", lg: "20px" }} />
+
 				<Stack
 					width={"100%"}
 					gap={"16px"}
 					flexWrap={"wrap"}
 					flexDirection={"row"}
-					marginTop={6}
 					justifyContent={"center"}
 				>
 					<CardsFound />
@@ -187,7 +187,7 @@ export const NewDashboard = () => {
 				</Stack>
 
 				<Button variant="contained" color="primary">
-					Agregar
+					Ver más
 				</Button>
 			</Stack>
 		</BackgroundDashboard>

@@ -254,10 +254,10 @@ export const SectionInteraction = ({
 			borderRadius={"8px"}
 			height={"100%"}
 			minHeight={"284px"}
-			maxHeight={"414px"}
+			//maxHeight={"414px"}
 			maxWidth={"1398px"}
 			gap={2}
-			marginTop={{ lg: "0", md: "340px", sm: "8px", xs: "8px" }}
+			//marginTop={{ lg: "0", md: "340px", sm: "8px", xs: "8px" }}
 			flexDirection={{ xs: "column", sm: "column", lg: "row", md: "row" }}
 			justifyContent={{
 				xs: "center",
@@ -265,12 +265,12 @@ export const SectionInteraction = ({
 				md: "flex-start",
 				lg: "flex-start",
 			}}
-			mt={{ xs: "190px", ms: "190px", md: "184px", lg: "16px" }}
+			//mt={{ xs: "190px", ms: "190px", md: "184px", lg: "16px" }}
 		>
 			<Stack
 				sx={{
 					width: { ls: "60%", md: "80%" },
-					height: "100%",
+					//height: "100%",
 					backgroundColor: "rgba(255, 255, 255, 0.42)",
 					minHeight: "414px",
 					backgroundColor: "red",
@@ -300,7 +300,7 @@ export const SectionInteraction = ({
 							<BodyText>
 								<Titulo>Valor Actual</Titulo>
 								<Coin
-									fontSize={"clamp(0.6em, 4vw, 1.4em)"}
+									fontSize={"clamp(0.9em, 2vw, 1.4em)"}
 								>{`$ ${actualMount}`}</Coin>
 							</BodyText>
 						</BodyCards>
@@ -311,7 +311,7 @@ export const SectionInteraction = ({
 							<BodyText>
 								<Titulo>Rentabilidad</Titulo>
 								<Coin
-									fontSize={"clamp(0.6em, 4vw, 1.4em)"}
+									fontSize={"clamp(0.9em, 2vw, 1.4em)"}
 								>{`$ ${rentabilityMount}`}</Coin>
 							</BodyText>
 						</BodyCards>
