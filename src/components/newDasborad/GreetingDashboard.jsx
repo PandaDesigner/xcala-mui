@@ -10,7 +10,7 @@ const TitelDashboards = styled(Stack)({
 	boxSizing: "border-box",
 	height: "48px",
 	width: "100%",
-	maxWidth: "1385px",
+	//maxWidth: "1385px",
 });
 
 const TitelType = styled(Typography)({
