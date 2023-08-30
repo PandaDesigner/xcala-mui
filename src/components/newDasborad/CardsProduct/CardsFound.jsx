@@ -1,4 +1,4 @@
-import { Stack, styled } from "@mui/material";
+import { Grid, Stack, styled } from "@mui/material";
 import { HeadContainerCards } from "./HeadContainerCards";
 import { BodyCardsContainer } from "./BodyCardsContainer";
 const CardsProduct = styled(Stack)({
@@ -14,7 +14,7 @@ const CardsProduct = styled(Stack)({
 	overflow: "hidden",
 	width: "100%",
 	height: "100%",
-	maxWidth: "456px",
+	//maxWidth: "456px",
 	minWidth: "316px",
 	//cursor: "pointer",
 	transitionDelay: "-2000",
@@ -37,6 +37,8 @@ export const CardsFound = ({
 	funDescription = "Lorem ipsum dolor sit amet consectetur. Congue hendrerit et lacinia donec tristique. A sit commodo fusce viverra",
 }) => {
 	return (
+		<Grid item md={4} xs={8}>
+
 		<CardsProduct>
 			<HeadContainerCards fundName={fundName} fundPerfile={fundPerfile} />
 			<BodyCardsContainer
@@ -47,7 +49,8 @@ export const CardsFound = ({
 				typeCurrency={typeCurrency}
 				rentabilityFound={rentabilityFound}
 				funDescription={funDescription}
-			/>
+				/>
 		</CardsProduct>
+</Grid>
 	);
 };
