@@ -170,7 +170,6 @@ export const NewDashboard = () => {
 					width={"100%"}
 					rowSpacing={2}
 					columnSpacing={2}
-					Spacing={{ xs: 1, sm: 1, md: 2, lg: 2 }}
 					columns={{ xs: 4, sm: 4, md: 8, lg: 8 }}
 					container
 					
