@@ -9,7 +9,7 @@ const colorTag = (typeCurrency) => {
 		: "rgba(107, 110, 199, 0.5)";
 };
 
-const TentabilidadContainer = styled(Stack)({
+export const TentabilidadContainer = styled(Stack)({
 	borderRadius: "8px",
 	position: "relative",
 	isolation: "isolate",

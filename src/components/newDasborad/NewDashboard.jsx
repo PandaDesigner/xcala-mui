@@ -6,6 +6,9 @@ import backgroundFondo from "../../assets/images/Background-fondo.png";
 import { DiviaiderSectionText } from "./DiviaiderSectionText";
 import { CardsFound } from "./CardsProduct/CardsFound";
 import { CardsButtomGroup } from "./CardsProduct/CardsButtomGroup";
+import { BackgroundDashboard, CarrselContent, SectionCaja, SectionHeader } from "./DasboardComponent"
+import { HandlerCapital } from "../../helper/FuntionesHelpers";
+//import { ProductView } from "../newViewPortafolio/ProductView";
 
 const perfil = "conservador";
 const cashAmount = "10.000.000";
@@ -43,69 +46,14 @@ const portfolio = null; /*[
 
 /**HandelFuntion */
 
-const HandlerCapital = (str) => {
-	const resultStr = [...str]
-		.map((leter, index) => {
-			return index === 0 ? leter.toUpperCase() : leter.toLowerCase();
-		})
-		.join("");
-	//console.log(resultStr);
-	return resultStr;
-};
+
 
 /**FIN */
 
-const SectionHeader = styled(Stack)({
-	flexDirection: { lg: "row", md: "column" },
-	width: "100%",
-	height: "100%",
-	position: "relative",
-	justifyContent: { md: "flex-start", xs: "center" },
-	alignItems: "flex-start",
-	padding: "0px",
-	boxSizing: "border-box",
-	//maxWidth: "1398px",
-	isolation: "isolate",
-});
 
-const CarrselContent = styled(Box)({
-	maxWidth: { xs: "100%", md: "100%", lg: "1080px" },
-	height: "100%",
-	width: "78%",
-	margin: "0px",
-	backgroundColor: "red",
-	borderRadius: "8px",
-});
-
-const SectionCaja = styled(Stack)({
-	width: { md: "100%", sm: "100%", lg: "100%" },
-	margin: "0px 0px 0px 0px",
-	borderRadius: "8px",
-	backgroundColor: "rgba(255, 255, 255, 1)",
-	boxShadow: "0px 0px 8px rgba(61, 64, 75, 0.15)",
-	overflow: "hidden",
-});
-
-const BackgroundDashboard = styled(Stack)({
-	position: "absolute",
-	background: `url(${backgroundFondo})`,
-	backgroundOrigin: "top",
-	backgroundSize: "cover",
-	backgroundPosition: "top",
-	backgroundRepeat: "no-repeat",
-	top: "0",
-	left: "0",
-	right: "0",
-	width: "100%",
-	objectFit: "cover",
-	alignItems: "center",
-	gap: "16px",
-	margin: "0px",
-	padding: "0px",
-});
 
 export const NewDashboard = () => {
-	return (
+	return (<>
 		<BackgroundDashboard>
 			<Stack
 				width={"90%"}
@@ -172,7 +120,6 @@ export const NewDashboard = () => {
 					columnSpacing={2}
 					columns={{ xs: 4, sm: 4, md: 8, lg: 8 }}
 					container
-					
 				>
 					<CardsFound
 						profileCards="Conservador"
@@ -183,9 +130,7 @@ export const NewDashboard = () => {
 						motivation={"Generar ingreso extra"}
 						foundTerm="Anualizado a largo plazo"
 						fundPerfile={true}
-						funDescription={
-							"Fondo que selecciona e invierte activamente en los mejores gestores globales Inmobiliarios. A su vez."
-						}
+						
 					/>
 					<CardsFound
 						profileCards="Moderado"
@@ -196,9 +141,7 @@ export const NewDashboard = () => {
 						motivation={"Hacer crecer mi plata"}
 						foundTerm="Anualizado a largo plazo"
 						fundPerfile={true}
-						funDescription={
-							"Fondo que selecciona e invierte activamente en los mejores gestores de deuda privada listados en este fondo..."
-						}
+						
 					/>
 					<CardsFound
 						profileCards="Agresivo"
@@ -209,9 +152,7 @@ export const NewDashboard = () => {
 						motivation={"Hacer crecer mi plata"}
 						foundTerm="Anualizado a largo plazo"
 						fundPerfile={false}
-						funDescription={
-							"Fondo que replica el índice de Venture Capital de Estados Unidos. Venture Capital son todas aquellas inversiones..."
-						}
+						
 					/>
 				</Grid>
 
@@ -220,5 +161,7 @@ export const NewDashboard = () => {
 				</Button>
 			</Stack>
 		</BackgroundDashboard>
+		
+		</>
 	);
 };

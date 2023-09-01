@@ -15,7 +15,7 @@ const SectionCajaContainer = styled(Stack)({
 	minHeight: "315px",
 	maxHeight: "315px",
 	maxWidth: "100%",
-	justifyContent: "space-between",
+	justifyContent: "space-around",
 	alignItems: "center",
 	padding: "8px 16px",
 	boxSizing: "border-box",
@@ -110,13 +110,13 @@ const ContainerCaja = styled(Stack)({
 	position: "relative",
 	isolation: "isolate",
 	flexDirection: "column",
-	justifyContent: "space-between",
+	justifyContent: "center",
 	alignItems: "center",
 	padding: "0px",
-	boxSizing: "border-box",
+	boxSizing: "flex-end",
 	alignSelf: "stretch",
 	margin: "0px",
-	height: "90px",
+	//height: "90px",
 	width: "100%",
 });
 
@@ -158,11 +158,11 @@ export const CajaSection = ({ perfil, cashAmount }) => {
 	return (
 		<>
 			<SectionCajaContainer>
-				<HeaderMenu>
+				{/* <HeaderMenu>
 					<Menu>
 						<Icons src={IconsMenus} alt='icons Menu' />
 					</Menu>
-				</HeaderMenu>
+				</HeaderMenu> */}
 				<AvatarSection perfil={perfil} />
 				{cashAmount > "0" ? (
 					<>
@@ -172,9 +172,9 @@ export const CajaSection = ({ perfil, cashAmount }) => {
 						</Titel>
 						<ContainerCaja>
 							<BtnCargar>Carga aquí tu caja</BtnCargar>
-							<BtnActualiza disabled variant='text'>
+							{/* <BtnActualiza disabled variant='text'>
 								Actualizar Caja
-							</BtnActualiza>
+							</BtnActualiza> */}
 						</ContainerCaja>
 					</>
 				) : (
