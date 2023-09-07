@@ -2,12 +2,12 @@ import { useState } from "react";
 import { SearchFilter } from "./FilterSection.components.jsx";
 import { TextField } from "@mui/material";
 
-const [shearch, setShearch] = useState("");
 
 export const FilterShearch = () => {
+	const [shearch, setShearch] = useState("");
 	return (
 		<>
-			<form>
+			<SearchFilter>
 				<TextField
 					id="outlined-basic"
 					label="Search"
@@ -15,7 +15,7 @@ export const FilterShearch = () => {
 					value={shearch}
 					onChange={(e) => setShearch(e.target.value)}
 				/>
-			</form>
+			</SearchFilter>
 		</>
 	);
 };

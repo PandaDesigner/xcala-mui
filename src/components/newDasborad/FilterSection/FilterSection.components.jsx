@@ -30,7 +30,7 @@ export const ContentFilter = styled(Stack)({
 	//width: '1352px',
 });
 
-const SearchFilter = styled("form")({
+export const SearchFilter = styled("from")({
 	position: "relative",
 	isolation: "isolate",
 	//flexDirection: 'row',
@@ -40,4 +40,4 @@ const SearchFilter = styled("form")({
 	//alignItems: 'flex-start',
 	padding: "0px 8px 0px 0px",
 	boxSizing: "border-box",
-})`varinat="outlined"`;
+});

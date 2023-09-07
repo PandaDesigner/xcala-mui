@@ -7,6 +7,9 @@ import { CajaSection } from "../newDasborad/CajaSection.jsx";
 import { DiviaiderSectionText } from "../newDasborad/DiviaiderSectionText.jsx";
 import { CardsFound } from "../newDasborad/CardsProduct/CardsFound.jsx";
 
+import { SectionFilter } from "../../components/newDasborad/FilterSection/SectionFilter.jsx";
+
+
 
 const name = "Pedro"
 const perfil = "conservador"
@@ -67,6 +70,7 @@ export const ProductView = () => {
             <CajaSection perfil={perfil} cashAmount={cashAmount} />
           </SectionCaja>
         </SectionHeader>
+        <SectionFilter/>
 
         <DiviaiderSectionText width={"100%"} />
 
