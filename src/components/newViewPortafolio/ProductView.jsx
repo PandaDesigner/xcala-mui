@@ -1,5 +1,10 @@
 import { Grid, Stack, Typography } from "@mui/material";
-import { BackgroundDashboard, CarrselContent, SectionCaja, SectionHeader } from "../newDasborad/DasboardComponent.jsx";
+import {
+  BackgroundDashboard,
+  CarrselContent,
+  SectionCaja,
+  SectionHeader,
+} from "../newDasborad/DasboardComponent.jsx";
 import { GreetingDashboard } from "../newDasborad/GreetingDashboard.jsx";
 import { HandlerCapital } from "../../helper/FuntionesHelpers.js";
 import { CajaSection } from "../newDasborad/CajaSection.jsx";
@@ -9,15 +14,12 @@ import { CardsFound } from "../newDasborad/CardsProduct/CardsFound.jsx";
 
 import { SectionFilter } from "../../components/newDasborad/FilterSection/SectionFilter.jsx";
 
-
-
-const name = "Pedro"
-const perfil = "conservador"
-const cashAmount = "10.000.000"
-
+const name = "Pedro";
+const perfil = "conservador";
+const cashAmount = "10.000.000";
 
 export const ProductView = () => {
-	return (
+  return (
     <BackgroundDashboard>
       <Stack
         width={"90%"}
@@ -70,10 +72,11 @@ export const ProductView = () => {
             <CajaSection perfil={perfil} cashAmount={cashAmount} />
           </SectionCaja>
         </SectionHeader>
-        <SectionFilter/>
 
-        <DiviaiderSectionText width={"100%"} />
+        <SectionFilter />
 
+        {/* <DiviaiderSectionText width={"100%"} />
+         */}
         <Grid
           width={"100%"}
           rowSpacing={2}
@@ -81,40 +84,36 @@ export const ProductView = () => {
           columns={{ xs: 4, sm: 8, md: 8, lg: 12 }}
           container
         >
-			<CardsFound
-						profileCards="Conservador"
-						fundName="Global Real Estate Income"
-						rentabilityFound={"10,00"}
-						typeCurrency={"CPL"}
-						intereses={"Renta Inmobiliaria"}
-						motivation={"Generar ingreso extra"}
-						foundTerm="Anualizado a largo plazo"
-						fundPerfile={true}
-						
-					/>
-					<CardsFound
-						profileCards="Moderado"
-						fundName="Balanceado Global"
-						rentabilityFound={"8,90"}
-						typeCurrency={"USD"}
-						intereses={"Retorno Absoluto"}
-						motivation={"Hacer crecer mi plata"}
-						foundTerm="Anualizado a largo plazo"
-						fundPerfile={true}
-						
-					/>
-					<CardsFound
-						profileCards="Agresivo"
-						fundName="US Venture Opportunities"
-						rentabilityFound={"25,00"}
-						typeCurrency="CPL"
-						intereses={"Venture Capital/Startups"}
-						motivation={"Hacer crecer mi plata"}
-						foundTerm="Anualizado a largo plazo"
-						fundPerfile={false}
-						
-					/>
-          
+          <CardsFound
+            profileCards="Conservador"
+            fundName="Global Real Estate Income"
+            rentabilityFound={"10,00"}
+            typeCurrency={"CPL"}
+            intereses={"Renta Inmobiliaria"}
+            motivation={"Generar ingreso extra"}
+            foundTerm="Anualizado a largo plazo"
+            fundPerfile={true}
+          />
+          <CardsFound
+            profileCards="Moderado"
+            fundName="Balanceado Global"
+            rentabilityFound={"8,90"}
+            typeCurrency={"USD"}
+            intereses={"Retorno Absoluto"}
+            motivation={"Hacer crecer mi plata"}
+            foundTerm="Anualizado a largo plazo"
+            fundPerfile={true}
+          />
+          <CardsFound
+            profileCards="Agresivo"
+            fundName="US Venture Opportunities"
+            rentabilityFound={"25,00"}
+            typeCurrency="CPL"
+            intereses={"Venture Capital/Startups"}
+            motivation={"Hacer crecer mi plata"}
+            foundTerm="Anualizado a largo plazo"
+            fundPerfile={false}
+          />
         </Grid>
       </Stack>
     </BackgroundDashboard>
