@@ -8,7 +8,7 @@ const HeadCards = styled(Stack)({
 	flexDirection: "column",
 	justifyContent: "flex-start",
 	alignItems: "flex-start",
-	padding: "16px 5%",
+	padding: "16px 32px",
 	boxSizing: "border-box",
 	flex: "1",
 	margin: "0px",
@@ -37,7 +37,7 @@ const MotivacionesGenerarl = styled(Stack)({
 	flexDirection: "row",
 	justifyContent: "center",
 	alignItems: "center",
-	//padding: "2.5px 8px",
+	padding: "2.5px 8px",
 	boxSizing: "border-box",
 	height: "22px",
 	margin: "0px",
@@ -92,10 +92,13 @@ const HeadTitel = styled(Typography)({
 	lineHeight: "119.49999332427979%",
 	textTransform: "none",
 	alignSelf: "stretch",
-	//margin: "18px 0px 0px 0px",
+	margin: "18px 0px 0px 0px",
 });
 
-export const HeadContainerCards = ({ fundName, fundPerfile }) => {
+export const HeadContainerCardsPorfolio = ({
+	fundName = "Portafolio One",
+	fundPerfile = false,
+}) => {
 	return (
 		<>
 			<HeadCards>

@@ -6,8 +6,8 @@ export const CardsProduct = styled(Stack)({
 	position: "relative",
 	isolation: "isolate",
 	flexDirection: "column",
-	justifyContent: "flex-start",
-	alignItems: "flex-start",
+	justifyContent: "start",
+	alignItems: "space-between",
 	padding: "0px",
 	boxSizing: "border-box",
 	overflow: "hidden",
@@ -65,8 +65,8 @@ export const CardsInfo = styled(Stack)({
 	boxSizing: "border-box",
 	flex: "1",
 	margin: "0px 0px 0px 13px",
-	height: "72px",
-	width: "280px",
+	//height: "72px",
+	width: "100%",
 });
 
 export const ReantabilityTitel = styled(Typography)({
@@ -81,6 +81,7 @@ export const ReantabilityTitel = styled(Typography)({
 	textDecoration: "none",
 	textTransform: "none",
 	alignSelf: "stretch",
+	lineHeight: "0px",
 	margin: "0px",
 });
 export const RentabilityValue = styled(Typography)({
@@ -90,6 +91,7 @@ export const RentabilityValue = styled(Typography)({
 	fontFamily: "Poppins",
 	fontWeight: "600",
 	fontSize: "22px",
+	lineHeight: "0px",
 	letterSpacing: "0px",
 	textDecoration: "none",
 	textTransform: "none",
@@ -105,6 +107,7 @@ export const ExpectedTime = styled(Typography)({
 	fontWeight: "400",
 	fontSize: "10px",
 	letterSpacing: "0px",
+	lineHeight: "0px",
 	textDecoration: "none",
 	textTransform: "none",
 	margin: "0px",

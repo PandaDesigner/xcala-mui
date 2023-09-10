@@ -4,11 +4,16 @@ import { MotivationLabel } from "./MotivationLabel";
 import { TypeOfCurrency } from "./TypeOfCurrency";
 import { CardsButtomGroup } from "./CardsButtomGroup";
 
-import { BodyContainers, BottonsIconosPerfile, CardsInfo, ExpectedTime, ReantabilityTitel, RentabilityValue, TitelCards } from "./CardsProductComponents";
+import {
+	BodyContainers,
+	BottonsIconosPerfile,
+	CardsInfo,
+	ExpectedTime,
+	ReantabilityTitel,
+	RentabilityValue,
+	TitelCards,
+} from "./CardsProductComponents";
 import { handelProfileIcon } from "../../../helper/FuntionesHelpers";
-
-
-
 
 export const BodyCardsContainer = ({
 	profileCards,
@@ -17,14 +22,13 @@ export const BodyCardsContainer = ({
 	motivation,
 	rentabilityFound,
 	foundTerm,
-	
 }) => {
 	return (
 		<BodyContainers gap={2}>
 			<Stack gap={1} width={"100%"}>
 				<TitelCards>
 					<BottonsIconosPerfile src={handelProfileIcon(profileCards)} />
-					<CardsInfo>
+					<CardsInfo spacing={"20px"}>
 						<ReantabilityTitel fontSize={"clamp(0.96rem, 2vw, 1.2rem)"}>
 							Rentabilidad Esperada
 						</ReantabilityTitel>
@@ -39,7 +43,7 @@ export const BodyCardsContainer = ({
 				</Stack>
 			</Stack>
 			<TypeOfCurrency typeCurrency={typeCurrency} />
-			
+
 			<CardsButtomGroup />
 		</BodyContainers>
 	);

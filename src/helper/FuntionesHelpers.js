@@ -15,8 +15,8 @@ export const HandlerCapital = (str) => {
     return resultStr;
 };
 
-export const handelProfileIcon = (rofileCards) => {
-    switch (rofileCards) {
+export const handelProfileIcon = (ProfileCards) => {
+    switch (ProfileCards) {
         case "Agresivo":
             return iconsAgresivo;
         case "Conservador":
