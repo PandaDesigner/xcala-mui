@@ -66,7 +66,7 @@ const printLabelData = (data) => {
 
 export const CardsPorfolio = ({
 	rentabilityFound = "20",
-	foundTerm = "(Anualizado a largo plazo)",
+	foundTerm = "Anualizado a largo plazo",
 	ProfileCards = "Agresivo",
 }) => {
 	//console.log(miData);
