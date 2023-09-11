@@ -21,40 +21,22 @@ const datasets = [
 ]; */
 
 const miOptions = {
-	maintainAspectRatio: true, // Para permitir dimensiones personalizadas
-	plugins: {
-		legend: {
-			display: false,
-		},
-	},
+  maintainAspectRatio: true, // Para permitir dimensiones personalizadas
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
 };
 
-const CharstComponet = (props) => {
-	const [data, setData] = useState({
-		labels: [
-			"Global Real Estate",
-			"Balnace Global",
-			"US Venture Opportunities",
-		],
-		datasets: [
-			{
-				label: "Fondo",
-				data: [50, 15, 35],
-				backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-				hoverBackgroundColor: ["#FF1384", "#31A2EB", "#FFCE16"],
-			},
-		],
-	});
-	useEffect(() => {
-		console.log(props.data);
-		//setData(props.data);
-	}, []);
+const CharstComponet = ({ miData }) => {
+  const [data, setData] = useState(miData);
 
-	return (
-		<Stack height={"100%"}>
-			<Doughnut height={100} width={100} data={data} options={miOptions} />
-		</Stack>
-	);
+  return (
+    <Stack height={"100%"}>
+      <Doughnut height={100} width={100} data={data} options={miOptions} />
+    </Stack>
+  );
 };
 
 export default CharstComponet;
