@@ -9,12 +9,11 @@ import { GreetingDashboard } from "../newDasborad/GreetingDashboard.jsx";
 import { HandlerCapital } from "../../helper/FuntionesHelpers.js";
 import { CajaSection } from "../newDasborad/CajaSection.jsx";
 
-import { DiviaiderSectionText } from "../newDasborad/DiviaiderSectionText.jsx";
-import { CardsFound } from "../newDasborad/CardsProduct/CardsFound.jsx";
 
 import { SectionFilter } from "../../components/newDasborad/FilterSection/SectionFilter.jsx";
 
 import { CardsPorfolio } from "../newDasborad/CardsPorfolio/CardsPorfolio.jsx";
+import { CardMovilPortafolio } from "../newDasborad/CardsPorfolio/CardMovilPortafolio.jsx";
 
 const name = "Pedro";
 const perfil = "conservador";
@@ -92,6 +91,7 @@ export const ProductView = () => {
 					<CardsPorfolio />
 					<CardsPorfolio />
 				</Grid>
+				<CardMovilPortafolio/>
 			</Stack>
 		</BackgroundDashboard>
 	);
