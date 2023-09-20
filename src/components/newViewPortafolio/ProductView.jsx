@@ -9,11 +9,10 @@ import { GreetingDashboard } from "../newDasborad/GreetingDashboard.jsx";
 import { HandlerCapital } from "../../helper/FuntionesHelpers.js";
 import { CajaSection } from "../newDasborad/CajaSection.jsx";
 
-import { DiviaiderSectionText } from "../newDasborad/DiviaiderSectionText.jsx";
-import { CardsFound } from "../newDasborad/CardsProduct/CardsFound.jsx";
 
 import { SectionFilter } from "../../components/newDasborad/FilterSection/SectionFilter.jsx";
 import { CardsPorfolio } from "../newDasborad/CardsPorfolio/CardsPorfolio.jsx";
+import { CardMovilPortafolio } from "../newDasborad/CardsPorfolio/CardMovilPortafolio.jsx";
 
 const name = "Pedro";
 const perfil = "conservador";
@@ -145,42 +144,18 @@ export const ProductView = () => {
         {/* <DiviaiderSectionText width={"100%"} />
          */}
 
-        <Grid
-          width={"100%"}
-          rowSpacing={2}
-          columnSpacing={2}
-          columns={{ xs: 4, sm: 8, md: 8, lg: 12 }}
-          container
-        >
-          {dataPortafolio.map(
-            ({
-              fundName,
-              fundPerfile,
-              rentabilityFound,
-              ProfileCards,
-              dataChart,
-            }) => {
-              console.log(
-                fundName,
-                fundPerfile,
-                rentabilityFound,
-                ProfileCards,
-                dataChart
-              );
-              return (
-                <CardsPorfolio
-                  key={fundName}
-                  fundName={fundName}
-                  fundPerfile={fundPerfile}
-                  rentabilityFound={rentabilityFound}
-                  ProfileCards={ProfileCards}
-                  dataChart={dataChart}
-                />
-              );
-            }
-          )}
-        </Grid>
-      </Stack>
-    </BackgroundDashboard>
-  );
+				<Grid
+					width={"100%"}
+					rowSpacing={2}
+					columnSpacing={2}
+					columns={{ xs: 4, sm: 8, md: 8, lg: 12 }}
+					container
+				>
+					<CardsPorfolio />
+					<CardsPorfolio />
+					<CardsPorfolio />
+				</Grid>
+			</Stack>
+		</BackgroundDashboard>
+	);
 };
