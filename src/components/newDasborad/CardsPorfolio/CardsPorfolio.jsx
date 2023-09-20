@@ -92,7 +92,7 @@ export const CardsPorfolio = ({
           </TitelCards>
           <Divider variant="fullWidth" width="100%" />
         </Stack>
-        <Stack width={"93%"} borderRadius={2} backgroundColor={"#E7F3FF"}>
+        <Stack width={"93%"} borderRadius={2} backgroundColor={"#E7F3FF"}> {/*Este es el mardito */}
           <Stack
             padding={2}
             flexDirection={"row"}
