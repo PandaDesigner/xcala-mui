@@ -151,9 +151,12 @@ export const ProductView = () => {
 					columns={{ xs: 4, sm: 8, md: 8, lg: 12 }}
 					container
 				>
-					<CardsPorfolio />
-					<CardsPorfolio />
-					<CardsPorfolio />
+					{dataPortafolio.map(item =>{
+            const {fundName, fundPerfile, rentabilityFound, ProfileCards, dataChart} = item
+            return <CardsPorfolio fundName={fundName} fundPerfile={fundPerfile} rentabilityFound={rentabilityFound} ProfileCards={ProfileCards} dataChart={dataChart} key={fundName} />
+
+
+          })}
 				</Grid>
 			</Stack>
 		</BackgroundDashboard>

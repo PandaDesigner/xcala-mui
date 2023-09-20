@@ -23,9 +23,11 @@ const miData = {
       hoverBackgroundColor: ["#FF1384", "#31A2EB", "#FFCE16"],
     },
   ],
-};
+}; 
 
-const printLabelData = ({ labels, datasets }) => {
+
+
+const printLabelData = ({labels, datasets}) => {
   return datasets.map((item, index) => {
     const {
       label: titelLabel,
@@ -80,7 +82,7 @@ export const CardsPorfolio = ({
           <TitelCards>
             <BottonsIconosPerfile src={handelProfileIcon(ProfileCards)} />
             <CardsInfo spacing={"20px"}>
-              <ExpectedTime>{`Participación de ${miData.labels.length} Fondos`}</ExpectedTime>
+              <ExpectedTime>{`Participación de ${dataChart.labels.length} Fondos`}</ExpectedTime>
               <ReantabilityTitel fontSize={"clamp(0.96rem, 2vw, 1.2rem)"}>
                 Rentabilidad Esperada
               </ReantabilityTitel>
@@ -109,11 +111,11 @@ export const CardsPorfolio = ({
                 {printLabelData(dataChart)}
               </Stack>
             </Stack>
-            <CharstComponet
+             <CharstComponet
               dataChart={dataChart}
               width={"100%"}
               height={"100%"}
-            />
+            /> 
           </Stack>
         </Stack>
         <Stack width={"93%"} paddingBottom={"16px"}>
