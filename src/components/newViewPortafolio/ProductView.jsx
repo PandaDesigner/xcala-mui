@@ -21,7 +21,7 @@ const dataPortafolio = [
     fundName: 'Portafolio One',
     fundPerfile: true,
     rentabilityFound: '15',
-    ProfileCards: 'Agresivo',
+    profileCards: 'Agresivo',
     dataChart: {
       labels: [
         'Global Real Estate',
@@ -42,7 +42,7 @@ const dataPortafolio = [
     fundName: 'Portafolio Two',
     fundPerfile: true,
     rentabilityFound: '35',
-    ProfileCards: 'Agresivo',
+    profileCards: 'Agresivo',
     dataChart: {
       labels: [
         'Global Real Estate',
@@ -63,7 +63,7 @@ const dataPortafolio = [
     fundName: 'Portafolio Three',
     fundPerfile: true,
     rentabilityFound: '50',
-    ProfileCards: 'Agresivo',
+    profileCards: 'Agresivo',
     dataChart: {
       labels: [
         'Global Real Estate',
@@ -150,9 +150,24 @@ export const ProductView = () => {
           columns={{xs: 4, sm: 8, md: 8, lg: 12}}
           container
         >
-          <CardsPorfolio />
-          <CardsPorfolio />
-          <CardsPorfolio />
+          {dataPortafolio.map(
+            ({
+              fundName,
+              fundPerfile,
+              rentabilityFound,
+              profileCards,
+              dataChart,
+            }) => (
+              <CardsPorfolio
+                key={fundName}
+                fundName={fundName}
+                fundPerfile={fundPerfile}
+                rentabilityFound={rentabilityFound}
+                profileCards={profileCards}
+                dataChart={dataChart}
+              />
+            )
+          )}
         </Grid>
       </Stack>
     </BackgroundDashboard>
