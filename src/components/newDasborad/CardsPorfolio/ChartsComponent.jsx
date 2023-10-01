@@ -1,10 +1,10 @@
-import { React } from "react";
-import { Doughnut } from "react-chartjs-2";
-import { Stack, Typography } from "@mui/material";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js/auto";
-import { useState } from "react";
+import {React} from 'react'
+import {Stack, Typography} from '@mui/material'
+import {useState} from 'react'
+import {Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js/auto'
+import {Doughnut} from 'react-chartjs-2'
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend)
 /* 
 const labels = [
 	"Global Real Estate",
@@ -27,14 +27,24 @@ const miOptions = {
       display: false,
     },
   },
-};
+}
 
-const CharstComponet = ({ dataChart }) => {
+const CharstComponet = ({dataChart, options = miOptions}) => {
   return (
-    <Stack height={"100%"}>
-      <Doughnut height={100} width={100} data={dataChart} options={miOptions} />
+    <Stack
+      height={'100%'}
+      width={'100%'}
+      justifyContent={'center'}
+      alignItems={'center'}
+    >
+      <Doughnut
+        height={'100%'}
+        width={'100%'}
+        data={dataChart}
+        options={miOptions}
+      />
     </Stack>
-  );
-};
+  )
+}
 
-export default CharstComponet;
+export default CharstComponet
