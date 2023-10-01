@@ -111,7 +111,7 @@ export const HeaderPorfolio = ({
     <BackgroundColor>
       <ContentApp
         direction={{md: 'row', xs: 'column'}}
-        paddingX={{md: 4, xs: 2}}
+        //paddingX={{md: 4, xs: 2}}
       >
         <Stack
           direction={{md: 'row', xs: 'center'}}
