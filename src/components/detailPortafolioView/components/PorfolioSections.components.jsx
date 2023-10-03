@@ -219,7 +219,7 @@ export const KeyDescription = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: '16px',
+  fontSize: '18px',
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',

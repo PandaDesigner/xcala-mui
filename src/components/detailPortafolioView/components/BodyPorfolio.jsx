@@ -68,6 +68,7 @@ const options = {
               (value / data.datasets[0].data.reduce((a, b) => a + b)) *
               100
             ).toFixed(2) + '%'
+          console.log(porcentaje)
 
           // Devolver la etiqueta personalizada
           return `${label}: ${porcentaje}`
