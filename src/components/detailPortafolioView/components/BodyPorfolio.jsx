@@ -10,6 +10,9 @@ import {
 } from './PorfolioSections.components'
 import CharstComponet from '../../newDasborad/CardsPorfolio/ChartsComponent'
 import {DescriptionComponent} from './DescriptionComponent'
+import {DisclaimerPerfil} from './DisclaimerPerfil'
+import {DistributionValue} from './DistributionValue'
+import {BtnGroup} from './distributionOfFunds/btnGroup'
 
 const labels = [
   'HMC Deuda Privada Pesos',
@@ -77,15 +80,24 @@ const options = {
     },
   },
 }
-export const BodyPorfolio = () => {
+export const BodyPorfolio = ({riskProfile}) => {
   return (
     <ContentApp sx={{flexDirection: 'column', marginTop: '100px', gap: '50px'}}>
+      <DisclaimerPerfil riskProfile={riskProfile} />
       <Typography variant='body1' margin={{md: '0', xs: '0 2rem'}}>
         Este portafolio fue generado mediante la metodología de Resampled
         efficient frontier, con el objetivo de buscar la combinación óptima de
         fondos de acuerdo al perfil de riesgo. [+].
       </Typography>
-      <SectionDataPorfolio minHeight={'400px'}>
+
+      <SectionDataPorfolio
+        minHeight={'400px'}
+        gap={4}
+        flexDirection={{md: 'row', sm: 'column', xs: 'column'}}
+        justifyContent={{md: 'space-between', xs: 'center'}}
+        alignItems={{md: 'center', xs: 'center'}}
+        padding={{md: '0', xs: '0 2rem'}}
+      >
         <ChartsPorfolio
           height={'100%'}
           width={'50%'}
@@ -96,25 +108,27 @@ export const BodyPorfolio = () => {
             <CharstComponet dataChart={{labels, datasets}} options={options} />
           </DataCharts>
         </ChartsPorfolio>
-        <InfoPorfolio width={'50%'}>
-          <TitelDataPorfolio>Condiciones generales</TitelDataPorfolio>
-          <DescriptionDataPorfo gap={2}>
-            <DescriptionComponent KeyDescriptions='Moneda:' KeyValues='Pesos' />
-            <DescriptionComponent
-              KeyDescriptions='Duración:'
-              KeyValues='Indefinido'
-            />
-            <DescriptionComponent
-              KeyDescriptions='Plazo de rescate:'
-              KeyValues='Según reglamento de los fondos'
-            />
-            <DescriptionComponent
-              KeyDescriptions='Comisión de salida:'
-              KeyValues='Según reglamento de los fondos'
-            />
-          </DescriptionDataPorfo>
-        </InfoPorfolio>
+        <DistributionValue />
       </SectionDataPorfolio>
+      <InfoPorfolio width={'50%'}>
+        <TitelDataPorfolio>Condiciones generales</TitelDataPorfolio>
+        <DescriptionDataPorfo gap={2}>
+          <DescriptionComponent KeyDescriptions='Moneda:' KeyValues='Pesos' />
+          <DescriptionComponent
+            KeyDescriptions='Duración:'
+            KeyValues='Indefinido'
+          />
+          <DescriptionComponent
+            KeyDescriptions='Plazo de rescate:'
+            KeyValues='Según reglamento de los fondos'
+          />
+          <DescriptionComponent
+            KeyDescriptions='Comisión de salida:'
+            KeyValues='Según reglamento de los fondos'
+          />
+        </DescriptionDataPorfo>
+      </InfoPorfolio>
+      <BtnGroup />
     </ContentApp>
   )
 }

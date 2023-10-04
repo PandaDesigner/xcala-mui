@@ -30,7 +30,7 @@ export const BottonsIconosPerfile = styled(Stack)({
   width: '54px',
   height: '54px',
   position: 'absolute',
-  left: '65px',
+  left: '45px',
   bottom: '25px',
 })
 
@@ -240,4 +240,26 @@ export const KeyValue = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none',
   margin: '0px',
+})
+
+export const InvestmentRiskProfile = styled(Typography)({
+  textAlign: 'left',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(209, 45, 53, 1)',
+  fontStyle: 'normal',
+  fontFamily: 'Poppins',
+  fontWeight: '400',
+  fontSize: '16px',
+  letterSpacing: '0px',
+  textDecoration: 'none',
+  textTransform: 'none',
+  //width: '488px',
+  margin: '0px 0px 0px 16px',
+})
+
+export const WarningAmber = styled('img')({
+  width: `24px`,
+  height: `24px`,
+  margin: `0px`,
 })
