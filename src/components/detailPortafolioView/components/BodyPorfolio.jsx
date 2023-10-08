@@ -129,6 +129,13 @@ export const BodyPorfolio = ({riskProfile}) => {
         </DescriptionDataPorfo>
       </InfoPorfolio>
       <BtnGroup />
+      <Stack
+        backgroundColor={'rgba(180, 225 , 225, 0.6)'}
+        height={'30vh'}
+        width={'100%'}
+        borderRadius={2}
+        marginBottom={18}
+      ></Stack>
     </ContentApp>
   )
 }
