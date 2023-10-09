@@ -7,12 +7,12 @@ const ItemValueDistributio = styled(Stack)({
   isolation: 'isolate',
   flexDirection: 'column',
   width: '100%',
-  minWidth: '338.75px',
+  //minWidth: '338.75px',
   justifyContent: 'space-between',
   alignItems: 'start',
   padding: '16px',
   boxSizing: 'border-box',
-  minHeight: '47px',
+  //minHeight: '47px',
 })
 
 const SelectorIndicator = styled(Stack)({
@@ -21,11 +21,13 @@ const SelectorIndicator = styled(Stack)({
   flexDirection: 'row',
   justifyContent: 'flex-start',
   alignItems: 'center',
+  flexWrap: 'wrap',
   padding: '0px',
   boxSizing: 'border-box',
   flex: '1',
   margin: '0px',
-  minWidth: '261.75px',
+  width: '100%',
+  //minWidth: '261.75px',
 })
 const InvertedChartsIndica = styled(Box)({
   height: '8px',
@@ -44,13 +46,14 @@ const FondoNameItem = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: {sm: '14px', md: '16px'},
+  fontSize: {sm: '12px', md: '16px'},
   letterSpacing: '0px',
   textDecoration: 'none',
   lineHeight: '105%',
   textTransform: 'none',
   flex: '1',
   margin: '0px 0px 0px 10px',
+  width: '100%',
 })
 
 const IndicatorSection = styled(Stack)({
@@ -60,11 +63,13 @@ const IndicatorSection = styled(Stack)({
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '0px 8px',
+  //flexWrap: 'wrap',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
   margin: '0px',
-  height: '39px',
-  minWidth: '330.75px',
+  width: '100%',
+  //height: '39px',
+  //minWidth: '330.75px',
 })
 
 const ValueFondo = styled(Stack)({

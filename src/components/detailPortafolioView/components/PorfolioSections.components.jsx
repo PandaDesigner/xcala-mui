@@ -165,10 +165,10 @@ export const InfoPorfolio = styled(Stack)({
   flexDirection: 'column',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
-  padding: '20px 30px',
+  padding: '10px 20px',
   boxSizing: 'border-box',
-  width: '100%',
-  margin: '0px 0px 0px 48px',
+
+  //margin: '0px 0px 0px 48px',
 })
 export const TitelDataPorfolio = styled(Typography)({
   textAlign: 'center',
@@ -193,7 +193,7 @@ export const DescriptionDataPorfo = styled(Stack)({
   padding: '0px',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
-  margin: '21px 0px 0px 0px',
+  //margin: '21px 0px 0px 0px',
   width: '100%',
 })
 

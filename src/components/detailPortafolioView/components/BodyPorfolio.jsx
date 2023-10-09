@@ -13,6 +13,7 @@ import {DescriptionComponent} from './DescriptionComponent'
 import {DisclaimerPerfil} from './DisclaimerPerfil'
 import {DistributionValue} from './DistributionValue'
 import {BtnGroup} from './distributionOfFunds/btnGroup'
+import {CardsDocumentation} from './distributionOfFunds/CardsDocumentation'
 
 const labels = [
   'HMC Deuda Privada Pesos',
@@ -82,7 +83,14 @@ const options = {
 }
 export const BodyPorfolio = ({riskProfile}) => {
   return (
-    <ContentApp sx={{flexDirection: 'column', marginTop: '100px', gap: '50px'}}>
+    <ContentApp
+      sx={{
+        flexDirection: 'column',
+        marginTop: '100px',
+        gap: '50px',
+        maxWidth: {xs: '100%', md: '90%'},
+      }}
+    >
       <DisclaimerPerfil riskProfile={riskProfile} />
       <Typography variant='body1' margin={{md: '0', xs: '0 2rem'}}>
         Este portafolio fue generado mediante la metodología de Resampled
@@ -110,7 +118,7 @@ export const BodyPorfolio = ({riskProfile}) => {
         </ChartsPorfolio>
         <DistributionValue />
       </SectionDataPorfolio>
-      <InfoPorfolio width={'50%'}>
+      <InfoPorfolio width={{md: '100%', xs: '90%'}}>
         <TitelDataPorfolio>Condiciones generales</TitelDataPorfolio>
         <DescriptionDataPorfo gap={2}>
           <DescriptionComponent KeyDescriptions='Moneda:' KeyValues='Pesos' />
@@ -130,12 +138,23 @@ export const BodyPorfolio = ({riskProfile}) => {
       </InfoPorfolio>
       <BtnGroup />
       <Stack
-        backgroundColor={'rgba(180, 225 , 225, 0.6)'}
-        height={'30vh'}
+        backgroundColor={'rgba(180, 225 , 225, 0.2)'}
+        //height={'30vh'}
+        padding={2}
         width={'100%'}
         borderRadius={2}
         marginBottom={18}
-      ></Stack>
+        flexDirection={'row'}
+        gap={2}
+        flexWrap={'wrap'}
+        justifyContent={'space-between'}
+        alignItems={'center'}
+      >
+        <CardsDocumentation />
+        <CardsDocumentation />
+        <CardsDocumentation />
+        <CardsDocumentation />
+      </Stack>
     </ContentApp>
   )
 }
