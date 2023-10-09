@@ -1,4 +1,5 @@
 import {Box, Stack, Typography, styled} from '@mui/material'
+import {handelBgColorFund} from '../../handler'
 
 const ItemValueDistributio = styled(Stack)({
   backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -34,8 +35,6 @@ const InvertedChartsIndica = styled(Box)({
   width: '8px',
   margin: '0px',
   borderRadius: '100px',
-  backgroundColor: 'rgba(245, 126, 126, 1)',
-  border: '1px solid rgba(245, 126, 126, 0.5)',
 })
 
 const FondoNameItem = styled(Typography)({
@@ -46,14 +45,12 @@ const FondoNameItem = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: {sm: '12px', md: '16px'},
-  letterSpacing: '0px',
   textDecoration: 'none',
   lineHeight: '105%',
   textTransform: 'none',
   flex: '1',
   margin: '0px 0px 0px 10px',
-  width: '100%',
+  // width: '100%',
 })
 
 const IndicatorSection = styled(Stack)({
@@ -63,13 +60,10 @@ const IndicatorSection = styled(Stack)({
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '0px 8px',
-  //flexWrap: 'wrap',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
   margin: '0px',
   width: '100%',
-  //height: '39px',
-  //minWidth: '330.75px',
 })
 
 const ValueFondo = styled(Stack)({
@@ -114,16 +108,30 @@ const DescriptionValue = styled(Typography)({
   lineHeight: '101%',
 })
 
-export const ItemValueDistribution = () => {
+export const ItemValueDistribution = ({
+  fundName = 'Nombre del fondo',
+  porcentualValueFund = '13.0',
+  bgColorFund = 'rgb(0, 96, 250, 1)',
+  lineColroFund = `1px solid  ${handelBgColorFund(bgColorFund)}`,
+}) => {
+  console.log(handelBgColorFund(bgColorFund))
+  console.log(lineColroFund)
   return (
     <ItemValueDistributio>
       <IndicatorSection>
         <SelectorIndicator>
-          <InvertedChartsIndica />
-          <FondoNameItem>Deuda Privada Global</FondoNameItem>
+          <InvertedChartsIndica
+            sx={{
+              backgroundColor: bgColorFund,
+              border: lineColroFund,
+            }}
+          />
+          <FondoNameItem sx={{fontSize: {sm: '0.9rem !important', md: '1rem'}}}>
+            {fundName}
+          </FondoNameItem>
         </SelectorIndicator>
         <ValueFondo>
-          <ValuePymen>{`${'13.0'}%`}</ValuePymen>
+          <ValuePymen>{`${porcentualValueFund}%`}</ValuePymen>
           <DescriptionValue>del valor invertido</DescriptionValue>
         </ValueFondo>
       </IndicatorSection>

@@ -141,7 +141,7 @@ export const BodyPorfolio = ({riskProfile}) => {
         backgroundColor={'rgba(180, 225 , 225, 0.2)'}
         //height={'30vh'}
         padding={2}
-        width={'100%'}
+        width={{xs: '90%', md: '100%'}}
         borderRadius={2}
         marginBottom={18}
         flexDirection={'row'}

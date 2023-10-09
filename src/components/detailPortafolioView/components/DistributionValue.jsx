@@ -1,6 +1,7 @@
 import {Stack, Typography, styled} from '@mui/material'
 import {ItemValueDistribution} from './distributionOfFunds/itemValueDistribution'
 import {BtnGroup} from './distributionOfFunds/btnGroup'
+import {handelHexToRgb} from '../handler'
 
 const DistributionValues = styled(Stack)({
   backgroundColor: 'rgba(85, 118, 209, 1)',
@@ -50,12 +51,30 @@ export const DistributionValue = () => {
         </TitelDistributionInvText>
       </TitelDistributionInvText>
       <SectionDistribucion gap={'6px'}>
-        <ItemValueDistribution />
-        <ItemValueDistribution />
-        <ItemValueDistribution />
-        <ItemValueDistribution />
-        <ItemValueDistribution />
-        <ItemValueDistribution />
+        <ItemValueDistribution
+          fundName='HMC Deuda Privada Pesos'
+          bgColorFund={handelHexToRgb('#8612FF')}
+        />
+        <ItemValueDistribution
+          fundName='HMC Balanceado Globa'
+          bgColorFund={handelHexToRgb('#160BE3')}
+        />
+        <ItemValueDistribution
+          fundName='HMC Renta Global Pesos'
+          bgColorFund={handelHexToRgb('#0060FA')}
+        />
+        <ItemValueDistribution
+          fundName='HMC Global Real Estate Income'
+          bgColorFund={handelHexToRgb('#0BBAE3')}
+        />
+        <ItemValueDistribution
+          fundName='HMC US Venture Opportunities'
+          bgColorFund={handelHexToRgb('#0DFBBD')}
+        />
+        <ItemValueDistribution
+          fundName='HMC Deuda Privada Global'
+          bgColorFund={handelHexToRgb('#FFAF9C')}
+        />
       </SectionDistribucion>
     </DistributionValues>
   )
