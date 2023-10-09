@@ -52,27 +52,27 @@ export const DistributionValue = () => {
       </TitelDistributionInvText>
       <SectionDistribucion gap={'6px'}>
         <ItemValueDistribution
-          fundName='HMC Deuda Privada Pesos'
+          fundName='Deuda Privada Pesos'
           bgColorFund={handelHexToRgb('#8612FF')}
         />
         <ItemValueDistribution
-          fundName='HMC Balanceado Globa'
+          fundName='Balanceado Globa'
           bgColorFund={handelHexToRgb('#160BE3')}
         />
         <ItemValueDistribution
-          fundName='HMC Renta Global Pesos'
+          fundName='Renta Global Pesos'
           bgColorFund={handelHexToRgb('#0060FA')}
         />
         <ItemValueDistribution
-          fundName='HMC Global Real Estate Income'
+          fundName='Global Real Estate Income'
           bgColorFund={handelHexToRgb('#0BBAE3')}
         />
         <ItemValueDistribution
-          fundName='HMC US Venture Opportunities'
+          fundName='US Venture Opportunitie'
           bgColorFund={handelHexToRgb('#0DFBBD')}
         />
         <ItemValueDistribution
-          fundName='HMC Deuda Privada Global'
+          fundName='Deuda Privada Global'
           bgColorFund={handelHexToRgb('#FFAF9C')}
         />
       </SectionDistribucion>

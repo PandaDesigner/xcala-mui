@@ -28,3 +28,10 @@ export const  handelHexToRgb = (hex) => {
 	const b = parseInt(hex.substring(5,7), 16);
 	return `rgba(${r}, ${g}, ${b}, 1)`
   }
+
+  export const  handelHexToRgba = (hex) => {
+	const r = parseInt(hex.substring(1,3), 16);
+	const g = parseInt(hex.substring(3,5), 16);
+	const b = parseInt(hex.substring(5,7), 16);
+	return `rgba(${r}, ${g}, ${b}, 0.2)`
+  }

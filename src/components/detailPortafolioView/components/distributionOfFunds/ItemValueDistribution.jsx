@@ -114,8 +114,6 @@ export const ItemValueDistribution = ({
   bgColorFund = 'rgb(0, 96, 250, 1)',
   lineColroFund = `1px solid  ${handelBgColorFund(bgColorFund)}`,
 }) => {
-  console.log(handelBgColorFund(bgColorFund))
-  console.log(lineColroFund)
   return (
     <ItemValueDistributio>
       <IndicatorSection>

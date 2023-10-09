@@ -14,6 +14,7 @@ import {DisclaimerPerfil} from './DisclaimerPerfil'
 import {DistributionValue} from './DistributionValue'
 import {BtnGroup} from './distributionOfFunds/btnGroup'
 import {CardsDocumentation} from './distributionOfFunds/CardsDocumentation'
+import {handelHexToRgb, handelHexToRgba} from '../handler'
 
 const labels = [
   'HMC Deuda Privada Pesos',
@@ -147,13 +148,15 @@ export const BodyPorfolio = ({riskProfile}) => {
         flexDirection={'row'}
         gap={2}
         flexWrap={'wrap'}
-        justifyContent={'space-between'}
+        justifyContent={'flex-start'}
         alignItems={'center'}
       >
-        <CardsDocumentation />
-        <CardsDocumentation />
-        <CardsDocumentation />
-        <CardsDocumentation />
+        <CardsDocumentation colorFund={handelHexToRgba('#160BE3')} />
+        <CardsDocumentation colorFund={handelHexToRgba('#0060FA')} />
+        <CardsDocumentation colorFund={handelHexToRgba('#8612FF')} />
+        <CardsDocumentation colorFund={handelHexToRgba('#0BBAE3')} />
+        <CardsDocumentation colorFund={handelHexToRgba('#0DFBBD')} />
+        <CardsDocumentation colorFund={handelHexToRgba('#FFAF9C')} />
       </Stack>
     </ContentApp>
   )

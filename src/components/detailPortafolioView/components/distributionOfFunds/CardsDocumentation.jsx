@@ -1,5 +1,6 @@
 import {Stack, Typography, styled} from '@mui/material'
 import {CardsItemDescription} from './CardsItemDescription'
+import {handelBgColorFund} from '../../handler'
 
 const CardsContentDocumentacion = styled(Stack)({
   backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -83,13 +84,13 @@ export const CardsDocumentation = ({
 }) => {
   return (
     <CardsContentDocumentacion
-      width={{xs: '100%', sm: '98%', md: '48%', lg: '31.5%', xl: '32.5%'}}
+      width={{xs: '100%', sm: '100%', md: '48%', lg: '31.5%', xl: '32.5%'}}
     >
       <HeaderComponent
         flexDirection={'column'}
         gap={0}
         p={2}
-        backgroundColor={colorFund}
+        backgroundColor={handelBgColorFund(colorFund)}
       >
         <TitleCardsDocumentation>Rentabilidad Esperada</TitleCardsDocumentation>
         <SubTitleCardsDocumentation>

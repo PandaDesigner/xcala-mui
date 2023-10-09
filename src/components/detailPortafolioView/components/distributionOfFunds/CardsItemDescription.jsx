@@ -1,4 +1,4 @@
-import {Stack, Typography, styled} from '@mui/material'
+import {Link, Stack, Typography, styled} from '@mui/material'
 import iconPorfolio from '../../../../assets/images/perfiles/ProfilePorfolio/picture_as_pdf.svg'
 
 const ContentCardsItem = styled(Stack)({
@@ -50,13 +50,22 @@ const TitelItem = styled(Typography)({
   margin: '0px 0px 0px 10px',
 })
 
-export const CardsItemDescription = ({titelText}) => {
+export const CardsItemDescription = ({titelText, url = '#'}) => {
   return (
     <ContentCardsItem>
-      <ItemCardsDescription>
-        <IconsItem src={iconPorfolio} alt='icon' />
-        <TitelItem>{titelText}</TitelItem>
-      </ItemCardsDescription>
+      <Link
+        textTransform={'none'}
+        sx={{
+          cursor: 'pointer',
+          textDecoration: 'none',
+        }}
+        href={url}
+      >
+        <ItemCardsDescription>
+          <IconsItem src={iconPorfolio} alt='icon' />
+          <TitelItem>{titelText}</TitelItem>
+        </ItemCardsDescription>
+      </Link>
     </ContentCardsItem>
   )
 }
