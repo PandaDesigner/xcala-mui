@@ -30,7 +30,7 @@ export const BottonsIconosPerfile = styled(Stack)({
   width: '54px',
   height: '54px',
   position: 'absolute',
-  left: '45px',
+  right: '22px',
   bottom: '25px',
 })
 
@@ -164,7 +164,7 @@ export const InfoPorfolio = styled(Stack)({
   isolation: 'isolate',
   flexDirection: 'column',
   justifyContent: 'flex-start',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   padding: '10px 20px',
   boxSizing: 'border-box',
 

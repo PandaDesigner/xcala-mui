@@ -76,41 +76,33 @@ export const CardsPorfolio = ({
     <Grid item md={4} xs={8}>
       <CardsProduct spacing={2} alignItems={'center'}>
         <HeadContainerCardsPorfolio fundName={fundName} fundPerfile={true} />
-        <Stack width={'93%'} paddingBottom={'16px'} gap={2}>
+        <Stack
+          flex={1}
+          flexDirection={'row'}
+          width={'93%'}
+          paddingBottom={'16px'}
+          gap={2}
+        >
           <TitelCards>
-            <BottonsIconosPerfile src={handelProfileIcon(ProfileCards)} />
-            <CardsInfo spacing={'20px'}>
+            <Stack height={{md: '80px', xs: '60px'}}>
+              <BottonsIconosPerfile
+                //height={'40px !Important'}
+                src={handelProfileIcon(ProfileCards)}
+              />
+            </Stack>
+            <CardsInfo gap={1.5}>
               <ExpectedTime>{`Participación de ${dataChart.labels.length} Fondos`}</ExpectedTime>
-              <ReantabilityTitel fontSize={'clamp(0.96rem, 2vw, 1.2rem)'}>
+              <ReantabilityTitel
+                fontSize={'clamp(0.96rem, 2vw, 1.2rem)'}
+                lineHeight={'1rem'}
+              >
                 Rentabilidad Esperada
               </ReantabilityTitel>
               <RentabilityValue>{`${rentabilityFound}%`}</RentabilityValue>
               <ExpectedTime>{`(${foundTerm})`}</ExpectedTime>
             </CardsInfo>
           </TitelCards>
-          <Divider variant='fullWidth' width='100%' />
-        </Stack>
-        <Stack width={'93%'} borderRadius={2} backgroundColor={'#E7F3FF'}>
-          {' '}
-          {/*Este es el mardito */}
-          <Stack
-            padding={2}
-            flexDirection={'row'}
-            justifyContent={'space-between'}
-            alignItems={'center'}
-          >
-            <Stack
-              height={'100%'}
-              alignItems={'start'}
-              justifyContent={'space-between'}
-            >
-              <Typography fontWeight={700} fontSize={'12pt'}>
-                Fondos del portafolio
-              </Typography>
-              <Stack height={'90%'} justifyContent={'space-around'}>
-                {printLabelData(dataChart)}
-              </Stack>
-            </Stack>
+          <Stack width={{md: '35%', xs: '30%'}}>
             <CharstComponet
               dataChart={dataChart}
               width={'100%'}
@@ -118,6 +110,8 @@ export const CardsPorfolio = ({
             />
           </Stack>
         </Stack>
+        <Divider variant='fullWidth' width='100%' />
+
         <Stack width={'93%'} paddingBottom={'16px'}>
           <CardsButtomGroup />
         </Stack>
