@@ -81,6 +81,7 @@ export const CardsPorfolio = ({
           flexDirection={'row'}
           width={'93%'}
           paddingBottom={'16px'}
+          alignItems={'center'}
           gap={2}
         >
           <TitelCards>

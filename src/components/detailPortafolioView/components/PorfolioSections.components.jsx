@@ -19,7 +19,7 @@ export const ContentApp = styled(Stack)({
   position: 'relative',
   flexDirection: 'row',
   margin: '0 auto',
-  width: '100%',
+  width: '90%',
   maxWidth: '1380px',
   height: '100%',
   minHeight: $minHeigth,
@@ -40,19 +40,6 @@ export const IconInfo = styled('img')({
   margin: '0px 0px 0px 14px',
 })
 
-export const RentabilidadUltimo = styled(Typography)({
-  whiteSpace: 'pre-wrap',
-  fontSynthesis: 'none',
-  color: 'rgba(208, 238, 233, 1)',
-  fontStyle: 'normal',
-  fontFamily: 'Poppins',
-  fontWeight: '600',
-  letterSpacing: '0px',
-  textDecoration: 'none',
-  lineHeight: '98%',
-  textTransform: 'none',
-  margin: '0px',
-})
 export const RetornoEsperado = styled(Typography)({
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -259,7 +246,50 @@ export const InvestmentRiskProfile = styled(Typography)({
 })
 
 export const WarningAmber = styled('img')({
-  width: `24px`,
-  height: `24px`,
-  margin: `0px`,
+  width: '24px',
+  height: '24px',
+  margin: '0px',
+})
+
+export const PorfolioStack = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  padding: '0px',
+  boxSizing: 'border-box',
+  margin: '0px',
+})
+export const ValuePorfolio = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '0px',
+  boxSizing: 'border-box',
+  margin: '0px',
+})
+export const RentabilidadUltimo = styled(Typography)({
+  textAlign: 'right',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(208, 238, 233, 1)',
+  fontStyle: 'normal',
+  fontFamily: 'Poppins',
+  fontWeight: '600',
+  fontSize: '48px',
+  letterSpacing: '0px',
+  textDecoration: 'none',
+  lineHeight: '99.99999403953552%',
+  textTransform: 'none',
+  margin: '0px',
+})
+export const DeteilValue = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  padding: '0px',
+  boxSizing: 'border-box',
 })
