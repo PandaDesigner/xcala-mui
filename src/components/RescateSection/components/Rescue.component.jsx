@@ -1,4 +1,4 @@
-import {Stack, Typography, styled} from '@mui/material'
+import {Button, Stack, Typography, styled} from '@mui/material'
 
 export const ComponentRescateCont = styled(Stack)({
   position: 'relative',
@@ -181,7 +181,7 @@ export const TitlePortafolioValue = styled(Typography)({
   margin: '0px',
 })
 
-export const RetornoEsperado = styled(Typography)({
+export const ExpectedReturnValue = styled(Typography)({
   textAlign: 'right',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -208,4 +208,92 @@ export const CreateDatePorfolio = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none',
   margin: '4px 0px 0px 0px',
+})
+
+/***********Cards Content **********/
+
+export const RescueContentContent = styled(Stack)({
+  backgroundColor: 'rgba(255, 255, 255, 1)',
+  boxShadow: '0px 0px 8px rgba(61, 64, 75, 0.15)',
+  borderRadius: '16px',
+  display: 'flex',
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '32px',
+  boxSizing: 'border-box',
+  //margin: '0px auto',
+  marginTop: '-60px',
+})
+export const SelectContent = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+  padding: '0px',
+  boxSizing: 'border-box',
+  alignSelf: 'stretch',
+  margin: '0px',
+  //height: '110px',
+  //width: '676px',
+})
+export const TitleSectionRescue = styled(Typography)({
+  textAlign: 'left',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(0, 0, 0, 0.87)',
+  fontStyle: 'normal',
+  fontFamily: 'Poppins',
+  fontWeight: '400',
+  fontSize: '26px',
+  letterSpacing: '0px',
+  textDecoration: 'none',
+  textTransform: 'none',
+  alignSelf: 'stretch',
+  margin: '0px',
+})
+export const SectionSelectRescue = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  padding: '0px',
+  boxSizing: 'border-box',
+  alignSelf: 'stretch',
+  margin: '16px 0px 0px 0px',
+  //height: '55px',
+  //width: '676px',
+})
+
+export const ButtonContained = styled(Button)({
+  backgroundColor: 'rgba(30, 34, 170, 1)',
+  boxShadow:
+    '0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.2)',
+  borderRadius: '8px',
+  display: 'flex',
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  height: '60px',
+  boxSizing: 'border-box',
+  overflow: 'hidden',
+  width: '456px',
+  color: '#fff',
+})
+export const BaseBotton = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '30px 95px',
+  boxSizing: 'border-box',
+  margin: '0px',
+  overflow: 'hidden',
+  height: '86px',
+  width: '456px',
 })

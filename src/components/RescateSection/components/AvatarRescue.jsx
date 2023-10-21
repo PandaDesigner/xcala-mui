@@ -103,7 +103,10 @@ export const AvatarRescue = ({
           alignItems={{md: 'flex-start', xs: 'center'}}
           gap={1}
         >
-          <RescueAvatarTitle textAlign={{md: 'left', xs: 'center'}}>
+          <RescueAvatarTitle
+            textAlign={{md: 'left', xs: 'center'}}
+            mt={{md: '0px', xs: '16px'}}
+          >
             Xcala Portafolio one
           </RescueAvatarTitle>
           <RescueAvatarChips

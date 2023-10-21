@@ -1,12 +1,12 @@
-import { Typography } from '@mui/material'
-import { HeaderRescueSection } from '../components/HeaderRescueSection'
+import {Typography} from '@mui/material'
+import {HeaderRescueSection} from '../components/HeaderRescueSection'
+import {CardsContinersRescue} from '../components/CardsContinersRescue'
 
-
-export const RescuePages = () => {
+export const RescuePages = ({rescueValue = 3750000}) => {
   return (
     <>
-    <HeaderRescueSection/>
-    <Typography>Desde Rescate</Typography>
+      <HeaderRescueSection rescueValue={rescueValue} />
+      <CardsContinersRescue />
     </>
   )
 }

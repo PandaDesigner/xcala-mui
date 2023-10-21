@@ -4,18 +4,20 @@ import AvatarSection from '../../AvatarSection'
 import {AvatarRescue} from './AvatarRescue'
 import {PorfolioValueSection} from './PorfolioValueSection'
 
-export const HeaderRescueSection = () => {
+export const HeaderRescueSection = ({rescueValue = 0}) => {
   return (
     <>
       <BackgroundColor>
         <ContentApp
           BackgroundColor='red'
-          justifyContent={{md: 'space-between', xs: 'center'}}
+          justifyContent={
+            rescueValue > 0 ? {md: 'space-between', xs: 'center'} : 'center'
+          }
           padding={'40px 0'}
           sx={{flexDirection: {md: 'row', xs: 'column'}}}
         >
           <AvatarRescue />
-          <PorfolioValueSection />
+          <PorfolioValueSection rescueValue={rescueValue} />
         </ContentApp>
       </BackgroundColor>
     </>
