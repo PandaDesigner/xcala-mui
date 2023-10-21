@@ -225,7 +225,7 @@ export const RescueContentContent = styled(Stack)({
   padding: '32px',
   boxSizing: 'border-box',
   //margin: '0px auto',
-  marginTop: '-60px',
+  marginTop: '-45px',
 })
 export const SelectContent = styled(Stack)({
   position: 'relative',
