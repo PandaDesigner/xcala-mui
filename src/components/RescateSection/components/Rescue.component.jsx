@@ -281,7 +281,8 @@ export const ButtonContained = styled(Button)({
   height: '60px',
   boxSizing: 'border-box',
   overflow: 'hidden',
-  width: '456px',
+  padding: '8px 32px',
+  //width: '456px',
   color: '#fff',
 })
 export const BaseBotton = styled(Stack)({

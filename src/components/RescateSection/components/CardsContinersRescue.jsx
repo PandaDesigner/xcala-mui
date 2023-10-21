@@ -11,7 +11,12 @@ import {SelectRescueItem} from './SelectRescueItem'
 export const CardsContinersRescue = () => {
   return (
     <Stack sx={{width: '90%', margin: '0 auto', alignItems: 'center'}}>
-      <RescueContentContent width={{md: '100%', sx: '80%'}} mb={9}>
+      <RescueContentContent
+        width={{md: '50%', sx: '80%'}}
+        height={{md: '300px', sx: '400'}}
+        minWidth={{md: '740px', sx: ''}}
+        mb={9}
+      >
         <SelectContent>
           <TitleSectionRescue>¿Cuanto deseas rescatar?</TitleSectionRescue>
           <SectionSelectRescue>
