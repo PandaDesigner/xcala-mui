@@ -9,8 +9,8 @@ export const RescuePages = () => {
   return (
     <>
       <HeaderRescueSection rescueValue={rescueValue} />
-      <CardsContinersRescue />
-      {/*<CardsResultRescue />*/}
+      {/*<CardsContinersRescue />*/}
+      <CardsResultRescue />
     </>
   )
 }

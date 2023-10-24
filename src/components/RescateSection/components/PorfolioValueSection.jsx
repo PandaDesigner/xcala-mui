@@ -26,9 +26,6 @@ export const PorfolioValueSection = ({rescueValue = 0}) => {
       </ValuePorfolio>
       <DeteilValue alignItems={{md: 'flex-end', xs: 'center'}}>
         <ExpectedReturnValue>Monto a Rescatar</ExpectedReturnValue>
-        <CreateDatePorfolio>
-          Rescate realizado hoy, 16/10/2023
-        </CreateDatePorfolio>
       </DeteilValue>
     </PorfolioStack>
   )

@@ -88,7 +88,7 @@ const TitleItemCards = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: '16px',
+  fontSize: {md: '18px', xs: '12px'},
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
@@ -102,7 +102,7 @@ const ResItemCards = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '600',
-  fontSize: '18px',
+  fontSize: {md: '18px', xs: '12px'},
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
@@ -294,12 +294,16 @@ export const CardsResultRescue = () => {
         <RsContent>
           <RescueDescription>
             <InstallmentNumbers>
-              <TitleItemCards>Número de cuotas:</TitleItemCards>
-              <ResItemCards>11,7298</ResItemCards>
+              <TitleItemCards>Monto solicitado</TitleItemCards>
+              <ResItemCards>$ 3.750.000</ResItemCards>
             </InstallmentNumbers>
             <RescuePeriod>
+              <TitleItemCards>Fecha de solicitud</TitleItemCards>
+              <ResItemCards>26/12/23</ResItemCards>
+            </RescuePeriod>
+            <RescuePeriod>
               <TitleItemCards>Plazo de rescate:</TitleItemCards>
-              <ResItemCards>Según reglamento de los fondos</ResItemCards>
+              <ResItemCards>Según reglamento fondos</ResItemCards>
             </RescuePeriod>
           </RescueDescription>
           <WarningMessage>
@@ -320,6 +324,13 @@ export const CardsResultRescue = () => {
                   Este depósito es en Dólares, por lo que el monto solicitado
                   será transformado a pesos el día del depósito de acuerdo al
                   tipo de cambio correspondiente a la fecha.
+                </DescriptionText>
+              </li>
+              <li>
+                <DescriptionText>
+                  El monto final a ser rescatado puede variar según el valor
+                  cuota de los fondos que componen el portafolio al momento de
+                  procesar el rescate.
                 </DescriptionText>
               </li>
             </ul>

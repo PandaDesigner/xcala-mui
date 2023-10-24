@@ -118,8 +118,8 @@ export const AvatarRescue = ({
             <MotivacionesGenerarl>
               <HmcText>HMC</HmcText>
             </MotivacionesGenerarl>
-            <InterestLabel intereses={intereses} />
-            <MotivationLabel motivation={motivation} />
+            {/*<InterestLabel intereses={intereses} />
+            <MotivationLabel motivation={motivation} />*/}
           </RescueAvatarChips>
           <RescueMunt>
             <RescueQuotas>

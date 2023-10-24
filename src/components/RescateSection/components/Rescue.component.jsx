@@ -65,20 +65,20 @@ export const RescueIconsPorfolio = styled('div')({
   boxSizing: 'border-box',
   left: '0px',
   top: '0px',
-  height: '161px',
-  width: '161px',
+  height: '131px',
+  width: '131px',
 })
 export const IconosPerfiles = styled('img')({
   height: 'auto',
-  width: '161px',
+  width: '131px',
   margin: '0px',
 })
 export const RescueAvatarPorfilio = styled('img')({
   height: 'auto',
   width: '40px',
   position: 'absolute',
-  left: '104px',
-  top: '122px',
+  left: '80px',
+  bottom: '-5px',
 })
 
 export const RescueAvatarTitle = styled(Typography)({
