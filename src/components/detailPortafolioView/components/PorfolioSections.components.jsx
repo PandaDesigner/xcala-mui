@@ -2,6 +2,7 @@ import {Box, Button, Stack, Typography, styled} from '@mui/material'
 
 const $minHeigth = '407px'
 export const BackgroundColor = styled(Stack)({
+  zIndex: 0,
   backgroundColor: 'rgba(30, 34, 170, 1)',
   borderRadius: '0px 0px 16px 16px',
   position: 'relative',
@@ -24,6 +25,7 @@ export const ContentApp = styled(Stack)({
   height: '100%',
   minHeight: $minHeigth,
   alignItems: 'center',
+  paddingBottom: {md: '', xs: '3rem'},
 })
 
 export const BottonsIconosPerfile = styled(Stack)({

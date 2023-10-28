@@ -1,6 +1,7 @@
 import {Button, Stack, Typography, styled} from '@mui/material'
 
 export const ComponentRescateCont = styled(Stack)({
+  flex: '1 1 auto',
   position: 'relative',
   isolation: 'isolate',
   flexDirection: 'row',
