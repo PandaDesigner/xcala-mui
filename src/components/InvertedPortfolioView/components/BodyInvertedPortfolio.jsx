@@ -1,5 +1,7 @@
-import {Divider, Stack, Typography, styled} from '@mui/material'
+import {Box, Divider, Stack, Tab, Tabs, Typography, styled} from '@mui/material'
 import {ItemDescription} from './itemDescription'
+import {TabletInverted} from './TabletInverted'
+import {useState} from 'react'
 
 const SectionGeneralCondit = styled(Stack)({
   position: 'relative',
@@ -250,7 +252,70 @@ const SectionDistribucion = styled(Stack)({
   width: '100%',
 })
 
+const ContentTitleTable = styled(Stack)({
+  display: 'flex',
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+  padding: '10px',
+  boxSizing: 'border-box',
+  alignSelf: 'stretch',
+  margin: '0px',
+})
+const TitleTableName = styled(Typography)({
+  textAlign: 'center',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(0, 0, 0, 1)',
+  fontStyle: 'normal',
+  fontFamily: 'Poppins',
+  fontWeight: '600',
+  fontSize: '24px',
+  letterSpacing: '0px',
+  textDecoration: 'none',
+  textTransform: 'none',
+  margin: '0px',
+})
+
+/**Tabs Component */
+/*
+const CustomTabPanel = (props) => {
+  const {children, value, index, ...other} = props
+  return (
+    <Box
+      role='tabpanel'
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box sx={{p: 3}}>{children}</Box>}
+    </Box>
+  )
+}
+
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+}
+
+const a11yProps = (index) => {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  }
+}
+*/
 export const BodyInvertedPortfolio = () => {
+  const [value, setValue] = useState(0)
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue)
+  }
+
   return (
     <Stack
       sx={{
@@ -356,6 +421,37 @@ export const BodyInvertedPortfolio = () => {
             <ItemDescription />
           </SectionDistribucion>
         </DistributionValue>
+      </Stack>
+      <Stack
+        sx={{
+          backgroundColor: 'rgba(255, 255, 255, 1)',
+          borderRadius: '8px',
+          display: 'flex',
+          position: 'relative',
+          isolation: 'isolate',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          padding: '32px',
+          boxSizing: 'border-box',
+          boxShadow: '0px 0px 8px rgba(61, 64, 75, 0.15)',
+        }}
+      >
+        <ContentTitleTable>
+          <TitleTableName variant='h2'>Cartola de movimientos</TitleTableName>
+        </ContentTitleTable>
+        <Box sx={{width: '100%', my: 2}}>
+          <Tabs
+            onChange={handleChange}
+            value={value}
+            aria-label='Tabs where selection follows focus'
+            selectionFollowsFocus
+          >
+            <Tab label='Realizados' />
+            <Tab label='Pendientes' />
+          </Tabs>
+        </Box>
+        <TabletInverted />
       </Stack>
     </Stack>
   )
