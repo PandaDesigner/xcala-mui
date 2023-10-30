@@ -87,30 +87,22 @@ export const TabletInverted = () => {
                 fundName,
                 investmentMovement,
                 Amountinvested,
-              }) => {
-                console.log({
-                  timeInverted,
-                  fundName,
-                  investmentMovement,
-                  Amountinvested,
-                })
-                return (
-                  <StyledTableRow key={timeInverted}>
-                    <StyledTableCell component='th' scope='row'>
-                      {timeInverted}
-                    </StyledTableCell>
-                    <StyledTableCell component='th' scope='row'>
-                      {fundName}
-                    </StyledTableCell>
-                    <StyledTableCell component='th' scope='row'>
-                      {investmentMovement}
-                    </StyledTableCell>
-                    <StyledTableCell align='right' component='th' scope='row'>
-                      {Amountinvested}
-                    </StyledTableCell>
-                  </StyledTableRow>
-                )
-              }
+              }) => (
+                <StyledTableRow key={timeInverted}>
+                  <StyledTableCell component='th' scope='row'>
+                    {timeInverted}
+                  </StyledTableCell>
+                  <StyledTableCell component='th' scope='row'>
+                    {fundName}
+                  </StyledTableCell>
+                  <StyledTableCell component='th' scope='row'>
+                    {investmentMovement}
+                  </StyledTableCell>
+                  <StyledTableCell align='right' component='th' scope='row'>
+                    {Amountinvested}
+                  </StyledTableCell>
+                </StyledTableRow>
+              )
             )}
           </TableBody>
         </Table>

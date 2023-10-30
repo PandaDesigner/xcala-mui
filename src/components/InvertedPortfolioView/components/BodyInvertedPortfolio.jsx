@@ -297,7 +297,7 @@ const CustomTabPanel = (props) => {
 }
 
 CustomTabPanel.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.element,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 }
@@ -339,7 +339,9 @@ export const BodyInvertedPortfolio = () => {
           sx={{
             backgroundColor: 'white',
             width: '100%',
-            border: '1px solid red',
+            backgroundColor: 'red',
+            borderRadius: '8px',
+            //border: '1px solid red',
             //height: '100%',
           }}
         ></Stack>
@@ -348,7 +350,7 @@ export const BodyInvertedPortfolio = () => {
           sx={{
             backgroundColor: '#fff',
             width: '100%',
-            border: '1px solid red',
+            //border: '1px solid red',
             height: '100%',
           }}
         >
