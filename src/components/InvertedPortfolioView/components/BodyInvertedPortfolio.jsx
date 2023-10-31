@@ -416,6 +416,7 @@ export const BodyInvertedPortfolio = () => {
             </HeadTitleDistribution>
           </HeadContainer>
           <SectionDistribucion>
+            {/** un map de elementos repetidos */}
             <ItemDescription />
             <ItemDescription />
             <ItemDescription />
@@ -453,6 +454,7 @@ export const BodyInvertedPortfolio = () => {
             <Tab label='Pendientes' />
           </Tabs>
         </Box>
+        {/**componentes de la tabla  */}
         <TabletInverted />
       </Stack>
     </Stack>

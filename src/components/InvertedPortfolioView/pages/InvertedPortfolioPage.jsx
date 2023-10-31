@@ -6,7 +6,6 @@ export const InvertedPortfolioPage = ({rescueValue}) => {
   return (
     <>
       <HeaderInvertedPortfolio rescueValue={rescueValue} />
-
       <BodyInvertedPortfolio />
     </>
   )
