@@ -26,7 +26,7 @@ const HeadChips = styled(Stack)({
   padding: '0px',
   boxSizing: 'border-box',
   margin: '0px',
-  height: '22.9px',
+  //height: '22.9px',
   //width: '100%', //"84.46px",
 })
 
@@ -79,7 +79,7 @@ const StartIcons = styled('img')({
   width: '16px',
   margin: '0px',
 })
-const HeadTitle = styled(Typography)({
+export const HeadTitle = styled(Typography)({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -92,7 +92,7 @@ const HeadTitle = styled(Typography)({
   lineHeight: '119.49999332427979%',
   textTransform: 'none',
   //alignSelf: 'stretch',
-  margin: '18px 0px 0px 0px',
+  //margin: '18px 0px 0px 0px',
 })
 
 const SectionInversion = styled(Stack)({
@@ -103,7 +103,7 @@ const SectionInversion = styled(Stack)({
   padding: '2px 0px',
   boxSizing: 'border-box',
   //alignSelf: 'stretch',
-  margin: '8px 0px 0px 0px',
+  //margin: '8px 0px 0px 0px',
   height: '27px',
   //width: '346px',
 })

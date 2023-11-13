@@ -46,7 +46,7 @@ export const HeaderPorfolio = ({
         >
           <Stack
             direction={{md: 'row', xs: 'center'}}
-            alignItems={{md: 'start', xs: 'center'}}
+            alignItems={{md: 'center', xs: 'center'}}
           >
             <Box height={'100%'} position={'relative'}>
               <img

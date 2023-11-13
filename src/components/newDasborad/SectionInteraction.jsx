@@ -375,7 +375,7 @@ export const SectionInteraction = ({
               Fondos
             </BtnFilterFund>
             <Divaider>|</Divaider>
-            <BtnFilterFund sx={{color: '#fff'}}>Portafolio</BtnFilterFund>
+            <BtnFilterFund sx={{color: '#fff'}}>Portfolio</BtnFilterFund>
           </IteractionAssetsFilt>
         </TitelSection>
         {portfolio != null ? (
