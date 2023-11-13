@@ -1,6 +1,14 @@
 import {PersonAddDisabledTwoTone} from '@mui/icons-material'
-import {Box} from '@mui/material'
-import {DataGrid, GridToolbar} from '@mui/x-data-grid'
+import {Box, MenuItem} from '@mui/material'
+import {
+  DataGrid,
+  GridToolbarContainer,
+  GridToolbarExportContainer,
+  GridCsvExportMenuItem,
+  useGridApiContext,
+  gridFilteredSortedRowIdsSelector,
+  gridVisibleColumnFieldsSelector,
+} from '@mui/x-data-grid'
 /*
 2"Pending"
 4"Poste"
@@ -153,6 +161,76 @@ const column = [
   {field: 'monto', ...clpPrice, headerName: 'Monto', flex: 0.6, width: 130},
 ]
 
+const getJson = (apiRef) => {
+  const filteredSortedRowIds = gridFilteredSortedRowIdsSelector(apiRef)
+  const visibleColumnsField = gridVisibleColumnFieldsSelector(apiRef)
+
+  const data = filteredSortedRowIds.map((id) => {
+    const row = {}
+    visibleColumnsField.forEach((field) => {
+      row[field] = apiRef.current.getCellParams(id, field).value
+    })
+    return row
+  })
+
+  return JSON.stringify(data, null, 2)
+}
+
+const exportBlob = (blob, filename) => {
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  a.click()
+
+  setTimeout(() => {
+    URL.revokeObjectURL(url)
+  })
+}
+
+function JsonExportMenuItem(props) {
+  const apiRef = useGridApiContext()
+
+  const {hideMenu} = props
+
+  return (
+    <MenuItem
+      onClick={() => {
+        const jsonString = getJson(apiRef)
+        const blob = new Blob([jsonString], {
+          type: 'text/json',
+        })
+        exportBlob(blob, 'data_xcala.json')
+        hideMenu?.()
+      }}
+    >
+      Export JSON
+    </MenuItem>
+  )
+}
+
+const csvOptions = {delimiter: ';'}
+
+function CustomExportButton(props) {
+  return (
+    <GridToolbarExportContainer {...props}>
+      <GridCsvExportMenuItem
+        rintOptions={{fileName: 'Descargar informe'}}
+        options={csvOptions}
+      />
+      {/*<JsonExportMenuItem />*/}
+    </GridToolbarExportContainer>
+  )
+}
+
+function CustomToolbar(props) {
+  return (
+    <GridToolbarContainer {...props}>
+      <CustomExportButton />
+    </GridToolbarContainer>
+  )
+}
+
 export const TabletGridDesktop = () => {
   return (
     <Box
@@ -173,6 +251,15 @@ export const TabletGridDesktop = () => {
             backgroundColor: '#1E22AA',
             color: '#fff',
             fontSize: {md: '16px', xs: '12px'},
+          },
+          '.MuiDataGrid-toolbarContaine, .css-128fb87-MuiDataGrid-toolbarContainer':
+            {
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'end',
+            },
+          '.MuiDataGrid-toolbarContainer>button': {
+            color: '#475569',
           },
           '.MuiDataGrid-columnSeparator': {
             display: 'none',
@@ -196,6 +283,9 @@ export const TabletGridDesktop = () => {
           '.MuiDataGrid-footerContainer': {
             fontSize: {md: '16px', xs: '12px'},
           },
+          '.MuiButtonBase-root': {
+            color: '#fff',
+          },
         }}
         localeText={{
           toolbarDensity: 'Size',
@@ -204,9 +294,7 @@ export const TabletGridDesktop = () => {
           toolbarDensityStandard: 'Medium',
           toolbarDensityComfortable: 'Large',
         }}
-        lots={{
-          toolbar: GridToolbar,
-        }}
+        slots={{toolbar: CustomToolbar}}
       />
     </Box>
   )
