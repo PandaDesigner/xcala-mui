@@ -16,11 +16,11 @@ const AvatarSection1 = styled(Stack)({
   alignItems: 'center',
   padding: '0px',
   boxSizing: 'border-box',
-  height: '100%',
-  maxHeight: '120px',
-  minHeight: '90px',
+  //height: '100%',
+  //maxHeight: '120px',
+  minHeight: '120px',
   width: '100%',
-  maxWidth: '122px',
+  maxWidth: '125px',
   minWidth: '92.83px',
 })
 
@@ -40,8 +40,8 @@ const Avatar = styled(Stack)({
 
 const Avatar1 = styled('img')({
   //position: "absolute",
-  width: '96px',
-  height: '96px',
+  width: '90px',
+  height: '90px',
 })
 
 const IconosPerfiles = styled('img')({

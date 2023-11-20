@@ -17,7 +17,7 @@ const SectionCajaContainer = styled(Stack)({
 	maxWidth: "100%",
 	justifyContent: "space-around",
 	alignItems: "center",
-	padding: "8px 16px",
+	padding: "16px 16px",
 	boxSizing: "border-box",
 });
 
@@ -157,7 +157,7 @@ const BtnActualiza = styled(Button)({
 export const CajaSection = ({ perfil, cashAmount }) => {
 	return (
 		<>
-			<SectionCajaContainer>
+			<SectionCajaContainer spacing={2}>
 				{/* <HeaderMenu>
 					<Menu>
 						<Icons src={IconsMenus} alt='icons Menu' />

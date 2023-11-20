@@ -11,7 +11,7 @@ const SectionNoAmount1 = styled(Stack)({
   padding: "0px",
   boxSizing: "border-box",
   height: "100%",
-  minHeight: "118px",
+  minHeight: "125px",
   width: "100%",
   minWidth: "233px",
 });
@@ -25,7 +25,7 @@ const ContentAmount = styled(Stack)({
   alignItems: "center",
   padding: "8px 16px",
   boxSizing: "border-box",
-  flex: "0 1 233px",
+  flex: "0 1 auto",
   //width: '233px',
   margin: "0px",
   //height: "88px",
