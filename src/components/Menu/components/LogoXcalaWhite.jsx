@@ -2,8 +2,8 @@ export const LogoXcalaWhite = () => {
   return (
     <>
       <svg
-        width='246'
-        height='106'
+        width='122'
+        height='53'
         viewBox='0 0 123 53'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'

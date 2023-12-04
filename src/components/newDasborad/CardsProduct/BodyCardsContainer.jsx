@@ -28,11 +28,11 @@ export const BodyCardsContainer = ({
 			<Stack gap={1} width={"100%"}>
 				<TitelCards>
 					<BottonsIconosPerfile src={handelProfileIcon(profileCards)} />
-					<CardsInfo spacing={"20px"}>
+					<CardsInfo >
 						<ReantabilityTitel fontSize={"clamp(0.96rem, 2vw, 1.2rem)"}>
 							Rentabilidad Esperada
 						</ReantabilityTitel>
-						<RentabilityValue>{`${rentabilityFound}%`}</RentabilityValue>
+						<RentabilityValue fontSize={"clamp(0.6rem, 2vw, 1.2rem)"}>{`${rentabilityFound}%`}</RentabilityValue>
 						<ExpectedTime>{`(${foundTerm})`}</ExpectedTime>
 					</CardsInfo>
 				</TitelCards>

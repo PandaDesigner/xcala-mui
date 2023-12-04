@@ -17,7 +17,7 @@ export const HeadContainerCards = ({ fundName, fundPerfile }) => {
 						</Start>
 					)}
 				</HeadChips>
-				<HeadTitel>{fundName}</HeadTitel>
+				<HeadTitel fontSize={"clamp(0.96rem, 2vw, 1.8rem)"}>{fundName}</HeadTitel>
 			</HeadCards>
 		</>
 	);

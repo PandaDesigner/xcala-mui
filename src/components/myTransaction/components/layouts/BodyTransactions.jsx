@@ -1,5 +1,5 @@
-import {Button, Stack, Typography, styled} from '@mui/material'
-import {TabletGridDesktop} from '../UI/TabletGridDesktop'
+import { Button, Stack, Typography, styled } from '@mui/material';
+import { TabletGridDesktop } from '../UI/TabletGridDesktop';
 
 const BodyTransaction = styled(Stack)({
   backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -11,12 +11,14 @@ const BodyTransaction = styled(Stack)({
   flexDirection: 'column',
   justifyContent: 'flex-start',
   alignItems: 'center',
-  padding: '32px 24px',
+  padding: '16px 12px',
   boxSizing: 'border-box',
   minHeight: '486px',
   width: '100%',
-  maxWidth: '1100px',
-})
+  maxWidth: 500,
+  margin: '0px auto',
+  paddingTop: '16px'
+});
 
 const AssetsTitle = styled(Stack)({
   borderRadius: '4px',
@@ -28,8 +30,8 @@ const AssetsTitle = styled(Stack)({
   padding: '4px 0px',
   boxSizing: 'border-box',
   width: '100%',
-  margin: '0px',
-})
+  margin: '0px'
+});
 const TitleAssets = styled(Typography)({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
@@ -43,8 +45,8 @@ const TitleAssets = styled(Typography)({
   textDecoration: 'none',
   lineHeight: '126.49999856948853%',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 const IteractionAssetsFilt = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -53,8 +55,8 @@ const IteractionAssetsFilt = styled(Stack)({
   alignItems: 'center',
   padding: '0px',
   boxSizing: 'border-box',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 const FundSelectBtn = styled(Button)({
   whiteSpace: 'pre-wrap',
@@ -68,8 +70,8 @@ const FundSelectBtn = styled(Button)({
   textDecoration: 'none',
   lineHeight: '126.49999856948853%',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 const Divaider = styled(Typography)({
   textAlign: 'center',
   whiteSpace: 'pre-wrap',
@@ -82,14 +84,17 @@ const Divaider = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   lineHeight: '126.49999856948853%',
-  textTransform: 'none',
-})
+  textTransform: 'none'
+});
 
-export const BodyTransactions = () => {
+export const BodyTransactions = ({
+  titleText = 'Mis Transacciones',
+  column
+}) => {
   return (
     <BodyTransaction>
-      <AssetsTitle gap={1} flexDirection={{md: 'row', xs: 'column'}}>
-        <TitleAssets>Mis Transacciones</TitleAssets>
+      <AssetsTitle gap={1} flexDirection={{ md: 'row', xs: 'column' }}>
+        <TitleAssets>{titleText}</TitleAssets>
         <IteractionAssetsFilt gap={1}>
           <FundSelectBtn>Portfolios</FundSelectBtn>
           <Divaider>|</Divaider>
@@ -97,8 +102,8 @@ export const BodyTransactions = () => {
         </IteractionAssetsFilt>
       </AssetsTitle>
       <Stack width={'100%'}>
-        <TabletGridDesktop />
+        <TabletGridDesktop column={column} />
       </Stack>
     </BodyTransaction>
-  )
-}
+  );
+};

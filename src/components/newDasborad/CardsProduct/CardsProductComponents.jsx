@@ -38,7 +38,7 @@ export const BodyContainers = styled(Stack)({
 })
 
 export const BottonsIconosPerfile = styled('img')({
-  width: '100%',
+  //width: '100%',
   height: '100%',
   margin: '0px',
 })
@@ -63,12 +63,13 @@ export const CardsInfo = styled(Stack)({
   alignItems: 'flex-start',
   padding: '0px',
   boxSizing: 'border-box',
-  //flex: '1',
+  flex: '1',
   flexBasis: 0.2,
   flexGrow: 1,
   margin: '0px 0px 0px 13px',
   //height: '72px',
   width: '100%',
+  gap: '12px',
 })
 
 export const ReantabilityTitel = styled(Typography)({
@@ -93,7 +94,7 @@ export const RentabilityValue = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '600',
-  fontSize: '22px',
+  //fontSize: '22px',
   lineHeight: '8px',
   letterSpacing: '0px',
   textDecoration: 'none',

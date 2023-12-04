@@ -1,5 +1,5 @@
-import {PersonAddDisabledTwoTone} from '@mui/icons-material'
-import {Box, MenuItem} from '@mui/material'
+import { PersonAddDisabledTwoTone } from '@mui/icons-material';
+import { Box, MenuItem } from '@mui/material';
 import {
   DataGrid,
   GridToolbarContainer,
@@ -7,8 +7,8 @@ import {
   GridCsvExportMenuItem,
   useGridApiContext,
   gridFilteredSortedRowIdsSelector,
-  gridVisibleColumnFieldsSelector,
-} from '@mui/x-data-grid'
+  gridVisibleColumnFieldsSelector
+} from '@mui/x-data-grid';
 /*
 2"Pending"
 4"Poste"
@@ -22,7 +22,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46561112,
+    monto: 46561112
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Completado',
     cuota: 42.3525,
-    monto: 46561112,
+    monto: 46561112
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46561112,
+    monto: 46561112
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46561112,
+    monto: 46561112
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Completado',
     cuota: 42.3525,
-    monto: 6561112,
+    monto: 6561112
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 86561112,
+    monto: 86561112
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Completado',
     cuota: 42.3525,
-    monto: 26561112,
+    monto: 26561112
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 146561112,
+    monto: 146561112
   },
   {
     id: 9,
@@ -94,7 +94,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 36561112,
+    monto: 36561112
   },
   {
     id: 10,
@@ -103,7 +103,7 @@ const row = [
     producto: 'Renta Global test texto largo de mucho contenido',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46566112,
+    monto: 46566112
   },
   {
     id: 11,
@@ -112,7 +112,7 @@ const row = [
     producto: 'Portfolio CLP',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46561112,
+    monto: 46561112
   },
   {
     id: 12,
@@ -121,7 +121,7 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46561112,
+    monto: 46561112
   },
   {
     id: 13,
@@ -130,97 +130,109 @@ const row = [
     producto: 'Renta Global',
     estado: 'Pendiente',
     cuota: 42.3525,
-    monto: 46561112,
-  },
-]
+    monto: 46561112
+  }
+];
 
 const currencyFormatter = new Intl.NumberFormat('es-CL', {
   style: 'currency',
-  currency: 'CLP',
-})
+  currency: 'CLP'
+});
 
 const clpPrice = {
   type: 'number',
   width: 130,
-  valueFormatter: ({value}) => currencyFormatter.format(value),
-  cellClassName: 'font-tabular-nums',
-}
+  valueFormatter: ({ value }) => currencyFormatter.format(value),
+  cellClassName: 'font-tabular-nums'
+};
 
-const column = [
-  {field: 'fecha', headerName: 'Fecha', width: 80, flex: 0.5, hide: true},
+const inicialColumn = [
+  {
+    field: 'fecha',
+    headerName: 'Fecha',
+    width: 120,
+    flex: '0.5',
+    hide: true
+  },
   {
     field: 'movimiento',
     headerName: 'Movimientos',
-    flex: 0.8,
+    flex: '1.5 ',
     width: 160,
-    cellClassName: 'super-app-theme--cell',
+    cellClassName: 'super-app-theme--cell'
   },
-  {field: 'producto', headerName: 'Productos', flex: 1, width: 350},
-  {field: 'estado', headerName: 'Estado', flex: 0.6, width: 130},
-  {field: 'cuota', headerName: 'Cuotas', flex: 0.6, width: 130},
-  {field: 'monto', ...clpPrice, headerName: 'Monto', flex: 0.6, width: 130},
-]
+  { field: 'producto', headerName: 'Productos', flex: '5 0 100px', width: 300 },
+  { field: 'estado', headerName: 'Estado', flex: '0.6 0 auto', width: 160 },
+  { field: 'cuota', headerName: 'Cuotas', flex: '0.6 0 auto', width: 140 },
+  {
+    field: 'monto',
+    ...clpPrice,
+    headerName: 'Monto',
+    flex: '0.6',
+    width: 140
+  }
+];
 
 const getJson = (apiRef) => {
-  const filteredSortedRowIds = gridFilteredSortedRowIdsSelector(apiRef)
-  const visibleColumnsField = gridVisibleColumnFieldsSelector(apiRef)
+  const filteredSortedRowIds = gridFilteredSortedRowIdsSelector(apiRef);
+  const visibleColumnsField = gridVisibleColumnFieldsSelector(apiRef);
 
   const data = filteredSortedRowIds.map((id) => {
-    const row = {}
+    const row = {};
     visibleColumnsField.forEach((field) => {
-      row[field] = apiRef.current.getCellParams(id, field).value
-    })
-    return row
-  })
+      row[field] = apiRef.current.getCellParams(id, field).value;
+    });
+    return row;
+  });
 
-  return JSON.stringify(data, null, 2)
-}
+  return JSON.stringify(data, null, 2);
+};
 
 const exportBlob = (blob, filename) => {
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  a.click()
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
 
   setTimeout(() => {
-    URL.revokeObjectURL(url)
-  })
-}
+    URL.revokeObjectURL(url);
+  });
+};
 
 function JsonExportMenuItem(props) {
-  const apiRef = useGridApiContext()
+  const apiRef = useGridApiContext();
 
-  const {hideMenu} = props
+  const { hideMenu } = props;
 
   return (
     <MenuItem
       onClick={() => {
-        const jsonString = getJson(apiRef)
+        const jsonString = getJson(apiRef);
         const blob = new Blob([jsonString], {
-          type: 'text/json',
-        })
-        exportBlob(blob, 'data_xcala.json')
-        hideMenu?.()
+          type: 'text/json'
+        });
+        exportBlob(blob, 'data_xcala.json');
+        hideMenu?.();
       }}
     >
       Export JSON
     </MenuItem>
-  )
+  );
 }
 
-const csvOptions = {delimiter: ';'}
+const csvOptions = { delimiter: ';' };
 
 function CustomExportButton(props) {
   return (
     <GridToolbarExportContainer {...props}>
       <GridCsvExportMenuItem
-        rintOptions={{fileName: 'Descargar informe'}}
+        rintOptions={{ fileName: 'Descargar informe' }}
         options={csvOptions}
       />
       {/*<JsonExportMenuItem />*/}
     </GridToolbarExportContainer>
-  )
+  );
 }
 
 function CustomToolbar(props) {
@@ -228,49 +240,49 @@ function CustomToolbar(props) {
     <GridToolbarContainer {...props}>
       <CustomExportButton />
     </GridToolbarContainer>
-  )
+  );
 }
 
-export const TabletGridDesktop = () => {
+export const TabletGridDesktop = ({ column = inicialColumn }) => {
   return (
     <Box
       sx={{
         height: '400px',
-        width: '100%',
+        width: { md: '100%' },
         '& .font-tabular-nums': {
-          fontVariantNumeric: 'tabular-nums',
-        },
+          fontVariantNumeric: 'tabular-nums'
+        }
       }}
     >
       <DataGrid
-        rowHeight={30}
+        rowHeight={50}
         columns={column}
         rows={row}
         sx={{
           '.MuiDataGrid-columnHeaders': {
             backgroundColor: '#1E22AA',
             color: '#fff',
-            fontSize: {md: '16px', xs: '12px'},
+            fontSize: { md: '16px', xs: '12px' }
           },
           '.MuiDataGrid-toolbarContaine, .css-128fb87-MuiDataGrid-toolbarContainer':
             {
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'end',
+              justifyContent: 'end'
             },
           '.MuiDataGrid-toolbarContainer>button': {
-            color: '#475569',
+            color: '#475569'
           },
           '.MuiDataGrid-columnSeparator': {
-            display: 'none',
+            display: 'none'
           },
           '&.MuiDataGrid-root': {
-            borderRadius: '8px',
+            borderRadius: '8px'
           },
           '.MuiDataGrid-row': {
-            fontSize: {md: '16px', xs: '10px'},
+            fontSize: { md: '16px', xs: '12px' },
             textAlign: 'left',
-            justifyContent: 'center',
+            justifyContent: 'center'
           },
           '& .super-app-theme--cell': {
             width: '100%',
@@ -278,24 +290,24 @@ export const TabletGridDesktop = () => {
             fontWeight: '600',
             display: 'flex',
             justifyContent: 'start',
-            alignItems: 'center',
+            alignItems: 'center'
           },
           '.MuiDataGrid-footerContainer': {
-            fontSize: {md: '16px', xs: '12px'},
+            fontSize: { md: '16px', xs: '12px' }
           },
           '.MuiButtonBase-root': {
-            color: '#fff',
-          },
+            color: '#fff'
+          }
         }}
         localeText={{
           toolbarDensity: 'Size',
           toolbarDensityLabel: 'Size',
           toolbarDensityCompact: 'Small',
           toolbarDensityStandard: 'Medium',
-          toolbarDensityComfortable: 'Large',
+          toolbarDensityComfortable: 'Large'
         }}
-        slots={{toolbar: CustomToolbar}}
+        slots={{ toolbar: CustomToolbar }}
       />
     </Box>
-  )
-}
+  );
+};

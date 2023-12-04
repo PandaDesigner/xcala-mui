@@ -12,7 +12,7 @@ export const HeadCards = styled(Stack)({
 	boxSizing: "border-box",
 	flex: "1",
 	margin: "0px",
-	height: "95.9px",
+	height: "120px",
 	width: "100%",
 	//maxWidth: "406px",
 });
@@ -86,11 +86,11 @@ export const HeadTitel = styled(Typography)({
 	fontStyle: "normal",
 	fontFamily: "Poppins",
 	fontWeight: "600",
-	fontSize: "26px",
+	//fontSize: "26px",
 	letterSpacing: "0px",
 	textDecoration: "none",
 	lineHeight: "119.49999332427979%",
 	textTransform: "none",
 	alignSelf: "stretch",
-	margin: "18px 0px 0px 0px",
+	margin: "8px 0px 0px 0px",
 });
