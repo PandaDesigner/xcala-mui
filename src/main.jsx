@@ -13,6 +13,7 @@ import './index.css';
 //import {InvertedPortfolioPage} from './components/InvertedPortfolioView/pages/InvertedPortfolioPage.jsx'
 //import { NewDashboard } from './components/newDasborad/NewDashboard.jsx';
 import { Wallet } from './components/wallet/pages/Wallet.jsx';
+import { MyDataPersonal } from './components/newMyData/index.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,8 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <InvertedPortfolioPage />
       <RescuePages />
       <ProductView />
-       */}
       <Wallet />
+       */}
+      <MyDataPersonal />
 
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}
