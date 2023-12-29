@@ -1,6 +1,7 @@
 import {
   Button,
   FormControl,
+  InputAdornment,
   InputLabel,
   MenuItem,
   Select,
@@ -146,7 +147,14 @@ export const FormDatas = () => {
             funtion={handleChange}
           />
           <ImputFiled nameFiled="Nacionalidad" />
-          <ImputFiled nameFiled="Ingresos mensuales" />
+          <ImputFiled
+            nameFiled="Ingresos mensuales"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">$</InputAdornment>
+              )
+            }}
+          />
           <ImputFiled nameFiled="Origen de fondos" />
           <ImputFiled nameFiled="Estado Civil" />
           <ImputFiled nameFiled="Profesión" />

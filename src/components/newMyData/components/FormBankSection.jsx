@@ -102,7 +102,7 @@ export const FormBankSection = () => {
           </ButtonsAcount>
         </Stack>
       </CardContent>
-      <CardContent gap={'24px'}>
+      <CardContent gap={'32px'}>
         <TitleSection>Referidos Xcala</TitleSection>
         <ButtonsAcount>
           <TextButtons>Copiar mi link para referir</TextButtons>
