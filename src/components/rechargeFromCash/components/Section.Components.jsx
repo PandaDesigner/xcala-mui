@@ -1,4 +1,4 @@
-import { Button, Stack, Typography, styled } from '@mui/material';
+import { Box, Button, Stack, Typography, styled } from '@mui/material';
 
 export const SectionRechargeCash = styled(Stack)({
   backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -14,7 +14,7 @@ export const SectionRechargeCash = styled(Stack)({
   maxWidth: '916px',
   margin: '0 auto',
   marginTop: '-80px',
-  gap: '16px'
+  gap: '21px'
 });
 export const SectionPrintView = styled(Stack)({
   background:
@@ -77,7 +77,6 @@ export const TitleProperty = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: '12px',
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
@@ -91,7 +90,6 @@ export const TextValue = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '600',
-  fontSize: '12px',
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
@@ -120,6 +118,72 @@ export const BtnTitle = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none'
 });
+
+export const MsnAlert = styled(Stack)({
+  border: '1px solid rgba(209, 45, 53, 1)',
+  boxSizing: 'border-box',
+  borderRadius: '8px',
+  display: 'flex',
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'column',
+  //height: '96px',
+  width: '100%',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  padding: '10px 8px',
+  gap: '16px'
+});
+
+export const TitleAlert = styled(Stack)({
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+  padding: '0px',
+  boxSizing: 'border-box',
+  alignSelf: 'stretch',
+  margin: '0px',
+  height: '24px',
+  width: '100%'
+});
+export const WarningAmber = styled(Box)({
+  width: '24px',
+  height: '24px',
+  margin: '0px'
+});
+export const TextImportante = styled(Typography)({
+  textAlign: 'left',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(209, 45, 53, 1)',
+  fontStyle: 'normal',
+  fontFamily: 'Poppins',
+  fontWeight: '600',
+  letterSpacing: '0px',
+  textDecoration: 'none',
+  textTransform: 'none',
+  width: '115.5px',
+  margin: '0px 0px 0px 16px'
+});
+
+export const ParrafoAlert = styled(Typography)({
+  textAlign: 'left',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(24, 40, 73, 1)',
+  fontStyle: 'normal',
+  fontFamily: 'Poppins',
+  fontWeight: '400',
+  letterSpacing: '0px',
+  textDecoration: 'none',
+  textTransform: 'none',
+  alignSelf: 'stretch',
+  margin: '0px auto'
+});
+
+//!SECTION Icons importants
 
 export const IconsCopy = () => {
   return (
@@ -151,10 +215,35 @@ export const IconsCopy = () => {
   );
 };
 
+export const IconsWarnning = () => {
+  return (
+    <svg
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="warning_amber">
+        <g id="Vector">
+          <path
+            d="M12.3044 6.49L19.8344 19.5H4.77444L12.3044 6.49ZM12.3044 2.5L1.30444 21.5H23.3044L12.3044 2.5Z"
+            fill="#D12D35"
+          />
+          <path d="M13.3044 16.5H11.3044V18.5H13.3044V16.5Z" fill="#D12D35" />
+          <path d="M13.3044 10.5H11.3044V15.5H13.3044V10.5Z" fill="#D12D35" />
+        </g>
+      </g>
+    </svg>
+  );
+};
+
 //Molecula
 
-export const BtnCopy = ({ text = 'text' }) => {
-  <ButtonCopy>
+export const BtnCopy = ({
+  text = 'Copiar datos bancarios para transferir'
+}) => {
+  <Button startIcon={<IconsCopy />} sx={{ width: '80%', padding: '16px' }}>
     <BtnTitle>{text}</BtnTitle>
-  </ButtonCopy>;
+  </Button>;
 };
