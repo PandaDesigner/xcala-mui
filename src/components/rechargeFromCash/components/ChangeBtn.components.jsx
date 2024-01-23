@@ -27,3 +27,13 @@ export const TitleCash = styled(Typography)({
   fontWeight: '300'
   //margin: '12px 0px 0px 0px'
 });
+
+export const TitlePagesRecharge = styled(Typography)({
+  textAlign: 'left',
+  whiteSpace: 'pre-wrap',
+  fontSynthesis: 'none',
+  color: 'rgba(0, 0, 0, 0.87)',
+  fontStyle: 'inherit',
+  fontFamily: 'Museo',
+  fontWeight: '500'
+});
