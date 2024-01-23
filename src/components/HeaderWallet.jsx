@@ -2,7 +2,7 @@ import { Typography, Stack, Button, styled } from '@mui/material';
 import CoinFlotin from './CoinFlotin.jsx';
 import AvatarSection from './AvatarSection.jsx';
 
-const HeaderWallet = ({ totalCaja, disponibleCaja, transitoCaja }) => {
+const HeaderWallet = ({ totalCaja = 50000, disponibleCaja, transitoCaja }) => {
   return (
     <Stack
       flexDirection={'column'}

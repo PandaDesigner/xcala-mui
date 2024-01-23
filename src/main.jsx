@@ -12,8 +12,9 @@ import './index.css';
 //import {RescuePages} from './components/RescateSection/pages/RescuePages.jsx'
 //import {InvertedPortfolioPage} from './components/InvertedPortfolioView/pages/InvertedPortfolioPage.jsx'
 //import { NewDashboard } from './components/newDasborad/NewDashboard.jsx';
-import { Wallet } from './components/wallet/pages/Wallet.jsx';
-import { MyDataPersonal } from './components/newMyData/index.js';
+//import { Wallet } from './components/wallet/pages/Wallet.jsx';
+import { RechargeFromCash } from './components/rechargeFromCash/pages/RechargeFromCash.jsx';
+//import { MyDataPersonal } from './components/newMyData/index.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ProductView />
       <Wallet />
        */}
-      <MyDataPersonal />
+      <RechargeFromCash />
 
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}

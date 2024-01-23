@@ -3,6 +3,7 @@ import HeaderWallet from '../../HeaderWallet';
 import { BodyTransactions } from '../../myTransaction/components/layouts/BodyTransactions';
 import { BtnGroupCaja } from '../../BtnGroupCaja';
 import { BtnGroupFix } from '../../BtnGroupFix';
+import { HeaderTransactions } from '../../myTransaction/components/layouts/HeaderTransactions';
 
 const currencyFormatter = new Intl.NumberFormat('es-CL', {
   style: 'currency',
@@ -42,7 +43,10 @@ const column = [
 export const Wallet = () => {
   return (
     <>
-      <HeaderWallet />
+      <HeaderTransactions />
+      {/* 
+      
+      <HeaderWallet /> */}
       <Container
         maxWidth="1380px"
         sx={{

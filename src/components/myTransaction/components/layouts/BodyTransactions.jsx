@@ -15,7 +15,7 @@ const BodyTransaction = styled(Stack)({
   boxSizing: 'border-box',
   minHeight: '486px',
   width: '100%',
-  maxWidth: 500,
+  maxWidth: 680,
   margin: '0px auto',
   paddingTop: '16px'
 });
