@@ -1,4 +1,4 @@
-import {Button, Stack, Typography, styled} from '@mui/material'
+import { Button, Stack, Typography, styled } from '@mui/material';
 
 export const ComponentRescateCont = styled(Stack)({
   flex: '1 1 auto',
@@ -8,10 +8,10 @@ export const ComponentRescateCont = styled(Stack)({
   justifyContent: 'start',
   alignItems: 'center',
   padding: '0px',
-  boxSizing: 'border-box',
+  boxSizing: 'border-box'
   //height: '161.72px',
   //width: '682.38px',
-})
+});
 export const ContentAvatarRescue = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -20,10 +20,10 @@ export const ContentAvatarRescue = styled(Stack)({
   flexWrap: 'wrap',
   padding: '0px',
   boxSizing: 'border-box',
-  margin: '0px',
+  margin: '0px'
   //height: '161.72px',
   //width: '682.38px',
-})
+});
 
 export const RescueAvatarIcon = styled(Stack)({
   display: 'flex',
@@ -36,8 +36,8 @@ export const RescueAvatarIcon = styled(Stack)({
   boxSizing: 'border-box',
   //width: '161px',
   //height: '161.72px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const RescueAvatarDescript = styled(Stack)({
   position: 'relative',
@@ -47,11 +47,11 @@ export const RescueAvatarDescript = styled(Stack)({
 
   padding: '0px',
   boxSizing: 'border-box',
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
   //margin: '0px 0px 0px 8.375024795532227px',
   //height: '161.72px',
   //width: '513px',
-})
+});
 
 export const RescueIconsPorfolio = styled('div')({
   boxShadow:
@@ -67,20 +67,20 @@ export const RescueIconsPorfolio = styled('div')({
   left: '0px',
   top: '0px',
   height: '131px',
-  width: '131px',
-})
+  width: '131px'
+});
 export const IconosPerfiles = styled('img')({
   height: 'auto',
   width: '131px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const RescueAvatarPorfilio = styled('img')({
   height: 'auto',
   width: '40px',
   position: 'absolute',
   left: '80px',
-  bottom: '-5px',
-})
+  bottom: '-5px'
+});
 
 export const RescueAvatarTitle = styled(Typography)({
   whiteSpace: 'pre-wrap',
@@ -94,8 +94,8 @@ export const RescueAvatarTitle = styled(Typography)({
   textDecoration: 'none',
   lineHeight: '100%',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const RescueAvatarChips = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -103,10 +103,10 @@ export const RescueAvatarChips = styled(Stack)({
   padding: '0px',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
-  margin: '4px 0px 0px 0px',
+  margin: '4px 0px 0px 0px'
   //height: '15px',
   //width: '513px',
-})
+});
 
 export const RescueQuotas = styled(Typography)({
   whiteSpace: 'pre-wrap',
@@ -119,9 +119,9 @@ export const RescueQuotas = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
   //margin: '4px 0px 0px 0px',
-})
+});
 
 export const RescueQuotasSpan = styled(Typography)({
   whiteSpace: 'pre-wrap',
@@ -132,8 +132,8 @@ export const RescueQuotasSpan = styled(Typography)({
   fontSize: '18px',
   letterSpacing: '0px',
   textDecoration: 'none',
-  textTransform: 'none',
-})
+  textTransform: 'none'
+});
 
 export const RescueMunt = styled(Stack)({
   position: 'relative',
@@ -142,11 +142,11 @@ export const RescueMunt = styled(Stack)({
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
   padding: '0px',
-  boxSizing: 'border-box',
+  boxSizing: 'border-box'
   //margin: '4px 0px 0px 0px',
   //height: '27.15px',
   //width: '224.29px',
-})
+});
 export const Tienes = styled(Typography)({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
@@ -159,8 +159,8 @@ export const Tienes = styled(Typography)({
   letterSpacing: '1.8px',
   textDecoration: 'none',
   textTransform: 'uppercase',
-  margin: '0px',
-})
+  margin: '0px'
+});
 // const AtomoUserRate = styled()({
 //   width: '159.29px',
 //   height: '27.15px',
@@ -179,8 +179,8 @@ export const TitlePortafolioValue = styled(Typography)({
   textDecoration: 'none',
   lineHeight: '99.99999403953552%',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const ExpectedReturnValue = styled(Typography)({
   textAlign: 'right',
@@ -194,8 +194,8 @@ export const ExpectedReturnValue = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const CreateDatePorfolio = styled(Typography)({
   textAlign: 'right',
   whiteSpace: 'pre-wrap',
@@ -208,8 +208,8 @@ export const CreateDatePorfolio = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '4px 0px 0px 0px',
-})
+  margin: '4px 0px 0px 0px'
+});
 
 /***********Cards Content **********/
 
@@ -226,8 +226,8 @@ export const RescueContentContent = styled(Stack)({
   padding: '32px',
   boxSizing: 'border-box',
   //margin: '0px auto',
-  marginTop: '-45px',
-})
+  marginTop: '-45px'
+});
 export const SelectContent = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -237,10 +237,10 @@ export const SelectContent = styled(Stack)({
   padding: '0px',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
-  margin: '0px',
+  margin: '0px'
   //height: '110px',
   //width: '676px',
-})
+});
 export const TitleSectionRescue = styled(Typography)({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
@@ -254,8 +254,8 @@ export const TitleSectionRescue = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none',
   alignSelf: 'stretch',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const SectionSelectRescue = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -265,27 +265,23 @@ export const SectionSelectRescue = styled(Stack)({
   padding: '0px',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
-  margin: '16px 0px 0px 0px',
+  margin: '16px 0px 0px 0px'
   //height: '55px',
   //width: '676px',
-})
+});
 
 export const ButtonContained = styled(Button)({
   backgroundColor: 'rgba(30, 34, 170, 1)',
-  boxShadow:
-    '0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.2)',
+  textTransform: 'none',
   borderRadius: '8px',
   display: 'flex',
-  position: 'relative',
-  isolation: 'isolate',
-  flexDirection: 'column',
   height: '60px',
   boxSizing: 'border-box',
   overflow: 'hidden',
   padding: '8px 32px',
   //width: '456px',
-  color: '#fff',
-})
+  color: '#fff'
+});
 export const BaseBotton = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -297,5 +293,5 @@ export const BaseBotton = styled(Stack)({
   margin: '0px',
   overflow: 'hidden',
   height: '86px',
-  width: '456px',
-})
+  width: '456px'
+});

@@ -120,19 +120,19 @@ export const BtnTitle = styled(Typography)({
 });
 
 export const MsnAlert = styled(Stack)({
-  border: '1px solid rgba(209, 45, 53, 1)',
+  border: '1px solid #F5BABD',
   boxSizing: 'border-box',
   borderRadius: '8px',
   display: 'flex',
   position: 'relative',
   isolation: 'isolate',
   flexDirection: 'column',
-  //height: '96px',
   width: '100%',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
   padding: '10px 8px',
-  gap: '16px'
+  gap: '16px',
+  backgroundColor: '#FBE0E1'
 });
 
 export const TitleAlert = styled(Stack)({

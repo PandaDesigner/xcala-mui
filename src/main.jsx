@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { ThemeProvider, useTheme } from '@mui/material';
 import { theme } from './theme.js';
 import './index.css';
+import { RescuePages } from './components/RescateSection/pages/RescuePages.jsx';
 //import { MyTransactionsPages } from './components/myTransaction/pages';
 //import {NotificationsXcala} from './components/Notifications/NotificationsXcala.jsx'
 //import { LoyoutMenu } from './components/Menu/Layouts/LoyoutMenu.jsx';
@@ -14,6 +15,7 @@ import './index.css';
 //import { NewDashboard } from './components/newDasborad/NewDashboard.jsx';
 //import { Wallet } from './components/wallet/pages/Wallet.jsx';
 import { RechargeFromCash } from './components/rechargeFromCash/pages/RechargeFromCash.jsx';
+import { CashRescuePages } from './components/rechargeFromCash/pages/CashRescuePages.jsx';
 //import { MyDataPersonal } from './components/newMyData/index.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -25,8 +27,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ProductView />
       <Wallet />
        */}
-      <RechargeFromCash />
 
+      {/* 
+      <RescuePages />
+       */}
+      <CashRescuePages />
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}
     </ThemeProvider>

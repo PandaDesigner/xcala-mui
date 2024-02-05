@@ -1,6 +1,6 @@
-import {Box, Button, Stack, Typography, styled} from '@mui/material'
+import { Box, Button, Stack, Typography, styled } from '@mui/material';
 
-const $minHeigth = '407px'
+const $minHeigth = '307px';
 export const BackgroundColor = styled(Stack)({
   zIndex: 0,
   backgroundColor: 'rgba(30, 34, 170, 1)',
@@ -13,8 +13,8 @@ export const BackgroundColor = styled(Stack)({
   minWidth: '90%',
   minHeight: $minHeigth,
   padding: '0px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const ContentApp = styled(Stack)({
   position: 'relative',
@@ -25,22 +25,22 @@ export const ContentApp = styled(Stack)({
   height: '100%',
   minHeight: $minHeigth,
   alignItems: 'center',
-  paddingBottom: {md: '', xs: '3rem'},
-})
+  paddingBottom: { md: '', xs: '3rem' }
+});
 
 export const BottonsIconosPerfile = styled(Stack)({
   width: '54px',
   height: '54px',
   position: 'absolute',
   right: '22px',
-  bottom: '25px',
-})
+  bottom: '25px'
+});
 
 export const IconInfo = styled('img')({
   height: 'auto',
   width: '24px',
-  margin: '0px 0px 0px 14px',
-})
+  margin: '0px 0px 0px 14px'
+});
 
 export const RetornoEsperado = styled(Typography)({
   whiteSpace: 'pre-wrap',
@@ -53,8 +53,8 @@ export const RetornoEsperado = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const CreateDatePorfolio = styled(Typography)({
   whiteSpace: 'pre-wrap',
@@ -67,21 +67,21 @@ export const CreateDatePorfolio = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '4px 0px 0px 0px',
-})
+  margin: '4px 0px 0px 0px'
+});
 
 export const SectionButtons = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
-  flexDirection: {md: 'row', xs: 'column'},
+  flexDirection: { md: 'row', xs: 'column' },
   justifyContent: 'center',
-  alignItems: {md: 'flex-end', xs: 'center'},
+  alignItems: { md: 'flex-end', xs: 'center' },
   boxSizing: 'border-box',
   width: '100%',
   maxWidth: '1380px',
   height: '100%',
-  margin: '0 auto',
-})
+  margin: '0 auto'
+});
 
 export const AreaButtons = styled(Stack)({
   backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -98,14 +98,14 @@ export const AreaButtons = styled(Stack)({
   minWidth: '550px',
   margin: '0px',
   bottom: '-40px',
-  gap: 8,
-})
+  gap: 8
+});
 export const ButtonsInvestment = styled(Button)({
   flex: '1',
   height: '50%',
   width: '100%',
-  paddingY: '16px',
-})
+  paddingY: '16px'
+});
 
 //*Body portafolio
 
@@ -117,8 +117,8 @@ export const SectionDataPorfolio = styled(Stack)({
   justifyContent: 'center',
   alignItems: 'center',
   padding: '0px',
-  boxSizing: 'border-box',
-})
+  boxSizing: 'border-box'
+});
 
 export const ChartsPorfolio = styled(Stack)({
   display: 'flex',
@@ -131,8 +131,8 @@ export const ChartsPorfolio = styled(Stack)({
   boxSizing: 'border-box',
   margin: '0px',
 
-  width: '100%',
-})
+  width: '100%'
+});
 export const DataCharts = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -142,8 +142,8 @@ export const DataCharts = styled(Stack)({
   padding: '0px',
   boxSizing: 'border-box',
   width: '100%',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const InfoPorfolio = styled(Stack)({
   background:
@@ -155,10 +155,10 @@ export const InfoPorfolio = styled(Stack)({
   justifyContent: 'flex-start',
   alignItems: 'center',
   padding: '10px 20px',
-  boxSizing: 'border-box',
+  boxSizing: 'border-box'
 
   //margin: '0px 0px 0px 48px',
-})
+});
 export const TitelDataPorfolio = styled(Typography)({
   textAlign: 'center',
   whiteSpace: 'pre-wrap',
@@ -171,8 +171,8 @@ export const TitelDataPorfolio = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const DescriptionDataPorfo = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -183,8 +183,8 @@ export const DescriptionDataPorfo = styled(Stack)({
   boxSizing: 'border-box',
   alignSelf: 'stretch',
   //margin: '21px 0px 0px 0px',
-  width: '100%',
-})
+  width: '100%'
+});
 
 //* Description data Charts
 
@@ -196,9 +196,9 @@ export const DescriptionComponents = styled(Stack)({
   justifyContent: 'space-between',
   alignItems: 'flex-start',
   padding: '0px',
-  boxSizing: 'border-box',
+  boxSizing: 'border-box'
   //height: '27px',
-})
+});
 
 export const KeyDescription = styled(Typography)({
   textAlign: 'left',
@@ -213,8 +213,8 @@ export const KeyDescription = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none',
   //width: '70px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const KeyValue = styled(Typography)({
   textAlign: 'end',
@@ -228,8 +228,8 @@ export const KeyValue = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const InvestmentRiskProfile = styled(Typography)({
   textAlign: 'left',
@@ -244,14 +244,14 @@ export const InvestmentRiskProfile = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none',
   //width: '488px',
-  margin: '0px 0px 0px 16px',
-})
+  margin: '0px 0px 0px 16px'
+});
 
 export const WarningAmber = styled('img')({
   width: '24px',
   height: '24px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const PorfolioStack = styled(Stack)({
   position: 'relative',
@@ -260,8 +260,8 @@ export const PorfolioStack = styled(Stack)({
   justifyContent: 'center',
   padding: '0px',
   boxSizing: 'border-box',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const ValuePorfolio = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -270,8 +270,8 @@ export const ValuePorfolio = styled(Stack)({
   alignItems: 'center',
   padding: '0px',
   boxSizing: 'border-box',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const RentabilidadUltimo = styled(Typography)({
   textAlign: 'right',
   whiteSpace: 'pre-wrap',
@@ -285,13 +285,13 @@ export const RentabilidadUltimo = styled(Typography)({
   textDecoration: 'none',
   lineHeight: '99.99999403953552%',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 export const DeteilValue = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
   flexDirection: 'column',
   justifyContent: 'flex-start',
   padding: '0px',
-  boxSizing: 'border-box',
-})
+  boxSizing: 'border-box'
+});
