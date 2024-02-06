@@ -6,7 +6,12 @@ import {
   Stack,
   TextField,
   Typography,
-  styled
+  styled,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+  Checkbox,
+  FormControlLabel
 } from '@mui/material';
 import { useState } from 'react';
 import {
@@ -17,6 +22,7 @@ import {
   TitleAlert,
   WarningAmber
 } from './Section.Components';
+import { Label } from '@mui/icons-material';
 
 const ContainerModal = styled(Stack)({
   position: 'absolute',
@@ -215,30 +221,18 @@ const BankCantainer = styled('div')({
   width: '100%',
   margin: '8px 0px 16px 0px'
 });
-const TextFields = styled(TextField)({
-  alignSelf: 'stretch',
-  height: '55px',
-  margin: '0px'
-});
-const Buttons = styled(Button)({
-  width: '147px',
-  margin: '4px 0px 0px 0px'
-});
-const MsjContainer = styled('div')({
-  border: '1px solid rgba(209, 45, 53, 1)',
-  boxSizing: 'border-box',
-  borderRadius: '8px',
-  display: 'flex',
+
+const BtnContainer = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignItems: 'flex-start',
-  padding: '10px 0px',
-  alignSelf: 'stretch',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'flex-end',
+  padding: '0px',
+  boxSizing: 'border-box',
+  height: '72px',
   margin: '8px 0px 0px 0px',
-  height: '102px',
-  width: '840px'
+  width: '80%'
 });
 
 export const ModalRescueCash = ({
@@ -363,6 +357,54 @@ export const ModalRescueCash = ({
               subsiguiente si la realizas luego de esa hora.
             </ParrafoAlert>
           </MsnAlert>
+          <Stack justifyContent={'center'} alignItems={'start'} width={'100%'}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label={
+                <Typography
+                  sx={{
+                    fontSize: 'clamp(0.75rem, 0.5673rem + 0.7692vw, 1rem)'
+                  }}
+                >
+                  Declaro entender los{' '}
+                  <Typography
+                    component={'span'}
+                    color={'#49A197'}
+                    fontWeight={500}
+                  >
+                    términos y condiciones del rescate
+                  </Typography>{' '}
+                  que estoy a punto de solicitar
+                </Typography>
+              }
+            />
+          </Stack>
+          <BtnContainer gap={2}>
+            <Button
+              sx={{
+                width: '45%',
+                padding: '16px',
+                background: '#F4F4FB',
+                color: 'white',
+                textTransform: 'none'
+              }}
+              disableElevation
+            >
+              No por ahora
+            </Button>
+            <Button
+              sx={{
+                width: '55%',
+                padding: '16px',
+                textTransform: 'none'
+              }}
+              variant="contained"
+              disableElevation
+              disabled
+            >
+              Confirmar solicitud de rescate
+            </Button>
+          </BtnContainer>
         </ModalContainer>
       </MuntRescueModal>
     </ContainerModal>
