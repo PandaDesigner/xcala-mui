@@ -1,15 +1,14 @@
-export const ImgComponent = () => {
+export const ImgComponent = ({ styles }) => {
   return (
     <svg
-      width="493"
-      height="285"
+      height="clamp(6.3125rem, -12.8542rem + 81.7778vw, 17.8125rem)"
       viewBox="0 0 493 285"
       fill="none"
       style={{
-        //zIndex: 1,
+        ...styles,
         position: 'absolute',
-        left: 0,
-        bottom: 0
+        bottom: 0,
+        left: 0
       }}
       xmlns="http://www.w3.org/2000/svg"
     >

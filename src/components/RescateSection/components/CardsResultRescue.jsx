@@ -4,10 +4,10 @@ import {
   Divider,
   Stack,
   Typography,
-  styled,
-} from '@mui/material'
+  styled
+} from '@mui/material';
 
-import iconWarnin from '../../../assets/images/Symbol/warning_amber.svg'
+import iconWarnin from '../../../assets/images/Symbol/warning_amber.svg';
 
 const RescauSolutionSectio = styled(Stack)({
   backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -21,8 +21,8 @@ const RescauSolutionSectio = styled(Stack)({
   alignItems: 'center',
   padding: '34px',
   boxSizing: 'border-box',
-  marginTop: '-75px',
-})
+  marginTop: '-75px'
+});
 const RsContent = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -34,8 +34,8 @@ const RsContent = styled(Stack)({
   flex: '1',
   margin: '0px',
   //height: '415px',
-  width: '100%',
-})
+  width: '100%'
+});
 const RescueDescription = styled(Stack)({
   background:
     'linear-gradient(-4.239999999999995deg, rgba(241, 244, 249, 1) -1.5822148034538395%, rgba(241, 244, 249, 0) 135.1821148520685%)',
@@ -50,8 +50,8 @@ const RescueDescription = styled(Stack)({
   alignSelf: 'stretch',
   margin: '0px',
   gap: '1rem',
-  width: '100%',
-})
+  width: '100%'
+});
 const InstallmentNumbers = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
@@ -63,8 +63,8 @@ const InstallmentNumbers = styled(Stack)({
   alignSelf: 'stretch',
   margin: '0px',
   //height: '27px',
-  width: '100%',
-})
+  width: '100%'
+});
 
 const RescuePeriod = styled(Stack)({
   position: 'relative',
@@ -77,8 +77,8 @@ const RescuePeriod = styled(Stack)({
   alignSelf: 'stretch',
   //margin: '21px 0px 0px 0px',
   //height: '27px',
-  width: '100%',
-})
+  width: '100%'
+});
 
 const TitleItemCards = styled(Typography)({
   textAlign: 'left',
@@ -88,12 +88,12 @@ const TitleItemCards = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: {md: '18px', xs: '12px'},
+  fontSize: { md: '18px', xs: '12px' },
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 const ResItemCards = styled(Typography)({
   textAlign: 'end',
   whiteSpace: 'pre-wrap',
@@ -102,12 +102,12 @@ const ResItemCards = styled(Typography)({
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '600',
-  fontSize: {md: '18px', xs: '12px'},
+  fontSize: { md: '18px', xs: '12px' },
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 const WarningMessage = styled(Stack)({
   //border: '1px solid rgba(209, 45, 53, 1)',
@@ -125,8 +125,8 @@ const WarningMessage = styled(Stack)({
   margin: '26px 0px 0px 0px',
   gap: '0.51rem',
   //height: '112px',
-  width: '100%',
-})
+  width: '100%'
+});
 const WarninTitle = styled(Stack)({
   display: 'flex',
   position: 'relative',
@@ -139,13 +139,13 @@ const WarninTitle = styled(Stack)({
   alignSelf: 'stretch',
   margin: '0px',
   //height: '24px',
-  width: '100%',
-})
+  width: '100%'
+});
 const WarningAmber = styled('img')({
   width: '24px',
   height: '24px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 const ImportanText = styled(Typography)({
   textAlign: 'left',
@@ -160,8 +160,8 @@ const ImportanText = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none',
   width: '115.5px',
-  margin: '0px 0px 0px 16px',
-})
+  margin: '0px 0px 0px 16px'
+});
 
 const DescriptionText = styled(Typography)({
   textAlign: 'left',
@@ -175,32 +175,32 @@ const DescriptionText = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  alignSelf: 'stretch',
+  alignSelf: 'stretch'
   //margin: '16px 0px 0px 0px',
-})
+});
 const Divaiders = styled(Divider)({
   border: '1px dashed rgba(191, 191, 191, 0.6)',
   alignSelf: 'stretch',
   margin: '26px 0px 0px 0px',
-  width: '100%',
-})
+  width: '100%'
+});
 
-const TermsAndConditions = styled(Stack)({
+export const TermsAndConditions = styled(Stack)({
   display: 'flex',
   position: 'relative',
   isolation: 'isolate',
   flexDirection: 'column',
   justifyContent: 'flex-start',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   padding: '0px',
   boxSizing: 'border-box',
   alignSelf: 'stretch',
-  margin: '26px 0px 0px 0px',
+  margin: '22px 0px 0px 0px',
   //height: '24px',
-  width: '100%',
-})
+  width: '100%'
+});
 
-const ContentCheckBox = styled(Stack)({
+export const ContentCheckBox = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
   flexDirection: 'row',
@@ -211,36 +211,34 @@ const ContentCheckBox = styled(Stack)({
   alignSelf: 'stretch',
   margin: '0px',
   //height: '24px',
-  width: '100%',
-})
+  width: '100%'
+});
 
-const CheckBoxOutlineBlank = styled(Checkbox)({
+export const CheckBoxOutlineBlank = styled(Checkbox)({
   width: '24px',
   height: '24px',
-  margin: '0px',
-})
-const TextDeclaration = styled(Typography)({
+  margin: '0px'
+});
+export const TextDeclaration = styled(Typography)({
   whiteSpace: 'pre-wrap',
   color: 'rgba(128, 128, 128, 1)',
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '400',
-  fontSize: '16px',
   letterSpacing: '0px',
   textDecoration: 'none',
-  textTransform: 'none',
-})
-const DeclarationSpan = styled(Typography)({
+  textTransform: 'none'
+});
+export const DeclarationSpan = styled(Typography)({
   whiteSpace: 'pre-wrap',
   color: 'rgba(73, 161, 151, 1)',
   fontStyle: 'normal',
   fontFamily: 'Poppins',
   fontWeight: '600',
-  fontSize: '16px',
   letterSpacing: '0px',
   textDecoration: 'none',
-  textTransform: 'none',
-})
+  textTransform: 'none'
+});
 
 const ButtonGroup = styled(Stack)({
   position: 'relative',
@@ -251,26 +249,26 @@ const ButtonGroup = styled(Stack)({
   boxSizing: 'border-box',
   margin: '26px 0px 0px 0px',
   //height: '60px',
-  width: {md: '60%', xs: '80%'},
+  width: { md: '60%', xs: '80%' },
   gap: '1rem',
-  alignSelf: 'stretch',
-})
+  alignSelf: 'stretch'
+});
 const NotNowButton = styled(Button)({
   backgroundColor: '#F4F4FB',
   width: '302px',
   height: '60px',
-  margin: '0px',
-})
+  margin: '0px'
+});
 const ConfirmationButton = styled(Button)({
   width: '302px',
-  height: '60px',
+  height: '60px'
   //margin: '0px 0px 0px 21px',
-})
+});
 
 const ButtonBack = styled(Button)({
   height: '39px',
-  width: '128px',
-})
+  width: '128px'
+});
 
 const TextBtnBack = styled(Typography)({
   textAlign: 'center',
@@ -284,12 +282,12 @@ const TextBtnBack = styled(Typography)({
   letterSpacing: '0px',
   textDecoration: 'none',
   textTransform: 'none',
-  margin: '0px',
-})
+  margin: '0px'
+});
 
 export const CardsResultRescue = () => {
   return (
-    <Stack sx={{margin: '0px auto', width: '90%', maxWidth: '1380px'}}>
+    <Stack sx={{ margin: '0px auto', width: '90%', maxWidth: '1380px' }}>
       <RescauSolutionSectio>
         <RsContent>
           <RescueDescription>
@@ -311,7 +309,7 @@ export const CardsResultRescue = () => {
               <WarningAmber src={iconWarnin} />
               <ImportanText>Importante:</ImportanText>
             </WarninTitle>
-            <ul style={{margin: '0px', padding: '0px 18px'}}>
+            <ul style={{ margin: '0px', padding: '0px 18px' }}>
               <li>
                 <DescriptionText>
                   El plazo de rescate comienza a correr el día hábil siguiente
@@ -335,22 +333,22 @@ export const CardsResultRescue = () => {
               </li>
             </ul>
           </WarningMessage>
-          <Divaiders variant='inset' />
+          <Divaiders variant="inset" />
           <TermsAndConditions>
             <ContentCheckBox gap={1}>
               <CheckBoxOutlineBlank />
               <TextDeclaration>
                 Declaro entender los{' '}
-                <DeclarationSpan variant='span' component={'span'}>
+                <DeclarationSpan variant="span" component={'span'}>
                   términos y condiciones del rescate
                 </DeclarationSpan>{' '}
                 que estoy a punto de solicitar
               </TextDeclaration>
             </ContentCheckBox>
           </TermsAndConditions>
-          <ButtonGroup flexDirection={{md: 'row', sx: 'column'}}>
+          <ButtonGroup flexDirection={{ md: 'row', sx: 'column' }}>
             <NotNowButton>No por ahora</NotNowButton>
-            <ConfirmationButton variant='contained' disableElevation>
+            <ConfirmationButton variant="contained" disableElevation>
               Confirmar
             </ConfirmationButton>
           </ButtonGroup>
@@ -362,7 +360,7 @@ export const CardsResultRescue = () => {
           justifyContent: 'center',
           alignItems: 'center',
           marginTop: '5rem',
-          marginBottom: '2rem',
+          marginBottom: '2rem'
         }}
       >
         <ButtonBack>
@@ -370,5 +368,5 @@ export const CardsResultRescue = () => {
         </ButtonBack>
       </Stack>
     </Stack>
-  )
-}
+  );
+};

@@ -16,7 +16,12 @@ import './index.css';
 //import { Wallet } from './components/wallet/pages/Wallet.jsx';
 //import { RechargeFromCash } from './components/rechargeFromCash/pages/RechargeFromCash.jsx';
 //import { CashRescuePages } from './components/rechargeFromCash/pages/CashRescuePages.jsx';
-import { RegisterPages } from './components/RegisterSection/page/RegisterPages.jsx';
+
+import {
+  InitialPerfilPages,
+  RegisterPages
+} from './components/RegisterSection/page';
+//import { CashRescuePages } from './components/rechargeFromCash/pages/CashRescuePages.jsx';
 //import { MyDataPersonal } from './components/newMyData/index.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -30,9 +35,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
        */}
 
       {/* 
-      <RescuePages />
-       */}
+      <CashRescuePages />
       <RegisterPages />
+    */}
+      <InitialPerfilPages />
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}
     </ThemeProvider>

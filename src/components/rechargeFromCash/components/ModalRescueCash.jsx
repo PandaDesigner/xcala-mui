@@ -225,12 +225,9 @@ const BankCantainer = styled('div')({
 const BtnContainer = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
-  flexDirection: 'row',
   justifyContent: 'center',
-  alignItems: 'flex-end',
   padding: '0px',
   boxSizing: 'border-box',
-  height: '72px',
   margin: '8px 0px 0px 0px',
   width: '80%'
 });
@@ -357,7 +354,12 @@ export const ModalRescueCash = ({
               subsiguiente si la realizas luego de esa hora.
             </ParrafoAlert>
           </MsnAlert>
-          <Stack justifyContent={'center'} alignItems={'start'} width={'100%'}>
+          <Stack
+            justifyContent={'center'}
+            alignItems={'start'}
+            width={'100%'}
+            marginTop={{ xs: '16px', md: '8px' }}
+          >
             <FormControlLabel
               control={<Checkbox />}
               label={
@@ -371,6 +373,9 @@ export const ModalRescueCash = ({
                     component={'span'}
                     color={'#49A197'}
                     fontWeight={500}
+                    sx={{
+                      fontSize: 'clamp(0.75rem, 0.5673rem + 0.7692vw, 1rem)'
+                    }}
                   >
                     términos y condiciones del rescate
                   </Typography>{' '}
@@ -379,10 +384,14 @@ export const ModalRescueCash = ({
               }
             />
           </Stack>
-          <BtnContainer gap={2}>
+          <BtnContainer
+            flexDirection={{ ms: 'column', md: 'row' }}
+            //alignItems={{ ms: 'center', md: 'flex-end' }}
+            gap={2}
+          >
             <Button
               sx={{
-                width: '45%',
+                width: { md: '45%' },
                 padding: '16px',
                 background: '#F4F4FB',
                 color: 'white',
@@ -394,7 +403,7 @@ export const ModalRescueCash = ({
             </Button>
             <Button
               sx={{
-                width: '55%',
+                width: { md: '55%' },
                 padding: '16px',
                 textTransform: 'none'
               }}
