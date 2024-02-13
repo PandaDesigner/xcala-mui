@@ -17,9 +17,9 @@ export const RegisterPages = () => {
     >
       <RegisterLayout>
         {/*
-        <LoginsSection />
-      */}
         <FromRegisterComponents />
+      */}
+        <LoginsSection />
       </RegisterLayout>
     </Stack>
   );

@@ -21,6 +21,7 @@ import {
   InitialPerfilPages,
   RegisterPages
 } from './components/RegisterSection/page';
+import { DefiningRiskProfile } from './components/RegisterSection/views/DefiningRiskProfile.jsx';
 //import { CashRescuePages } from './components/rechargeFromCash/pages/CashRescuePages.jsx';
 //import { MyDataPersonal } from './components/newMyData/index.js';
 

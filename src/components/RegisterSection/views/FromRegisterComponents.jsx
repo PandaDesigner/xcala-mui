@@ -34,7 +34,7 @@ export const FromRegisterComponents = () => {
       sx={{
         background: '#fff',
         boxSizing: 'border-box',
-        //width: '100%',
+        width: '100%',
         borderRadius: '24px',
         padding: '24px',
         position: 'relative',

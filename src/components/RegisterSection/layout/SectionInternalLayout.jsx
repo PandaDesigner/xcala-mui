@@ -201,7 +201,11 @@ const TitleStepe = ({
   );
 };
 
-export const SectionInternalLayout = ({ name, headerSteep = true }) => {
+export const SectionInternalLayout = ({
+  name,
+  headerSteep = false,
+  children
+}) => {
   return (
     <Box
       sx={{
@@ -237,6 +241,21 @@ export const SectionInternalLayout = ({ name, headerSteep = true }) => {
         )}
         <AroYellowsBackground />
       </HeaderLayout>
+      <Box
+        sx={{
+          width: '90%',
+          maxWidth: '1200px',
+          height: '100%',
+          minHeight: '300px',
+          margin: '0 auto',
+          marginTop: '-80px',
+          boxSizing: 'border-box',
+          position: 'relative',
+          zIndex: 1
+        }}
+      >
+        {children}
+      </Box>
     </Box>
   );
 };

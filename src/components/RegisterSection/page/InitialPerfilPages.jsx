@@ -1,5 +1,7 @@
 import { Stack } from '@mui/material';
 import { SectionInternalLayout } from '../layout/SectionInternalLayout';
+import { DefiningRiskProfile } from '../views';
+import { SectionNotification } from '../views/SectionNotification';
 
 export const InitialPerfilPages = () => {
   return (
@@ -10,10 +12,14 @@ export const InitialPerfilPages = () => {
         minHeight: '100vh',
         position: 'relative',
         overflow: 'hidden',
-        padding: 0
+        padding: 0,
+        margin: 0
       }}
     >
-      <SectionInternalLayout></SectionInternalLayout>
+      <SectionInternalLayout>
+        <SectionNotification />
+        {/*   <DefiningRiskProfile /> */}
+      </SectionInternalLayout>
     </Stack>
   );
 };
