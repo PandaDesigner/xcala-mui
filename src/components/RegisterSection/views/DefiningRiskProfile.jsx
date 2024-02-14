@@ -128,7 +128,10 @@ export const DefiningRiskProfile = () => {
           </HeaderCardRiskProf>
           <BtnsRiskProfile sx={{ gap: { xs: '2rem', md: '4rem' } }}>
             <BtnPrimary
-              sx={{ fontSize: 'clamp(0.9rem, 0.3214rem + 0.7619vw, 1.45rem)' }}
+              sx={{
+                fontSize: 'clamp(0.9rem, 0.3214rem + 0.7619vw, 1.45rem)',
+                borderRadius: '8px'
+              }}
               startIcon={<DoneIcon />}
               variant="contained"
               disableElevation
@@ -138,7 +141,9 @@ export const DefiningRiskProfile = () => {
             <BtnSecundary
               variant={'text'}
               component={Link}
-              sx={{ fontSize: 'clamp(0.7rem, 0.3214rem + 0.7619vw, 1.05rem)' }}
+              sx={{
+                fontSize: 'clamp(0.7rem, 0.3214rem + 0.7619vw, 1.05rem)'
+              }}
             >
               ya se cual es mi perfil de riesgo
             </BtnSecundary>

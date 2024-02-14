@@ -4,7 +4,7 @@ import { ContainerRiskDefault, DefiningRiskProfile } from '../views';
 import { SectionNotification } from '../views/SectionNotification';
 import { SelectorImput } from '../components/SelectorImput';
 
-export const InitialPerfilPages = () => {
+export const InitialPerfilPages = ({ headerSteep = true }) => {
   return (
     <Stack
       sx={{
@@ -17,15 +17,18 @@ export const InitialPerfilPages = () => {
         margin: 0
       }}
     >
-      <SectionInternalLayout>
-        <ContainerRiskDefault>
-          {['Menos de 1 año', 'De 1 a 2 años', 'Más de 2 años'].map(
-            (item, index) => (
-              <SelectorImput key={index} text={item} />
-            )
-          )}
-        </ContainerRiskDefault>
-        {/*   <DefiningRiskProfile /> */}
+      <SectionInternalLayout headerSteep={headerSteep}>
+        {headerSteep ? (
+          <ContainerRiskDefault>
+            {['Menos de 1 año', 'De 1 a 2 años', 'Más de 2 años'].map(
+              (item, index) => (
+                <SelectorImput key={index} text={item} />
+              )
+            )}
+          </ContainerRiskDefault>
+        ) : (
+          <DefiningRiskProfile />
+        )}
       </SectionInternalLayout>
     </Stack>
   );
