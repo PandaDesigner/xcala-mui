@@ -48,7 +48,7 @@ const TitleRiskProfileSpan = styled(Typography)({
   textDecoration: 'none',
   textTransform: 'none'
 });
-const IconsRiskProfile = styled('img')({
+export const IconsRiskProfile = styled('img')({
   objectFit: 'cover'
 });
 

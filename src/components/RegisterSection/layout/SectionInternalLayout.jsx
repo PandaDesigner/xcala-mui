@@ -203,7 +203,7 @@ const TitleStepe = ({
 
 export const SectionInternalLayout = ({
   name,
-  headerSteep = false,
+  headerSteep = true,
   children
 }) => {
   return (
