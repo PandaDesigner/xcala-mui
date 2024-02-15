@@ -6,7 +6,7 @@ export const ContainerRiskDefault = ({ children }) => {
   return (
     <Stack
       sx={{
-        width: '60%',
+        width: { md: '60%' },
         mx: 'auto',
         boxSizing: 'border-box',
         flexDirection: 'column',

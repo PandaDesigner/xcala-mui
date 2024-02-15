@@ -6,7 +6,7 @@ const HeaderLayout = styled(Stack)({
   height: '100%',
   backgroundColor: '#1E22AA',
   borderRadius: '0px 0px 24px 24px',
-  minHeight: '469px',
+  minHeight: '369px',
   position: 'relative',
   justifyContent: 'center',
   alignItems: 'center',
@@ -30,7 +30,7 @@ const AroYellowsBackground = () => {
         zIndex: -0
       }}
       maxHeight="clamp(21.875rem, 9.4792rem + 52.8889vw, 29.3125rem)"
-      right={'clamp(-20rem, -36.3636rem + 48.4848vw, 0rem)'}
+      right={'clamp(-26rem, -40.3636rem + 48.4848vw, 0rem)'}
     >
       <svg
         //width="460"
@@ -158,8 +158,8 @@ const TitleSectionName = ({ name, description }) => {
           fontWeight={'bold'}
           color={'#5AC4B1'}
           component={'span'}
-          lineHeight={'clamp(1.5rem, -0.1667rem + 7.1111vw, 2.5rem)'}
-          fontSize={'clamp(1.5rem, -0.1667rem + 7.1111vw, 2.5rem)'}
+          fontSize={'clamp(1.2rem, -0.1667rem + 6.1111vw, 2rem)'}
+          lineHeight={'clamp(1.8rem, -0.1667rem + 7.1111vw, 2.5rem)'}
         >
           {name}{' '}
         </Typography>
@@ -175,12 +175,12 @@ const TitleStepe = ({
 }) => {
   return (
     <>
-      <Typography fontSize={'clamp(0.875rem, -0.1667rem + 4.4444vw, 1.8rem);'}>
+      <Typography fontSize={'clamp(0.875rem, -0.1667rem + 4.4444vw, 1.6rem);'}>
         Mi Perfil de inversiones
       </Typography>
       <Typography
-        fontSize={'clamp(0.95rem, -0.0833rem + 3.5556vw, 1.45rem)'}
-        lineHeight={'clamp(1.05rem, -0.0833rem + 3.5556vw, 1.55rem)'}
+        fontSize={'clamp(0.95rem, -0.0833rem + 3.4556vw, 1.25rem)'}
+        lineHeight={'clamp(1.05rem, -0.0833rem + 3.5556vw, 1.45rem)'}
         fontFamily={'Museo'}
         textAlign={'center'}
         component={'p'}
@@ -190,8 +190,8 @@ const TitleStepe = ({
           color={'#5AC4B1'}
           //textAlign={'center'}
           component={'span'}
-          fontSize={'clamp(0.95rem, -0.0833rem + 3.5556vw, 1.45rem)'}
-          lineHeight={'clamp(1.05rem, -0.0833rem + 3.5556vw, 1.55rem)'}
+          fontSize={'clamp(0.95rem, -0.0833rem + 3.4556vw, 1.25rem)'}
+          lineHeight={'clamp(1.05rem, -0.0833rem + 3.5556vw, 1.45rem)'}
         >
           {name}{' '}
         </Typography>
@@ -226,13 +226,13 @@ export const SectionInternalLayout = ({
         ) : (
           <HeaderContainers zIndex={'1'}>
             <Stack
-              height={'80%'}
+              width={'80%'}
               margin={'0 auto'}
               justifyContent={'center'}
               flexDirection={'column'}
               alignItems={'center'}
               maxWidth={'clamp(15.875rem, -6.8333rem + 118.2222vw, 35.5rem)'}
-              marginTop={'clamp(-11.375rem, -27rem + 66.6667vw, 0rem)'}
+              marginTop={'clamp(-3.375rem, -27rem + 66.6667vw, 0rem)'}
             >
               <LogoXcala />
               <TitleStepe />
@@ -248,7 +248,7 @@ export const SectionInternalLayout = ({
           height: '100%',
           minHeight: '300px',
           margin: '0 auto',
-          marginTop: '-80px',
+          marginTop: '-60px',
           boxSizing: 'border-box',
           position: 'relative',
           zIndex: 1
