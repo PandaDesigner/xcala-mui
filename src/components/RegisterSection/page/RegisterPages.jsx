@@ -11,15 +11,15 @@ export const RegisterPages = () => {
         minHeight: '100vh',
         position: 'relative',
         overflow: 'hidden',
-        padding: 0
+        padding: 0,
         //overscrollBehaviorX: 'contain',
       }}
     >
       <RegisterLayout>
-        {/*
         <FromRegisterComponents />
-      */}
+        {/*
         <LoginsSection />
+      */}
       </RegisterLayout>
     </Stack>
   );

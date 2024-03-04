@@ -19,7 +19,7 @@ import './index.css';
 
 import {
   InitialPerfilPages,
-  RegisterPages
+  RegisterPages,
 } from './components/RegisterSection/page';
 import { DefiningRiskProfile } from './components/RegisterSection/views/DefiningRiskProfile.jsx';
 //import { CashRescuePages } from './components/rechargeFromCash/pages/CashRescuePages.jsx';
@@ -37,9 +37,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       {/* 
       <CashRescuePages />
-      <RegisterPages />
-    */}
       <InitialPerfilPages />
+    */}
+      <RegisterPages />
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}
     </ThemeProvider>
