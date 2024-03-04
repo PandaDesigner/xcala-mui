@@ -1,8 +1,22 @@
-import { Stack } from '@mui/material';
+import { Button, Link, Stack, styled } from '@mui/material';
 import { SectionInternalLayout } from '../layout/SectionInternalLayout';
 import { ContainerRiskDefault, DefiningRiskProfile } from '../views';
 import { SectionNotification } from '../views/SectionNotification';
 import { SelectorImput } from '../components/SelectorImput';
+
+const SectionButton = styled(Stack)({
+  display: 'flex',
+  position: 'relative',
+  isolation: 'isolate',
+  flexDirection: 'row',
+  width: '456px',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '0px',
+  boxSizing: 'border-box',
+  margin: '0px auto',
+  marginBottom: '1rem',
+});
 
 export const InitialPerfilPages = ({ headerSteep = true }) => {
   return (
@@ -14,7 +28,7 @@ export const InitialPerfilPages = ({ headerSteep = true }) => {
         position: 'relative',
         overflow: 'hidden',
         padding: 0,
-        margin: 0
+        margin: 0,
       }}
     >
       <SectionInternalLayout headerSteep={headerSteep}>
@@ -29,6 +43,18 @@ export const InitialPerfilPages = ({ headerSteep = true }) => {
         ) : (
           <DefiningRiskProfile />
         )}
+        <SectionButton>
+          <Button
+            variant='text'
+            sx={{
+              textDecoration: 'none',
+              textTransform: 'none',
+              padding: '8px 32px',
+            }}
+          >
+            volver
+          </Button>
+        </SectionButton>
       </SectionInternalLayout>
     </Stack>
   );

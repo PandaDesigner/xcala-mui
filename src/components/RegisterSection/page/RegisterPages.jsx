@@ -12,7 +12,7 @@ export const RegisterPages = () => {
         position: 'relative',
         overflow: 'hidden',
         padding: 0,
-        //overscrollBehaviorX: 'contain',
+        overscrollBehaviorX: 'contain',
       }}
     >
       <RegisterLayout>

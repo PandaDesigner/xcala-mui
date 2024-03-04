@@ -89,7 +89,7 @@ export const FromRegisterComponents = () => {
         padding: '24px',
         position: 'relative',
         boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.15)',
-        minHeight: '300px',
+        // minHeight: '300px',
         zIndex: 4,
         justifyContent: 'center',
         alignItems: 'center',

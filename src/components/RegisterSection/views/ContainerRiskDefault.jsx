@@ -16,14 +16,14 @@ export const ContainerRiskDefault = ({ children }) => {
         boxShadow: '0px 0px 1rem 0px rgba(0, 0, 0, 0.1)',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: '4rem'
+        marginBottom: '1rem',
       }}
       gap={1}
     >
       <Box>
         <IconsRiskProfile
           sx={{
-            width: 'clamp(5.1875rem, 1.4375rem + 16vw, 10.4375rem);'
+            width: 'clamp(5.1875rem, 1.4375rem + 16vw, 10.4375rem);',
           }}
           src={iconRiskNoDenifed}
         />
@@ -33,7 +33,7 @@ export const ContainerRiskDefault = ({ children }) => {
           width: '100%',
           flexDirection: 'column',
           gap: 2,
-          marginBottom: '1rem'
+          marginBottom: '1rem',
         }}
       >
         {children}

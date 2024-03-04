@@ -37,9 +37,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       {/* 
       <CashRescuePages />
-      <InitialPerfilPages />
-    */}
       <RegisterPages />
+    */}
+      <InitialPerfilPages />
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}
     </ThemeProvider>
