@@ -37,9 +37,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
       {/* 
       <CashRescuePages />
-      <RegisterPages />
+      <InitialPerfilPages headerSteep={true} />
     */}
-      <InitialPerfilPages />
+      <RegisterPages />
       {/* <NotificationsXcala />
       <MyTransactionsPages /> */}
     </ThemeProvider>

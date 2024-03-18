@@ -248,13 +248,12 @@ export const FromRegisterComponents = () => {
           <Button
             variant='contained'
             sx={{
-              padding: '10px 16px',
-              width: '70%',
+              padding: '8px 16px',
+              width: '50%',
               margin: '20px auto',
               textTransform: 'none',
             }}
             disableElevation
-            disabled
           >
             Conrtinuar
           </Button>

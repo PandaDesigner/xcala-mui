@@ -297,8 +297,12 @@ export const SectionInternalLayout = ({
               <Box
                 sx={{
                   margin: ' 0px auto',
-                  marginTop: '16px',
-                  width: { xs: '300px', md: '444px' },
+                  marginTop: {
+                    xs: 'clamp(1.8rem, 4.4313rem + -6.1069vw, 1.5rem)',
+                    md: '16px',
+                  },
+                  width: '100%',
+                  maxWidth: '444px',
                 }}
               >
                 <SteperContent>

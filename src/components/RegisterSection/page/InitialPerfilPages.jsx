@@ -9,13 +9,14 @@ const SectionButton = styled(Stack)({
   position: 'relative',
   isolation: 'isolate',
   flexDirection: 'row',
-  width: '456px',
+  width: '60%',
+  maxWidth: '456px',
   justifyContent: 'center',
   alignItems: 'center',
   padding: '0px',
   boxSizing: 'border-box',
-  margin: '0px auto',
-  marginBottom: '1rem',
+  margin: '16px auto',
+  //marginBottom: '1rem',
 });
 
 export const InitialPerfilPages = ({ headerSteep = true }) => {
